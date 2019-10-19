@@ -1,0 +1,17 @@
+target/
+.byebug_history
+.DS_Store
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+secrets/*
+bin/
+src/main/resources/git.properties
+out/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+

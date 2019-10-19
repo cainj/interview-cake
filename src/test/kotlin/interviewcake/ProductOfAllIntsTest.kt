@@ -1,14 +1,10 @@
 package interviewcake
 
+import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test
 
-
-
 class ProductOfAllIntsTest {
-
-
-    // tests
 
     @Test
     fun smallArrayTest() {
@@ -52,14 +48,18 @@ class ProductOfAllIntsTest {
         assertArrayEquals(expected, actual)
     }
 
-//    @Test(expected = Exception::class)
-//    fun exceptionWithEmptyArrayTest() {
-//        getProductsOfAllIntsExceptAtIndex(intArrayOf())
-//    }
-//
-//    @Test(expected = Exception::class)
-//    fun exceptionWithOneNumberTest() {
-//        getProductsOfAllIntsExceptAtIndex(intArrayOf(1))
-//    }
+    @Test
+    fun exceptionWithEmptyArrayTest() {
+        Assertions.assertThrows(Exception::class.java) {
+            getProductsOfAllIntsExceptAtIndex(intArrayOf())
+        }
+    }
 
+    @Test
+    fun exceptionWithOneNumberTest() {
+        Assertions.assertThrows(Exception::class.java) {
+            getProductsOfAllIntsExceptAtIndex(intArrayOf(1))
+        }
+
+    }
 }
