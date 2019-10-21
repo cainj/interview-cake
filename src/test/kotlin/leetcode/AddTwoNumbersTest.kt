@@ -28,7 +28,21 @@ class AddTwoNumbersTest {
          */
         val node1 = ListNode(9, ListNode(9, ListNode(9)))
         val node2 = ListNode(9, ListNode(9, ListNode(9)))
-        val expected = ListNode(8, ListNode(9, ListNode(19)))
+        val expected = ListNode(8, ListNode(9, ListNode(9, ListNode(1))))
+        val actual = addTwoNumbers(node1, node2)
+        Assertions.assertEquals(expected, actual)
+    }
+
+    @Test
+    fun sampleTest3() {
+        /**
+         * Input: (9 -> 9 -> 9) + (9 -> 9 -> 9)
+         * Output: 9 -> 9 -> 19
+         * Explanation: 999 + 999 = 1998.
+         */
+        val node1 = ListNode(5)
+        val node2 = ListNode(5)
+        val expected = ListNode(0, ListNode(1))
         val actual = addTwoNumbers(node1, node2)
         Assertions.assertEquals(expected, actual)
     }
