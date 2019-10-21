@@ -1,6 +1,5 @@
-package interviewcake
+package leetcode
 
-import leetcode.twoSum
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
