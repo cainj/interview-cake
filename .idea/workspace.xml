@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff69f41d-d20e-4074-bfe8-57ec08792bb6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/karat/rectangles.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/karat/RectangleTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/karat/rectangles.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/karat/rectangles.kt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +195,7 @@
       <workItem from="1571506993138" duration="19194000" />
       <workItem from="1571753664885" duration="1736000" />
       <workItem from="1571755457941" duration="902000" />
-      <workItem from="1571757502030" duration="18151000" />
+      <workItem from="1571757502030" duration="18512000" />
     </task>
     <servers />
   </component>

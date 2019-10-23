@@ -127,6 +127,9 @@ private fun nextMove(pos: Pos, image: Image): Pos {
     return pos
 }
 
+/**
+ * Using BFS
+ */
 private fun findStartingPoints(image: Image): List<Pos> {
     val positions = mutableListOf<Pos>()
     val visitedStartingPoints = hashSetOf<Pos>()
@@ -136,7 +139,7 @@ private fun findStartingPoints(image: Image): List<Pos> {
     while (dequeue.isNotEmpty()) {
         val pos = dequeue.pop()
         visited.add(pos)
-        if (topLeftCorner(pos, image) && image[pos.x][pos.y] == 0 && !visitedStartingPoints.contains(pos)) {
+        if (isTopLeftCorner(pos, image) && !visitedStartingPoints.contains(pos)) {
             positions.add(pos)
             visitedStartingPoints.add(pos)
         }
@@ -146,6 +149,9 @@ private fun findStartingPoints(image: Image): List<Pos> {
     return positions
 }
 
+/**
+ * Using BFS
+ */
 private fun findStartingPoint(image: Image): Pos {
     val start = Pos(0, 0)
     val dequeue = ArrayDeque<Pos>()
@@ -154,7 +160,7 @@ private fun findStartingPoint(image: Image): Pos {
     while (dequeue.isNotEmpty()) {
         val pos = dequeue.pop()
         visited.add(pos)
-        if (topLeftCorner(pos, image) && image[pos.x][pos.y] == 0)
+        if (isTopLeftCorner(pos, image))
             return pos
         dequeue.addAll(validDirections(pos, image).filterNot { visited.contains(it) })
     }
@@ -169,18 +175,20 @@ private fun moves(pos: Pos): Array<Pos> =
     )
 
 
-private fun validDirections(pos: Pos, image: Image): List<Pos> = arrayOf(
-    Pos(pos.x - 1, pos.y),
-    Pos(pos.x, pos.y - 1)
-).plus(moves(pos)).filter { direction ->
-    try {
-        image[direction.x][direction.y] == 0 || image[direction.x][direction.y] == 1
-    } catch (e: ArrayIndexOutOfBoundsException) {
-        false
+private fun validDirections(pos: Pos, image: Image): List<Pos> {
+    return arrayOf(
+        Pos(pos.x - 1, pos.y),
+        Pos(pos.x, pos.y - 1)
+    ).plus(moves(pos)).filter { direction ->
+        try {
+            image[direction.x][direction.y] == 0 || image[direction.x][direction.y] == 1
+        } catch (e: ArrayIndexOutOfBoundsException) {
+            false
+        }
     }
 }
 
-private fun topLeftCorner(pos: Pos, image: Image): Boolean {
+private fun isTopLeftCorner(pos: Pos, image: Image): Boolean {
     val directions = arrayOf(
         Pos(pos.x - 1, pos.y),
         Pos(pos.x, pos.y - 1)
@@ -192,5 +200,5 @@ private fun topLeftCorner(pos: Pos, image: Image): Boolean {
         } catch (e: Exception) {
             true
         }
-    }
+    } && image[pos.x][pos.y] == 0
 }
