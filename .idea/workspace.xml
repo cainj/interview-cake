@@ -2,26 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff69f41d-d20e-4074-bfe8-57ec08792bb6" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/main/kotlin/leetcode/CheckStraightLine.kt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/kotlin/leetcode/CheckStraighLineTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/karat/rectangles.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/karat/rectangles.kt" afterDir="false" />
+>>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/.gradle/" />
-    <ignored path="$PROJECT_DIR$/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
   <component name="ComposerSettings">
     <execution>
       <executable />
     </execution>
-  </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -45,6 +47,7 @@
       </state>
     </system>
   </component>
+<<<<<<< HEAD
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
@@ -70,6 +73,8 @@
       </file>
     </leaf>
   </component>
+=======
+>>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -78,19 +83,10 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>led</find>
-      <find>throws</find>
-      <find>getMax</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -181,7 +177,12 @@
         </subPane>
       </pane>
     </panes>
+=======
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+>>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
   </component>
+  <component name="ProjectId" id="1SYw5ge2ZkT9cqxXuC4sJtTsoWQ" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -209,7 +210,11 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="JUnit.CheckStraighLineTest.simpleTwoSumTest">
+=======
+  <component name="RunManager" selected="JUnit.RectangleTest">
+>>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
     <configuration name="AddTwoNumbersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="interview-cake.test" />
       <extension name="coverage">
@@ -225,6 +230,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="CheckStraighLineTest.simpleTwoSumTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="interview-cake.test" />
       <extension name="coverage">
@@ -237,21 +243,61 @@
       <option name="MAIN_CLASS_NAME" value="leetcode.CheckStraighLineTest" />
       <option name="METHOD_NAME" value="simpleTwoSumTest" />
       <option name="TEST_OBJECT" value="method" />
+=======
+    <configuration name="RectangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="interview-cake.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="karat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="karat" />
+      <option name="MAIN_CLASS_NAME" value="karat.RectangleTest" />
+      <option name="TEST_OBJECT" value="class" />
+>>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="ProductOfAllIntsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="RectangleTest.sampleTest4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+>>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
       <module name="interview-cake.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="interviewcake.*" />
+          <option name="PATTERN" value="karat.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+<<<<<<< HEAD
       <option name="PACKAGE_NAME" value="interviewcake" />
       <option name="MAIN_CLASS_NAME" value="interviewcake.ProductOfAllIntsTest" />
       <option name="TEST_OBJECT" value="class" />
+=======
+      <option name="PACKAGE_NAME" value="karat" />
+      <option name="MAIN_CLASS_NAME" value="karat.RectangleTest" />
+      <option name="METHOD_NAME" value="sampleTest4" />
+      <option name="TEST_OBJECT" value="method" />
+>>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RectangleTest.sampleTest5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="interview-cake.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="karat.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="karat" />
+      <option name="MAIN_CLASS_NAME" value="karat.RectangleTest" />
+      <option name="METHOD_NAME" value="sampleTest5" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -271,29 +317,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwoSumTest.bothRegistersHaveSameNumberOfOrdersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="interview-cake.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="interviewcake.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="interviewcake" />
-      <option name="MAIN_CLASS_NAME" value="interviewcake.TwoSumTest" />
-      <option name="METHOD_NAME" value="bothRegistersHaveSameNumberOfOrdersTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="JUnit.CheckStraighLineTest.simpleTwoSumTest" />
         <item itemvalue="JUnit.AddTwoNumbersTest" />
         <item itemvalue="JUnit.TwoSumTest" />
         <item itemvalue="JUnit.TwoSumTest.bothRegistersHaveSameNumberOfOrdersTest" />
         <item itemvalue="JUnit.ProductOfAllIntsTest" />
+=======
+        <item itemvalue="JUnit.RectangleTest" />
+        <item itemvalue="JUnit.RectangleTest.sampleTest5" />
+        <item itemvalue="JUnit.RectangleTest.sampleTest4" />
+        <item itemvalue="JUnit.AddTwoNumbersTest" />
+        <item itemvalue="JUnit.TwoSumTest" />
+>>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
       </list>
     </recent_temporary>
   </component>
@@ -318,6 +356,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571506988543</updated>
+<<<<<<< HEAD
       <workItem from="1571506993138" duration="19429000" />
       <workItem from="1572060163049" duration="2253000" />
     </task>
@@ -434,8 +473,30 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="11" weight="0.25" />
     </layout-to-restore>
   </component>
+=======
+      <workItem from="1571506993138" duration="19194000" />
+      <workItem from="1571753664885" duration="1736000" />
+      <workItem from="1571755457941" duration="902000" />
+      <workItem from="1571757502030" duration="18512000" />
+    </task>
+    <servers />
+  </component>
+>>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -443,10 +504,10 @@
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/leetcode/twoSum.kt</url>
           <line>6</line>
-          <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/src/main/kotlin/leetcode/CheckStraightLine.kt</url>
           <line>7</line>
           <properties />
@@ -457,10 +518,16 @@
           <line>9</line>
           <properties />
           <option name="timeStamp" value="14" />
+=======
+          <url>file://$PROJECT_DIR$/src/test/kotlin/karat/RectangleTest.kt</url>
+          <line>140</line>
+          <option name="timeStamp" value="31" />
+>>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
+<<<<<<< HEAD
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -683,4 +750,6 @@
       </state>
     </states>
   </component>
+=======
+>>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
 </project>
