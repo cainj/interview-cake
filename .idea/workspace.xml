@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff69f41d-d20e-4074-bfe8-57ec08792bb6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/leetcode/AddTwoNumbers.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/leetcode/AddTwoNumbers.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/leetcode/AddTwoNumbersTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/leetcode/AddTwoNumbersTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/leetcode/CheckStraightLine.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/leetcode/CheckStraighLineTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -45,33 +46,21 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/leetcode/AddTwoNumbers.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/leetcode/CheckStraightLine.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="234">
+              <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/kotlin/leetcode/AddTwoNumbersTest.kt">
+        <entry file="file://$PROJECT_DIR$/src/test/kotlin/leetcode/CheckStraighLineTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-              <folding>
-                <element signature="e#18#91#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/kotlin/leetcode/TwoSumTest.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="300">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#18#91#0" expanded="true" />
               </folding>
@@ -115,6 +104,8 @@
         <option value="$PROJECT_DIR$/src/test/kotlin/leetcode/TwoSumTest.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/leetcode/AddTwoNumbersTest.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/leetcode/AddTwoNumbers.kt" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/leetcode/CheckStraighLineTest.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/leetcode/CheckStraightLine.kt" />
       </list>
     </option>
   </component>
@@ -130,6 +121,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,21 +174,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="interviewcake" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="interview-cake" type="b2602c69:ProjectViewProjectNode" />
-              <item name="interview-cake" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
               <item name="leetcode" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -226,7 +209,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.AddTwoNumbersTest">
+  <component name="RunManager" selected="JUnit.CheckStraighLineTest.simpleTwoSumTest">
     <configuration name="AddTwoNumbersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="interview-cake.test" />
       <extension name="coverage">
@@ -242,6 +225,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CheckStraighLineTest.simpleTwoSumTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="interview-cake.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="leetcode" />
+      <option name="MAIN_CLASS_NAME" value="leetcode.CheckStraighLineTest" />
+      <option name="METHOD_NAME" value="simpleTwoSumTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductOfAllIntsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="interview-cake.test" />
       <extension name="coverage">
@@ -253,22 +252,6 @@
       <option name="PACKAGE_NAME" value="interviewcake" />
       <option name="MAIN_CLASS_NAME" value="interviewcake.ProductOfAllIntsTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductOfAllIntsTest.longArrayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="interview-cake.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="interviewcake.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="interviewcake" />
-      <option name="MAIN_CLASS_NAME" value="interviewcake.ProductOfAllIntsTest" />
-      <option name="METHOD_NAME" value="longArrayTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -306,11 +289,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CheckStraighLineTest.simpleTwoSumTest" />
         <item itemvalue="JUnit.AddTwoNumbersTest" />
         <item itemvalue="JUnit.TwoSumTest" />
         <item itemvalue="JUnit.TwoSumTest.bothRegistersHaveSameNumberOfOrdersTest" />
         <item itemvalue="JUnit.ProductOfAllIntsTest" />
-        <item itemvalue="JUnit.ProductOfAllIntsTest.longArrayTest" />
       </list>
     </recent_temporary>
   </component>
@@ -335,83 +318,84 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571506988543</updated>
-      <workItem from="1571506993138" duration="19194000" />
+      <workItem from="1571506993138" duration="19429000" />
+      <workItem from="1572060163049" duration="2253000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AddTwoNumbersTest - 2019.10.20 at 23h 52m 20s.xml">
+    <history-entry file="AddTwoNumbersTest - 2019.10.21 at 00h 40m 56s.xml">
       <configuration name="AddTwoNumbersTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AddTwoNumbersTest - 2019.10.20 at 23h 54m 27s.xml">
-      <configuration name="AddTwoNumbersTest" configurationId="JUnit" />
+    <history-entry file="CheckStraighLineTest_simpleTwoSumTest - 2019.10.25 at 21h 42m 20s.xml">
+      <configuration name="CheckStraighLineTest.simpleTwoSumTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AddTwoNumbersTest - 2019.10.21 at 00h 02m 58s.xml">
-      <configuration name="AddTwoNumbersTest" configurationId="JUnit" />
+    <history-entry file="CheckStraighLineTest_simpleTwoSumTest - 2019.10.25 at 21h 42m 43s.xml">
+      <configuration name="CheckStraighLineTest.simpleTwoSumTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AddTwoNumbersTest - 2019.10.21 at 00h 03m 50s.xml">
-      <configuration name="AddTwoNumbersTest" configurationId="JUnit" />
+    <history-entry file="CheckStraighLineTest_simpleTwoSumTest - 2019.10.25 at 21h 49m 17s.xml">
+      <configuration name="CheckStraighLineTest.simpleTwoSumTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AddTwoNumbersTest - 2019.10.21 at 00h 04m 12s.xml">
-      <configuration name="AddTwoNumbersTest" configurationId="JUnit" />
+    <history-entry file="CheckStraighLineTest_simpleTwoSumTest - 2019.10.25 at 21h 55m 31s.xml">
+      <configuration name="CheckStraighLineTest.simpleTwoSumTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AddTwoNumbersTest - 2019.10.21 at 00h 07m 16s.xml">
-      <configuration name="AddTwoNumbersTest" configurationId="JUnit" />
+    <history-entry file="CheckStraighLineTest_simpleTwoSumTest - 2019.10.25 at 21h 55m 47s.xml">
+      <configuration name="CheckStraighLineTest.simpleTwoSumTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AddTwoNumbersTest - 2019.10.21 at 00h 09m 09s.xml">
-      <configuration name="AddTwoNumbersTest" configurationId="JUnit" />
+    <history-entry file="CheckStraighLineTest_simpleTwoSumTest - 2019.10.25 at 21h 56m 25s.xml">
+      <configuration name="CheckStraighLineTest.simpleTwoSumTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AddTwoNumbersTest - 2019.10.21 at 00h 09m 53s.xml">
-      <configuration name="AddTwoNumbersTest" configurationId="JUnit" />
+    <history-entry file="CheckStraighLineTest_simpleTwoSumTest - 2019.10.25 at 21h 57m 03s.xml">
+      <configuration name="CheckStraighLineTest.simpleTwoSumTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AddTwoNumbersTest - 2019.10.21 at 00h 33m 45s.xml">
-      <configuration name="AddTwoNumbersTest" configurationId="JUnit" />
+    <history-entry file="CheckStraighLineTest_simpleTwoSumTest - 2019.10.25 at 21h 57m 44s.xml">
+      <configuration name="CheckStraighLineTest.simpleTwoSumTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AddTwoNumbersTest - 2019.10.21 at 00h 35m 20s.xml">
-      <configuration name="AddTwoNumbersTest" configurationId="JUnit" />
+    <history-entry file="CheckStraighLineTest_simpleTwoSumTest - 2019.10.25 at 21h 58m 15s.xml">
+      <configuration name="CheckStraighLineTest.simpleTwoSumTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19194000" />
+    <option name="totallyTimeSpent" value="21682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1668" height="975" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23308733" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23554735" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Build" weight="0.22790697" />
-      <window_info anchor="bottom" id="sbt-shell-toolwindow" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32906976" />
-      <window_info anchor="bottom" id="Docker" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32906976" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32906976" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32906976" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="sbt" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Gradle" weight="0.21864952" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.22790697" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32906976" />
+      <window_info anchor="bottom" id="Docker" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32906976" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="sbt" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Gradle" order="7" weight="0.21864952" />
+      <window_info anchor="right" id="SciView" order="8" />
+      <window_info anchor="right" id="Database" order="9" />
+      <window_info anchor="right" id="Palette&#9;" order="10" />
+      <window_info anchor="right" id="Theme Preview" order="11" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="0" />
@@ -461,6 +445,18 @@
           <line>6</line>
           <properties />
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/leetcode/CheckStraightLine.kt</url>
+          <line>7</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/leetcode/CheckStraightLine.kt</url>
+          <line>9</line>
+          <properties />
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -557,30 +553,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/leetcode/TwoSumTest.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/leetcode/AddTwoNumbers.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#18#91#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/leetcode/AddTwoNumbersTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="42" column="31" lean-forward="true" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+        <state relative-caret-position="615">
+          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
           <folding>
             <element signature="e#18#91#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/leetcode/AddTwoNumbers.kt">
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/leetcode/TwoSumTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="135">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="e#18#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/leetcode/CheckStraighLineTest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#18#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/leetcode/CheckStraightLine.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
         </state>
       </provider>
     </entry>
