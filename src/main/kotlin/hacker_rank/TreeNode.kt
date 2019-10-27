@@ -62,7 +62,7 @@ data class TreeNode(val data: Int, var left: TreeNode? = null, var right: TreeNo
     companion object {
         fun checkBSTRecursive(root: TreeNode?, lowerBounds: Int, upperBounds: Int): Boolean {
             if (root == null)
-                return false
+                return true
             val data = root.data
             if (data < lowerBounds || data > upperBounds)
                 return false

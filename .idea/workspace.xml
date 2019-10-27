@@ -1,112 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff69f41d-d20e-4074-bfe8-57ec08792bb6" name="Default Changelist" comment="">
-<<<<<<< HEAD
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/leetcode/CheckStraightLine.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/leetcode/CheckStraighLineTest.kt" afterDir="false" />
+    <list default="true" id="14b34efb-f837-405d-ba96-505d15329566" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/hacker_rank/IsBst.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/hacker_rank/NearestClone.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/karat/rectangles.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/karat/rectangles.kt" afterDir="false" />
->>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/hacker_rank/Graph.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/hacker_rank/Graph.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/hacker_rank/TreeNode.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/hacker_rank/TreeNode.kt" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeStyleSettingsInfer">
-    <option name="done" value="true" />
-  </component>
   <component name="ComposerSettings">
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="interview-cake" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-<<<<<<< HEAD
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/leetcode/CheckStraightLine.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/hacker_rank/NearestClone.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+            <state relative-caret-position="574">
+              <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+              <folding>
+                <element signature="n#!!block;n#findShortestPathBFS#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/kotlin/leetcode/CheckStraighLineTest.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/geeksforgeeks/RatMaze.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="e#18#91#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="447">
+              <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/interviewcake/Graph.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-=======
->>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
-        <option value="Kotlin Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Type</find>
+      <find>typeali</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-<<<<<<< HEAD
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/settings.gradle" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/interviewcake/ProductOfAllIntsTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/interviewcake/ProductOfAllInts.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/interviewcake/CafeOrderCheckerTest.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/interviewcake/TwoSumTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/leetcode/twoSum.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/leetcode/TwoSumTest.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/leetcode/AddTwoNumbersTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/leetcode/AddTwoNumbers.kt" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/leetcode/CheckStraighLineTest.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/leetcode/CheckStraightLine.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/hacker_rank/checkBst.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/hacker_rank/TreeNode.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/hacker_rank/Graph.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/hacker_rank/NearestClone.kt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
     <option name="y" value="23" />
     <option name="width" value="1668" />
     <option name="height" value="975" />
@@ -116,7 +103,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -128,6 +114,11 @@
             <path>
               <item name="interview-cake" type="b2602c69:ProjectViewProjectNode" />
               <item name="interview-cake" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="interview-cake" type="b2602c69:ProjectViewProjectNode" />
+              <item name="interview-cake" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -149,40 +140,31 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="geeksforgeeks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="interview-cake" type="b2602c69:ProjectViewProjectNode" />
               <item name="interview-cake" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="interview-cake" type="b2602c69:ProjectViewProjectNode" />
-              <item name="interview-cake" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+              <item name="hacker_rank" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="interview-cake" type="b2602c69:ProjectViewProjectNode" />
               <item name="interview-cake" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-              <item name="leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="interviewcake" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
-=======
-  <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="1" />
->>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
   </component>
-  <component name="ProjectId" id="1SYw5ge2ZkT9cqxXuC4sJtTsoWQ" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -192,11 +174,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15429688" />
     <property name="project.structure.side.proportion" value="0.20124482" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
-      <recent name="leetcode" />
-    </key>
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -210,128 +188,37 @@
       </list>
     </option>
   </component>
-<<<<<<< HEAD
-  <component name="RunManager" selected="JUnit.CheckStraighLineTest.simpleTwoSumTest">
-=======
-  <component name="RunManager" selected="JUnit.RectangleTest">
->>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
-    <configuration name="AddTwoNumbersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="interview-cake.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="leetcode" />
-      <option name="MAIN_CLASS_NAME" value="leetcode.AddTwoNumbersTest" />
-      <option name="TEST_OBJECT" value="class" />
+  <component name="RunManager" selected="Kotlin.hacker_rank.NearestCloneKt">
+    <configuration name="hacker_rank.IsBstKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="interview-cake.main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="hacker_rank.IsBstKt" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
-    <configuration name="CheckStraighLineTest.simpleTwoSumTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="interview-cake.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="leetcode.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="leetcode" />
-      <option name="MAIN_CLASS_NAME" value="leetcode.CheckStraighLineTest" />
-      <option name="METHOD_NAME" value="simpleTwoSumTest" />
-      <option name="TEST_OBJECT" value="method" />
-=======
-    <configuration name="RectangleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="interview-cake.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="karat.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="karat" />
-      <option name="MAIN_CLASS_NAME" value="karat.RectangleTest" />
-      <option name="TEST_OBJECT" value="class" />
->>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-<<<<<<< HEAD
-    <configuration name="ProductOfAllIntsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-=======
-    <configuration name="RectangleTest.sampleTest4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
->>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
-      <module name="interview-cake.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="karat.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-<<<<<<< HEAD
-      <option name="PACKAGE_NAME" value="interviewcake" />
-      <option name="MAIN_CLASS_NAME" value="interviewcake.ProductOfAllIntsTest" />
-      <option name="TEST_OBJECT" value="class" />
-=======
-      <option name="PACKAGE_NAME" value="karat" />
-      <option name="MAIN_CLASS_NAME" value="karat.RectangleTest" />
-      <option name="METHOD_NAME" value="sampleTest4" />
-      <option name="TEST_OBJECT" value="method" />
->>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RectangleTest.sampleTest5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="interview-cake.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="karat.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="karat" />
-      <option name="MAIN_CLASS_NAME" value="karat.RectangleTest" />
-      <option name="METHOD_NAME" value="sampleTest5" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TwoSumTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="interview-cake.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="interviewcake.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="interviewcake" />
-      <option name="MAIN_CLASS_NAME" value="interviewcake.TwoSumTest" />
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="hacker_rank.NearestCloneKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+      <module name="interview-cake.main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="hacker_rank.NearestCloneKt" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-<<<<<<< HEAD
-        <item itemvalue="JUnit.CheckStraighLineTest.simpleTwoSumTest" />
-        <item itemvalue="JUnit.AddTwoNumbersTest" />
-        <item itemvalue="JUnit.TwoSumTest" />
-        <item itemvalue="JUnit.TwoSumTest.bothRegistersHaveSameNumberOfOrdersTest" />
-        <item itemvalue="JUnit.ProductOfAllIntsTest" />
-=======
-        <item itemvalue="JUnit.RectangleTest" />
-        <item itemvalue="JUnit.RectangleTest.sampleTest5" />
-        <item itemvalue="JUnit.RectangleTest.sampleTest4" />
-        <item itemvalue="JUnit.AddTwoNumbersTest" />
-        <item itemvalue="JUnit.TwoSumTest" />
->>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
+        <item itemvalue="Kotlin.hacker_rank.NearestCloneKt" />
+        <item itemvalue="Kotlin.hacker_rank.IsBstKt" />
       </list>
     </recent_temporary>
   </component>
@@ -351,316 +238,147 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ff69f41d-d20e-4074-bfe8-57ec08792bb6" name="Default Changelist" comment="" />
-      <created>1571506988543</created>
+      <changelist id="14b34efb-f837-405d-ba96-505d15329566" name="Default Changelist" comment="" />
+      <created>1572121338415</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1571506988543</updated>
-<<<<<<< HEAD
-      <workItem from="1571506993138" duration="19429000" />
-      <workItem from="1572060163049" duration="2253000" />
+      <updated>1572121338415</updated>
+      <workItem from="1572121340270" duration="14398000" />
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="AddTwoNumbersTest - 2019.10.21 at 00h 40m 56s.xml">
-      <configuration name="AddTwoNumbersTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CheckStraighLineTest_simpleTwoSumTest - 2019.10.25 at 21h 42m 20s.xml">
-      <configuration name="CheckStraighLineTest.simpleTwoSumTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CheckStraighLineTest_simpleTwoSumTest - 2019.10.25 at 21h 42m 43s.xml">
-      <configuration name="CheckStraighLineTest.simpleTwoSumTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CheckStraighLineTest_simpleTwoSumTest - 2019.10.25 at 21h 49m 17s.xml">
-      <configuration name="CheckStraighLineTest.simpleTwoSumTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CheckStraighLineTest_simpleTwoSumTest - 2019.10.25 at 21h 55m 31s.xml">
-      <configuration name="CheckStraighLineTest.simpleTwoSumTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CheckStraighLineTest_simpleTwoSumTest - 2019.10.25 at 21h 55m 47s.xml">
-      <configuration name="CheckStraighLineTest.simpleTwoSumTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CheckStraighLineTest_simpleTwoSumTest - 2019.10.25 at 21h 56m 25s.xml">
-      <configuration name="CheckStraighLineTest.simpleTwoSumTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CheckStraighLineTest_simpleTwoSumTest - 2019.10.25 at 21h 57m 03s.xml">
-      <configuration name="CheckStraighLineTest.simpleTwoSumTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CheckStraighLineTest_simpleTwoSumTest - 2019.10.25 at 21h 57m 44s.xml">
-      <configuration name="CheckStraighLineTest.simpleTwoSumTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CheckStraighLineTest_simpleTwoSumTest - 2019.10.25 at 21h 58m 15s.xml">
-      <configuration name="CheckStraighLineTest.simpleTwoSumTest" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21682000" />
+    <option name="totallyTimeSpent" value="14398000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="23" width="1668" height="975" extended-state="0" />
+    <frame x="0" y="23" width="1668" height="975" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23554735" />
+      <window_info id="Designer" />
+      <window_info id="Image Layers" />
+      <window_info id="Capture Tool" />
+      <window_info id="UI Designer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2496925" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Build" sideWeight="0.499385" weight="0.32906976" />
+      <window_info anchor="bottom" id="sbt-shell-toolwindow" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Docker" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.500615" side_tool="true" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" sideWeight="0.499385" weight="0.32906976" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32906976" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32906976" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.499385" weight="0.32906976" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.499385" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.22790697" />
-      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32906976" />
-      <window_info anchor="bottom" id="Docker" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32906976" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="sbt" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Kotlin Bytecode" weight="0.3296433" />
+      <window_info anchor="right" id="Gradle" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="sbt" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Gradle" order="7" weight="0.21864952" />
-      <window_info anchor="right" id="SciView" order="8" />
-      <window_info anchor="right" id="Database" order="9" />
-      <window_info anchor="right" id="Palette&#9;" order="10" />
-      <window_info anchor="right" id="Theme Preview" order="11" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Designer" order="0" />
-      <window_info id="Image Layers" order="1" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.23308733" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="0" weight="0.22790697" />
-      <window_info anchor="bottom" id="sbt-shell-toolwindow" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="2" visible="true" weight="0.32906976" />
-      <window_info anchor="bottom" id="Docker" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="5" weight="0.32906976" />
-      <window_info anchor="bottom" id="Database Changes" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Message" order="8" />
-      <window_info anchor="bottom" id="Find" order="9" />
-      <window_info anchor="bottom" id="Run" order="10" weight="0.32906976" />
-      <window_info anchor="bottom" id="Debug" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="14" />
-      <window_info anchor="right" id="Maven" order="0" />
-      <window_info anchor="right" id="Palette" order="1" />
-      <window_info anchor="right" id="sbt" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" id="Gradle" order="4" weight="0.21864952" />
-      <window_info anchor="right" id="SciView" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="9" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="10" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="11" weight="0.25" />
-    </layout-to-restore>
   </component>
-=======
-      <workItem from="1571506993138" duration="19194000" />
-      <workItem from="1571753664885" duration="1736000" />
-      <workItem from="1571755457941" duration="902000" />
-      <workItem from="1571757502030" duration="18512000" />
-    </task>
-    <servers />
-  </component>
->>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/leetcode/twoSum.kt</url>
-          <line>6</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-<<<<<<< HEAD
-          <url>file://$PROJECT_DIR$/src/main/kotlin/leetcode/CheckStraightLine.kt</url>
-          <line>7</line>
-          <properties />
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/leetcode/CheckStraightLine.kt</url>
-          <line>9</line>
-          <properties />
-          <option name="timeStamp" value="14" />
-=======
-          <url>file://$PROJECT_DIR$/src/test/kotlin/karat/RectangleTest.kt</url>
-          <line>140</line>
-          <option name="timeStamp" value="31" />
->>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-<<<<<<< HEAD
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/hacker_rank/IsBst.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="259">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/hacker_rank/TreeNode.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        <state relative-caret-position="292">
+          <caret line="63" column="29" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.2.0/ad0d47eb12682e65b371f1f7eb6a284ff2716d40/junit-jupiter-engine-5.2.0-sources.jar!/org/junit/jupiter/engine/descriptor/TestMethodTestDescriptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="169" selection-start-line="169" selection-end-line="169" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.2.0/ad0d47eb12682e65b371f1f7eb6a284ff2716d40/junit-jupiter-engine-5.2.0-sources.jar!/org/junit/jupiter/engine/execution/ExecutableInvoker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="114" selection-start-line="114" selection-end-line="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/interviewcake/MaxProfit.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/interviewcake/ProductOfAllInts.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/interviewcake/ProductOfAllIntsTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/interviewcake/CafeOrderCheckerTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" selection-start-line="8" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/interviewcake/MaxProfitTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="35" column="20" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/interviewcake/MeshMessageTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/interviewcake/CakeThiefTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.5.0-M1/212dc68b153daa5df01db995ff163f0335ad1398/junit-platform-commons-1.5.0-M1-sources.jar!/org/junit/platform/commons/util/ReflectionUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="677" selection-start-line="677" selection-end-line="677" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/leetcode/twoSum.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/leetcode/AddTwoNumbers.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/leetcode/AddTwoNumbersTest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
-          <folding>
-            <element signature="e#18#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/leetcode/TwoSumTest.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/interviewcake/ColorGraph.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="14" selection-end-column="5" />
-          <folding>
-            <element signature="e#18#91#0" expanded="true" />
-          </folding>
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/kotlin/leetcode/CheckStraighLineTest.kt">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.50/bc0c767786c4a3c042a364e69d3f3dd5ff5253a5/kotlin-stdlib-1.3.50-sources.jar!/kotlin/Array.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#18#91#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="184">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/leetcode/CheckStraightLine.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/hacker_rank/BubbleSort.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/hacker_rank/MergeSort.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="17" column="26" lean-forward="true" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        <state relative-caret-position="-820" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/hacker_rank/MinimumSwap.kt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.50/8ac406cf33e942265c4abb33ee0acdee79292dd6/kotlin-stdlib-common-1.3.50-sources.jar!/generated/_Collections.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="1383" selection-start-line="1383" selection-end-line="1383" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home/lib/src.zip!/java.base/java/util/ArrayDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="399" column="13" selection-start-line="399" selection-start-column="13" selection-end-line="399" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/hacker_rank/Graph.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/interviewcake/Graph.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/geeksforgeeks/RatMaze.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/hacker_rank/NearestClone.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="574">
+          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+          <folding>
+            <element signature="n#!!block;n#findShortestPathBFS#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -692,10 +410,11 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>scala-sdk-2.12.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.20124482" />
               </list>
             </option>
           </splitter-proportions>
@@ -703,10 +422,11 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.20124482" />
               </list>
             </option>
           </splitter-proportions>
@@ -739,10 +459,11 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Gradle: org.apiguardian:apiguardian-api:1.0.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.20124482" />
               </list>
             </option>
           </splitter-proportions>
@@ -750,6 +471,4 @@
       </state>
     </states>
   </component>
-=======
->>>>>>> 866249175908dbeb68dd26d80180624d12d598dc
 </project>
