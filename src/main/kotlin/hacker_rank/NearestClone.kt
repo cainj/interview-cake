@@ -8,7 +8,7 @@ typealias Graph = Array<GraphNode>
 private val scanner = Scanner(System.`in`)
 
 
-class GraphNode(val id: Int, val color: Long, val neighbors: HashSet<GraphNode> = hashSetOf()) {
+data class GraphNode(val id: Int, val color: Long, val neighbors: HashSet<GraphNode> = hashSetOf()) {
     fun addNeighbors(node: GraphNode) = neighbors.add(node)
 }
 
