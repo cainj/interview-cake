@@ -5,7 +5,14 @@ import java.util.*
 import java.util.stream.IntStream
 
 
-class Edge(val to: Int, val from: Int, val weight: Int)
+class SortNoDecreasingOrder : Comparator<Edge> {
+    override fun compare(o1: Edge?, o2: Edge?): Int {
+        return o1?.weight?.minus(o2?.weight ?: 0) ?: 0
+    }
+}
+
+class Edge(val from: Int, val to: Int, val weight: Int)
+
 /*
  * Complete the 'kruskals' function below.
  *
@@ -23,16 +30,32 @@ class Edge(val to: Int, val from: Int, val weight: Int)
  */
 
 fun kruskals(gNodes: Int, gFrom: List<Int>, gTo: List<Int>, gWeight: List<Int>): Int {
-    val edges = arrayListOf<Edge>()
+    val edges = mutableListOf<Edge>()
     for (index in gFrom.indices)
-        edges.add(Edge(gTo[index], gFrom[index], gWeight[index]))
+        edges.add(Edge(gFrom[index], gTo[index], gWeight[index]))
 
     //sort the edges
-    val sortedEdges = edges.sortByDescending { it.weight }
+    edges.sortWith(SortNoDecreasingOrder())
+
     val disjointSet = DisjointSet<Int>()
     for (node in 1..gNodes)
         disjointSet.makeSet(node)
-    TODO()
+
+    val result = mutableListOf<Edge>()
+
+    for (edge in edges) {
+        val root1 = disjointSet.findSet(edge.to)
+        val root2 = disjointSet.findSet(edge.from)
+
+        if (root1 == root2)
+            continue
+        else {
+            result.add(edge)
+            disjointSet.union(edge.to, edge.from)
+        }
+    }
+
+    return result.sumBy { it.weight }
 }
 
 
@@ -71,7 +94,7 @@ object Solution {
         val res = kruskals(gNodes, gFrom, gTo, gWeight)
 
         // Write your code here.
-
+        bufferedWriter.write(res)
         bufferedReader.close()
         bufferedWriter.close()
     }
