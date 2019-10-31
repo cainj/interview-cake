@@ -44,27 +44,31 @@ fun kruskals(gNodes: Int, gFrom: List<Int>, gTo: List<Int>, gWeight: List<Int>):
     val result = mutableListOf<Edge>()
 
     for (edge in edges) {
-        val root1 = disjointSet.findSet(edge.to)
-        val root2 = disjointSet.findSet(edge.from)
+        if (isNotCycle(edge, disjointSet)) {
+            val root1 = disjointSet.findSet(edge.to)
+            val root2 = disjointSet.findSet(edge.from)
 
-        if (root1 == root2)
-            continue
-        else {
-            result.add(edge)
-            disjointSet.union(edge.to, edge.from)
+            if (root1 == root2)
+                continue
+            else {
+                result.add(edge)
+                disjointSet.union(edge.to, edge.from)
+            }
+
         }
     }
 
     return result.sumBy { it.weight }
 }
 
+fun isNotCycle(edge: Edge, disjointSet: DisjointSet<Int>) =
+    disjointSet.findSet(edge.to) != disjointSet.findSet(edge.from)
 
 object Solution {
     @Throws(IOException::class)
     @JvmStatic
     fun main(args: Array<String>) {
         val bufferedReader = BufferedReader(InputStreamReader(System.`in`))
-        val bufferedWriter = BufferedWriter(PrintWriter(System.out))
 
         val gNodesEdges =
             bufferedReader.readLine().replace("\\s+$".toRegex(), "").split(" ".toRegex()).dropLastWhile { it.isEmpty() }
@@ -94,8 +98,7 @@ object Solution {
         val res = kruskals(gNodes, gFrom, gTo, gWeight)
 
         // Write your code here.
-        bufferedWriter.write(res)
         bufferedReader.close()
-        bufferedWriter.close()
+        println(res)
     }
 }
