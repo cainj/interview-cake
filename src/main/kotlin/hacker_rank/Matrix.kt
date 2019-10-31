@@ -21,32 +21,23 @@ fun minTime(arr: Array<Array<Int>>, machines: Array<Int>): Int {
     //Sort the roads
     roads.sortWith(RoadSortOrder())
 
-    val disjointSet = DisjointSet<Int>()
-    for (city in 0..arr.size + 1)
-        disjointSet.makeSet(city)
+    val disjointSet = DisjointSetMatrix(machines)
+    for (machine in machines)
+        disjointSet.makeSet(machine)
 
 
-    val result = mutableListOf<Edge>()
+    var result = 0
 
-    for (edge in roads) {
-        if (isNotCycle(edge, disjointSet)) {
-            val root1 = disjointSet.findSet(edge.to)
-            val root2 = disjointSet.findSet(edge.from)
-
-            if (root1 == root2)
-                continue
-            else {
-                result.add(edge)
-                disjointSet.union(edge.to, edge.from)
-            }
-
+    for (road in roads) {
+        if (disjointSet.hasMachine(road.to) && disjointSet.hasMachine(road.from))
+            result += road.time
+        else {
+            disjointSet.union(road.to, road.from)
         }
+
     }
     return 0
 }
-
-fun hasMachine(city: Int, machines: Array<Int>): Boolean = machines.contains(city)
-
 
 fun main() {
     val scan = Scanner(System.`in`)
