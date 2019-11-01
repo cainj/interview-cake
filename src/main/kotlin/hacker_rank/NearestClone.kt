@@ -12,8 +12,7 @@ class GraphNode(val id: Int, val color: Long, val neighbors: HashSet<GraphNode> 
     fun addNeighbors(node: GraphNode) = neighbors.add(node)
 }
 
-fun findStart(color: Long, graph: Graph): GraphNode =  graph[color.toInt() - 1]
-
+fun findStart(color: Long, graph: Graph): GraphNode = graph[color.toInt() - 1]
 
 fun findShortest(graphNodes: Int, graphFrom: IntArray, graphTo: IntArray, ids: LongArray, `val`: Int): Int {
     // create nodes with ids
