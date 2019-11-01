@@ -2,29 +2,8 @@ package hacker_rank
 
 class Node<T>(val data: T, var rank: Int = 0, var parent: Node<T>? = null)
 
-class DisjointSetMatrix(private val machines: Array<Int>) : DisjointSet<Int>() {
-    override fun union(that: Int, other: Int) {
-        val parent1 = findSet(that)
-        val parent2 = findSet(other)
-
-        val node = nodes[parent1]
-        val node2 = nodes[parent2]
-
-        println("$parent1:$parent2")
-        if (hasMachine(parent1!!)) {
-            println("hasMachine $parent1")
-            node2?.parent = node
-        } else if (hasMachine(parent2!!)) {
-            println("hasMachine $parent2")
-            node?.parent = node2
-        }
-    }
-
-    fun hasMachine(city: Int): Boolean = machines.contains(city)
-}
-
-open class DisjointSet<T> {
-    protected val nodes = hashMapOf<T, Node<T>>()
+class DisjointSet<T> {
+    private val nodes = hashMapOf<T, Node<T>>()
 
     fun makeSet(data: T): Node<T> {
         val node = Node(data)
@@ -38,7 +17,7 @@ open class DisjointSet<T> {
         return findSet(d)?.data
     }
 
-    fun findSet(node: Node<T>?): Node<T>? {
+    private fun findSet(node: Node<T>?): Node<T>? {
         val parent = node?.parent
         if (parent == node)
             return parent
@@ -47,7 +26,7 @@ open class DisjointSet<T> {
         return node?.parent
     }
 
-    open fun union(that: T, other: T) {
+    fun union(that: T, other: T) {
         val nodeThat = nodes[that]
         val nodeOther = nodes[other]
 

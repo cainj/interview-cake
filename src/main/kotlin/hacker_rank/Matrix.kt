@@ -2,41 +2,49 @@ package hacker_rank
 
 import java.util.*
 
-class RoadSortOrder : Comparator<Road> {
-    override fun compare(o1: Road?, o2: Road?): Int {
-        return o1?.time?.plus(o2?.time ?: 0) ?: 0
-    }
-}
-
-data class Road(val to: Int, val from: Int, val time: Int)
-
 // Complete the minTime function below.
-fun minTime(arr: Array<Array<Int>>, machines: Array<Int>): Int {
+fun minTime(roads: Array<Array<Int>>, machines: Array<Int>): Int {
 
-    //setup adjacency list
-    val roads = Array(arr.size) {
-        Road(arr[it][0], arr[it][1], arr[it][2])
+    val n = roads.size
+    // Mark each group with a machine.
+    val base = Array(n + 1) { machines.contains(it) }
+    val sets = List(n + 1) { hashSetOf(it) }
+
+    // Put each city in its own group.
+    val nodes = Array(n + 1) { it }
+    val m = hashMapOf<Int, HashSet<Pair<Int, Int>>>()
+
+    var time = 0
+    // Build map indexed by road value.
+    for (road in roads) {
+        val set = m[road[2]]
+        if (set != null)
+            set.add(road[0] to road[1])
+        else
+            m[road[2]] = hashSetOf(road[0] to road[1])
     }
 
-    //Sort the roads
-    roads.sortWith(RoadSortOrder())
+    for (rs in m.toSortedMap(reverseOrder())) {
+        for (pair in rs.component2()) {
+            val b1 = nodes[pair.first]
 
-    val disjointSet = DisjointSetMatrix(machines)
-    for (machine in machines)
-        disjointSet.makeSet(machine)
+            val b2 = nodes[pair.second]
 
+            if (base[b1] && base[b2]) {
+                time += rs.component1()
+            } else {
+                base[b1] = base[b1] || base[b2]
+                for (s in sets[b2]) {
+                    sets[b1].add(s)
+                    nodes[s] = b1
+                }
+            }
 
-    var result = 0
-
-    for (road in roads) {
-        if (disjointSet.hasMachine(road.to) && disjointSet.hasMachine(road.from))
-            result += road.time
-        else {
-            disjointSet.union(road.to, road.from)
         }
 
     }
-    return 0
+
+    return time
 }
 
 fun main() {
