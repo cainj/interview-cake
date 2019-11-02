@@ -1,4 +1,4 @@
-package hacker_rank
+package hacker_rank.interview_preparation.sorting
 
 import utils.swap
 import java.util.*

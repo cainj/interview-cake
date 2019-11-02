@@ -1,4 +1,4 @@
-package hacker_rank
+package hacker_rank.interview_preparation.graphs
 
 //class Graph<T> {
 //    private val adjacencyMap = HashMap<T, HashSet<T>>()

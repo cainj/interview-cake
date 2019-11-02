@@ -1,4 +1,4 @@
-package hacker_rank
+package hacker_rank.interview_preparation.graphs
 
 class Node<T>(val data: T, var rank: Int = 0, var parent: Node<T>? = null)
 

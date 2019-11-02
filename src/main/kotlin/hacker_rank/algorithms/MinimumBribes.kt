@@ -1,4 +1,4 @@
-package hacker_rank
+package hacker_rank.algorithms
 
 import java.util.*
 

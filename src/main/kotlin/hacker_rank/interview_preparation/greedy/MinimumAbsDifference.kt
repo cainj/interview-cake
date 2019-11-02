@@ -1,4 +1,4 @@
-package hacker_rank
+package hacker_rank.interview_preparation.greedy
 
 import java.util.*
 import kotlin.math.abs
@@ -10,7 +10,7 @@ fun minimumAbsoluteDifference(arr: Array<Int>): Int {
     var min = abs(arr[0] - arr[1])
     for (i in 0..arr.size - 2)
         min = min(min, abs(arr[i] - arr[i + 1]))
-    
+
     return min
 
 }

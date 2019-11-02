@@ -1,4 +1,4 @@
-package hacker_rank
+package hacker_rank.interview_preparation.trees
 
 
 fun checkBst(treeNode: TreeNode): Boolean {
@@ -6,7 +6,11 @@ fun checkBst(treeNode: TreeNode): Boolean {
     // traverse right and make sure the parent node is less than right child
     // if it passes these conditions it's a BST else it's not
 
-    return doCheckBst(treeNode.left, Int.MIN_VALUE, treeNode.data) && doCheckBst(
+    return doCheckBst(
+        treeNode.left,
+        Int.MIN_VALUE,
+        treeNode.data
+    ) && doCheckBst(
         treeNode.right,
         treeNode.data,
         Int.MAX_VALUE
@@ -16,7 +20,11 @@ fun checkBst(treeNode: TreeNode): Boolean {
 fun doCheckBst(treeNode: TreeNode?, lowerBounds: Int, upperBounds: Int): Boolean {
     return when {
         treeNode == null -> return true
-        treeNode.data in lowerBounds..upperBounds -> doCheckBst(treeNode.left, lowerBounds, treeNode.data) && doCheckBst(
+        treeNode.data in lowerBounds..upperBounds -> doCheckBst(
+            treeNode.left,
+            lowerBounds,
+            treeNode.data
+        ) && doCheckBst(
             treeNode.right,
             treeNode.data,
             upperBounds
