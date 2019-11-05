@@ -7,11 +7,11 @@ fun makeAnagram(a: String, b: String): Int {
     val rover = IntArray(26) { 0 }
     var removeCount = 0
     for (c in a) {
-        rover[c.toInt() - 97] += 1
+        rover[c.toInt() - 'a'.toInt()] += 1
     }
 
     for (c in b) {
-        rover[c.toInt() - 97] -= 1
+        rover[c.toInt() - 'a'.toInt()] -= 1
     }
 
     for (i in rover.indices)
@@ -25,11 +25,8 @@ fun makeAnagram(a: String, b: String): Int {
 
 fun main(args: Array<String>) {
     val scan = Scanner(System.`in`)
-
     val a = scan.nextLine()
-
     val b = scan.nextLine()
-
     val res = makeAnagram(a, b)
 
     println(res)
