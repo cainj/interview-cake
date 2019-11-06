@@ -1,4 +1,4 @@
-package hacker_rank.data_structures
+package hackerrank.datastructures
 
 interface QueueLike<A> {
     fun enqueue(obj: A)

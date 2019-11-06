@@ -1,4 +1,4 @@
-package hacker_rank.interview_preparation.sorting
+package hackerrank.interviewpreparation.sorting
 
 import java.util.*
 

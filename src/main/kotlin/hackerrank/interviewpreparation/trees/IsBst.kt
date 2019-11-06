@@ -1,4 +1,4 @@
-package hacker_rank.interview_preparation.trees
+package hackerrank.interviewpreparation.trees
 
 
 fun checkBst(treeNode: TreeNode): Boolean {

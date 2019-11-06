@@ -1,4 +1,4 @@
-package hacker_rank.interview_preparation.dictionaries
+package hackerrank.interviewpreparation.dictionaries
 
 import java.util.*
 

@@ -1,4 +1,4 @@
-package hacker_rank.interview_preparation.graphs
+package hackerrank.interviewpreparation.graphs
 
 import java.io.*
 import java.util.*

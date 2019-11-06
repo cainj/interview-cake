@@ -1,4 +1,4 @@
-package hacker_rank.interview_preparation.strings
+package hackerrank.interviewpreparation.strings
 
 import java.util.*
 

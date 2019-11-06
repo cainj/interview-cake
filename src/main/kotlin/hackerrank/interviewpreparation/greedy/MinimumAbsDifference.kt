@@ -1,4 +1,4 @@
-package hacker_rank.interview_preparation.greedy
+package hackerrank.interviewpreparation.greedy
 
 import java.util.*
 import kotlin.math.abs

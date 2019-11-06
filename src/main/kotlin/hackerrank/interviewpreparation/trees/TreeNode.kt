@@ -1,6 +1,6 @@
-package hacker_rank.interview_preparation.trees
+package hackerrank.interviewpreparation.trees
 
-import hacker_rank.interview_preparation.trees.TreeNode.Companion.checkBSTRecursive
+import hackerrank.interviewpreparation.trees.TreeNode.Companion.checkBSTRecursive
 
 data class TreeNode(val data: Int, var left: TreeNode? = null, var right: TreeNode? = null) {
 
