@@ -2,7 +2,6 @@ package interviewcake
 
 import kotlin.math.max
 
-
 fun highestProductOf3(nums: IntArray): Int {
 
     require(nums.size > 2)
@@ -37,7 +36,6 @@ fun highestProductOf3(nums: IntArray): Int {
 
     return max(max * secondMax * thirdMax, min * secondMin * max)
 }
-
 
 fun highestProductOf3Sort(nums: IntArray): Int {
     //you can sort the array then take the top 3 largest number

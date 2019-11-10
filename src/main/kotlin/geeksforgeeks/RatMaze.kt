@@ -80,7 +80,6 @@ fun printMoves(listOfMoves: List<Moves>) =
             .joinToString { "${it.first}" }
     }
 
-
 fun main() {
     val maze = arrayOf(
         arrayOf(1, 0, 0, 0),

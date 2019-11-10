@@ -2,7 +2,6 @@ package interviewcake
 
 import java.util.*
 
-
 data class NodeBounds(val node: BinaryTreeNode, val lowerBounds: Int, val upperBounds: Int)
 
 fun isBinarySearchTree(treeNode: BinaryTreeNode?): Boolean {

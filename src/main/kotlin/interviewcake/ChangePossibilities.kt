@@ -65,6 +65,7 @@ class ChangePossibilities {
 }
 
 fun changePossibilitiesBottomUp(amount: Int, denominations: IntArray): Int {
+
     val waysOfDoingNCents = IntArray(amount + 1)  // array of zeros from 0..amount
     waysOfDoingNCents[0] = 1
 

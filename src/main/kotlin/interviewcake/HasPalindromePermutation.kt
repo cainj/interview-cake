@@ -3,7 +3,6 @@ package interviewcake
 fun initialHasPalindromePermutation(input: String): Boolean {
 
     val chars = input.toCharArray()
-
     val palindromeMap = mutableMapOf(0 to HashSet<Char>(), 1 to HashSet())
 
     for (c in input) {

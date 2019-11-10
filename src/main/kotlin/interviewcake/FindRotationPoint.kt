@@ -8,10 +8,10 @@ fun findRotationPoint(words: Array<String>): Int {
     //if it is then return the index of the next word
     //if not return 0
     //O(n) is the runtime for this solution
-//    for (i in 0 until words.size - 1) {
-//        if (words[i] > words[i + 1])
-//            return i + 1
-//    }
+    //    for (i in 0 until words.size - 1) {
+    //        if (words[i] > words[i + 1])
+    //            return i + 1
+    //    }
 
     var floor = 0
     var ceiling = words.size - 1

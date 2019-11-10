@@ -1,6 +1,5 @@
 package interviewcake
 
-
 fun isFirstComeFirstServed(takeOutOrders: IntArray, dineInOrders: IntArray, servedOrders: IntArray): Boolean =
     checkOrderRecursive(takeOutOrders, dineInOrders, servedOrders)
 

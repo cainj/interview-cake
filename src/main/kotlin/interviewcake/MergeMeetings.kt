@@ -1,6 +1,5 @@
 package interviewcake
 
-
 class Meeting(val startTime: Long, val endTime: Long) {
     override fun toString(): String {
         return "($startTime, $endTime)"

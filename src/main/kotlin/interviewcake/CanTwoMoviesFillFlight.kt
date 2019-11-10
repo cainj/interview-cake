@@ -1,6 +1,5 @@
 package interviewcake
 
-
 fun canTwoMoviesFillFlight(moviesLengths: IntArray, flightLength: Int): Boolean {
     val sums = mutableSetOf<Int>()
     for (i in moviesLengths.indices) {

@@ -2,7 +2,6 @@ package interviewcake
 
 import java.util.*
 
-
 class GraphNode(val label: String) {
     private val neighbors: MutableSet<GraphNode>
     private var color: Optional<String>

@@ -4,7 +4,6 @@ import utils.swap
 import java.util.*
 import kotlin.random.Random
 
-
 fun shuffle(intArray: Array<Char>) {
     if (intArray.size <= 1)
         return
@@ -15,7 +14,6 @@ fun shuffle(intArray: Array<Char>) {
             swap(index, random, intArray)
     }
 }
-
 
 fun getRandom(floor: Int, ceiling: Int): Int = Random.nextInt((ceiling - floor) + 1) + floor;
 

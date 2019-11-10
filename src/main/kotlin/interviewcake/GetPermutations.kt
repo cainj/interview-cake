@@ -2,11 +2,7 @@ package interviewcake
 
 import utils.swap
 
-
 fun getPermutations(inputString: String): Set<String> {
-
-    // generate all permutations of the input string
-
     return recursivePermutation(
         0,
         inputString.toCharArray(),
@@ -37,7 +33,6 @@ fun createHeadAndTail(i: Int, j: Int, input: CharArray): Pair<Char, CharArray> {
     swap(i, j, input)
     return Pair(input.head(), input.tail())
 }
-
 
 fun CharArray.tail() = drop(1).joinToString(separator = "").toCharArray()
 

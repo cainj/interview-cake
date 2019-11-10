@@ -1,6 +1,5 @@
 package interviewcake
 
-
 fun mergeArrays(left: IntArray, right: IntArray): IntArray {
     val mergedArray = IntArray(left.size + right.size)
     recursiveMerge(left, right, mergedArray, 0, 0, 0)

@@ -4,7 +4,6 @@ import java.util.*
 
 data class PositionChar(val index: Int, val c: Char)
 
-
 fun getClosingParen(sentence: String, openingParenIndex: Int): Int {
 
     // find the position of the matching closing parenthesis
@@ -33,7 +32,6 @@ fun getClosingParen(sentence: String, openingParenIndex: Int): Int {
 
     throw Exception("No matching closer")
 }
-
 
 fun getClosingParenWithStack(sentence: String, openingParenIndex: Int): Int {
 

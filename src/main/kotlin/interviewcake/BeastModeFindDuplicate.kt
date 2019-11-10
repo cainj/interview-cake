@@ -10,17 +10,17 @@ fun findDuplicate(numbers: Array<Int>): Int {
     //2. if not then swap
     //3. after swapping if the current number in the position != to position swap else move index
 
-//    var currentPosition = 1
-//
-//    while (currentPosition < numbers.size + 1) {
-//
-//        val currentNumber = numbers[currentPosition - 1]
-//        when {
-//            currentPosition == currentNumber -> currentPosition++
-//            (numbers[currentPosition - 1] == numbers[currentNumber - 1]) -> return currentNumber
-//            else -> swap(currentPosition - 1, currentNumber - 1, numbers)
-//        }
-//    }
+    //    var currentPosition = 1
+    //
+    //    while (currentPosition < numbers.size + 1) {
+    //
+    //        val currentNumber = numbers[currentPosition - 1]
+    //        when {
+    //            currentPosition == currentNumber -> currentPosition++
+    //            (numbers[currentPosition - 1] == numbers[currentNumber - 1]) -> return currentNumber
+    //            else -> swap(currentPosition - 1, currentNumber - 1, numbers)
+    //        }
+    //    }
 
     var position = numbers.size
     var totalCycles = 0
@@ -52,4 +52,3 @@ fun findDuplicate(numbers: Array<Int>): Int {
 
     return 0
 }
-

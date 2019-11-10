@@ -1,6 +1,5 @@
 package interviewcake
 
-
 fun kthToLastNode(kth: Int, head: LinkedListNode?): LinkedListNode? {
 
     requireNotNull(head)

@@ -6,7 +6,6 @@ import kotlin.random.Random
 fun colorGraph(graph: Array<GraphNode>, colors: Array<String>) {
 
     val d = graph.size
-
     val setOfColors = colors.copyOfRange(0, d + 1)
     val allowedColors = shuffle(setOfColors)
 
@@ -23,11 +22,10 @@ private fun shuffle(array: Array<String>): Set<String> {
 private fun random(floor: Int, ceiling: Int) = Random.nextInt(floor, ceiling)
 
 fun paint(node: GraphNode, allowedColors: Set<String>) {
+
     val neighbors = node.unColoredNeighbors()
-
-    require(!neighbors.contains(node)) { "Legal coloring impossible for node with loop: $node.label}" }
-
     val availableColors = node.legalColors(allowedColors)
+    require(!neighbors.contains(node)) { "Legal coloring impossible for node with loop: $node.label}" }
 
     if (!node.hasColor())
         node.setColor(availableColors.elementAt(0))
@@ -37,4 +35,3 @@ fun paint(node: GraphNode, allowedColors: Set<String>) {
         neighbors.forEach { paint(it, allowedColors) }
 
 }
-

@@ -2,13 +2,11 @@ package interviewcake
 
 import kotlin.math.max
 
-
 data class CakeType(val weight: Int, val value: Int) : Comparable<CakeType> {
     override fun compareTo(other: CakeType): Int {
         return if (this.value < other.value) 1 else -1
     }
 }
-
 
 fun maxDuffelBagValue(cakes: Array<CakeType>, capacity: Int): Long {
 
@@ -43,7 +41,6 @@ fun maxDuffelBagValue(cakes: Array<CakeType>, capacity: Int): Long {
 
     return maxHeist
 }
-
 
 class InfinityException : RuntimeException("Max value is infinity!")
 
