@@ -10,16 +10,15 @@ fun triplets(a: IntArray, b: IntArray, c: IntArray): Long {
 
     var count = 0L
     var ai = 0
-    var bi = 0
     var ci = 0
-    while (bi < arrb.size) {
-        while (ai < arra.size && arrb[bi] >= arra[ai])
+    for (i in arrb.indices) {
+        while (ai < arra.size && arrb[i] >= arra[ai])
             ai++
-        while (ci < arrc.size && arrb[bi] >= arrc[ci])
+        while (ci < arrc.size && arrb[i] >= arrc[ci])
             ci++
         count += ai.toLong() * ci.toLong()
-        bi++
     }
+
     return count
 }
 
