@@ -1,4 +1,4 @@
-Coding Challenges done in Kotlin
+Coding Challenges implemented in Kotlin
 ======
 
 This is a collection of my coding challenges from various source ([HackerRank](https://www.hackerrank.com/), [Interview Cake](https://www.interviewcake.com/), etc) using Kotlin.   
