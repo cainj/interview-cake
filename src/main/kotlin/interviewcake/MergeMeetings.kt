@@ -27,7 +27,7 @@ class Meeting(val startTime: Long, val endTime: Long) {
     companion object {
         fun empty(): Meeting = Meeting(0, 0)
     }
-}// number of 30 min blocks past 9:00 am
+} // number of 30 min blocks past 9:00 am
 
 fun mergeRanges(meetings: Array<Meeting>): ArrayList<Meeting> {
     meetings.sortBy { it.startTime }
