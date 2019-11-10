@@ -1,6 +1,5 @@
 package interviewcake
 
-
 @Throws(Exception::class)
 fun findSecondLargest(rootNode: BinaryTreeNode?): Int {
     if (rootNode == null || (rootNode.left == null
@@ -15,7 +14,6 @@ private fun doSecondLargestIteratively(rootNode: BinaryTreeNode): Int {
     var current: BinaryTreeNode? = rootNode
 
     while (true) {
-
         when {
             current?.left != null && current.right == null ->
                 return findLargest(current.left!!)
@@ -25,8 +23,6 @@ private fun doSecondLargestIteratively(rootNode: BinaryTreeNode): Int {
             else -> current = current!!.right
         }
     }
-
-
 }
 
 private fun findLargest(rootNode: BinaryTreeNode): Int {

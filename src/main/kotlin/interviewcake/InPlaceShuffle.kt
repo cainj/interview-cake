@@ -1,7 +1,6 @@
 package interviewcake
 
 import utils.swap
-import java.util.*
 import kotlin.random.Random
 
 fun shuffle(intArray: Array<Char>) {
@@ -15,7 +14,7 @@ fun shuffle(intArray: Array<Char>) {
     }
 }
 
-fun getRandom(floor: Int, ceiling: Int): Int = Random.nextInt((ceiling - floor) + 1) + floor;
+fun getRandom(floor: Int, ceiling: Int): Int = Random.nextInt((ceiling - floor) + 1) + floor
 
 fun main() {
     val initial = arrayOf('a', 'b', 'c')

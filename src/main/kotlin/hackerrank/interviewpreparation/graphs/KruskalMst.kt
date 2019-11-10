@@ -1,6 +1,8 @@
 package hackerrank.interviewpreparation.graphs
 
-import java.io.*
+import java.io.BufferedReader
+import java.io.IOException
+import java.io.InputStreamReader
 import java.util.*
 import java.util.stream.IntStream
 
@@ -81,7 +83,7 @@ object Solution {
         val gTo = ArrayList<Int>()
         val gWeight = ArrayList<Int>()
 
-        IntStream.range(0, gEdges).forEach { i ->
+        IntStream.range(0, gEdges).forEach {
             try {
                 val gFromToWeight = bufferedReader.readLine().replace("\\s+$".toRegex(), "").split(" ".toRegex())
                     .dropLastWhile { it.isEmpty() }

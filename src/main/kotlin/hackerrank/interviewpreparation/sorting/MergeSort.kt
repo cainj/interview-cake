@@ -7,12 +7,9 @@ fun countInversions(arr: Array<Int>): Long {
     return mergeSort(arr, temp, 0, arr.size - 1)
 }
 
-
 fun mergeSort(arr: Array<Int>, temp: Array<Int>, left: Int, right: Int): Long {
     var inversionCount = 0L
     if (right > left) {
-
-
         val mid = (left + right) / 2
         inversionCount += mergeSort(arr, temp, left, mid)
         inversionCount += mergeSort(arr, temp, mid + 1, right)
@@ -21,7 +18,6 @@ fun mergeSort(arr: Array<Int>, temp: Array<Int>, left: Int, right: Int): Long {
     }
     return inversionCount
 }
-
 
 fun merge(arr: Array<Int>, temp: Array<Int>, left: Int, mid: Int, right: Int): Long {
     var inversionCount = 0L
@@ -49,7 +45,6 @@ fun merge(arr: Array<Int>, temp: Array<Int>, left: Int, mid: Int, right: Int): L
         temp[k] = arr[i]
         i += 1
         k += 1
-
     }
     /* Copy the remaining elements of right subarray
            (if there are any) to temp*/
@@ -70,16 +65,12 @@ fun merge(arr: Array<Int>, temp: Array<Int>, left: Int, mid: Int, right: Int): L
 
 fun main(args: Array<String>) {
     val scan = Scanner(System.`in`)
-
     val t = scan.nextLine().trim().toInt()
 
     for (tItr in 1..t) {
-
         val arr = scan.nextLine().split(" ").map { it.trim().toInt() }.toTypedArray()
-
         val result = countInversions(arr)
 
         println(result)
     }
-   // println(countInversions(arrayOf(7, 5, 3, 1)))
 }

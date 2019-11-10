@@ -2,11 +2,8 @@ package hackerrank.interviewpreparation.graphs
 
 import java.util.*
 
-
 typealias Graph = Array<GraphNode>
-
 private val scanner = Scanner(System.`in`)
-
 
 class GraphNode(val id: Int, val color: Long, val neighbors: HashSet<GraphNode> = hashSetOf()) {
     fun addNeighbors(node: GraphNode) = neighbors.add(node)
@@ -14,7 +11,7 @@ class GraphNode(val id: Int, val color: Long, val neighbors: HashSet<GraphNode> 
 
 fun findStart(color: Long, graph: Graph): GraphNode = graph[color.toInt() - 1]
 
-fun findShortest(graphNodes: Int, graphFrom: IntArray, graphTo: IntArray, ids: LongArray, `val`: Int): Int {
+fun findShortest(graphNodes: Int, graphFrom: IntArray, graphTo: IntArray, ids: LongArray, dest: Int): Int {
     // create nodes with ids
     val graph = Array(graphNodes) { GraphNode(it + 1, ids[it]) }
 
@@ -26,8 +23,8 @@ fun findShortest(graphNodes: Int, graphFrom: IntArray, graphTo: IntArray, ids: L
         from.addNeighbors(to)
     }
 
-    val start = findStart(`val`.toLong(), graph)
-    return findShortestPathBFS(start, `val`.toLong(), start.id)
+    val start = findStart(dest.toLong(), graph)
+    return findShortestPathBFS(start, dest.toLong(), start.id)
 }
 
 private fun findShortestPathBFS(node: GraphNode, color: Long, startId: Int): Int {
@@ -84,10 +81,10 @@ fun main() {
         ids[i] = idsItem
     }
 
-    val `val` = scanner.nextInt()
+    val i = scanner.nextInt()
     scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?")
 
-    val ans = findShortest(graphNodes, graphFrom, graphTo, ids, `val`)
+    val ans = findShortest(graphNodes, graphFrom, graphTo, ids, i)
 
     scanner.close()
 

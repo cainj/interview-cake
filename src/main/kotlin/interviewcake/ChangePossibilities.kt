@@ -7,11 +7,8 @@ class ChangePossibilities {
 
     private val memo = hashMapOf<String, Int>()
 
-    fun changePossibilities(amount: Int, denominations: IntArray): Int {
-
-        return changePossibilitiesBottomUp(amount, denominations)
-
-    }
+    fun changePossibilities(amount: Int, denominations: IntArray): Int =
+        changePossibilitiesBottomUp(amount, denominations)
 
     private fun changePossibilitiesTopDown(left: Int, denominations: IntArray, currentIndex: Int): Int {
         var amountLeft = left

@@ -2,7 +2,6 @@ package geeksforgeeks
 
 import java.util.*
 
-
 typealias Maze = Array<Array<Int>>
 typealias Move = Pair<Char, Cell>
 typealias Moves = List<Move>

@@ -1,14 +1,11 @@
 package interviewcake
 
-
 fun getProductsOfAllIntsExceptAtIndex2(numbers: IntArray): IntArray {
-    val products = IntArray(numbers.size) { 0 }
     require(numbers.size > 1)
 
+    val products = IntArray(numbers.size) { 0 }
     val mid = numbers.size / 2
-
-    val isOddSize =  numbers.size % 2 == 1
-
+    val isOddSize = numbers.size % 2 == 1
     val fold = { array: List<Int> ->
         array.fold(1) { accum, next ->
             accum * next
@@ -43,7 +40,6 @@ fun grab(numbers: IntArray, floor: Int, ceiling: Int, skipIndex: Int): Int {
 
     return product
 }
-
 
 fun getProductsOfAllIntsExceptAtIndex(intArray: IntArray): IntArray {
 

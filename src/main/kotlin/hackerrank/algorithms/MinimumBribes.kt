@@ -2,11 +2,10 @@ package hackerrank.algorithms
 
 import java.util.*
 
-
 typealias Pos = Pair<Int, Int>
 
 // Complete the minimumBribes function below.
-fun minimumBribes(q: Array<Int>): Unit {
+fun minimumBribes(q: Array<Int>) {
     var bribes = 0
     var expectedFirst = 1
     var expectedSecond = 2
@@ -24,8 +23,8 @@ fun minimumBribes(q: Array<Int>): Unit {
                 ++expectedThird
             }
             expectedThird -> {
-                bribes += 2;
-                ++expectedThird;
+                bribes += 2
+                ++expectedThird
             }
             else -> return println("Too chaotic")
         }
@@ -33,9 +32,8 @@ fun minimumBribes(q: Array<Int>): Unit {
     println(bribes)
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val scan = Scanner(System.`in`)
-
     val t = scan.nextLine().trim().toInt()
 
     for (tItr in 1..t) {

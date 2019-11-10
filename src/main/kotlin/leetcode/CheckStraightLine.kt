@@ -1,6 +1,5 @@
 package leetcode
 
-
 fun checkStraightLine(coordinates: Array<IntArray>): Boolean {
     val (x, y) = coordinates[0]
     val (x2, y2) = coordinates[1]

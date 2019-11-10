@@ -51,5 +51,5 @@ fun main() {
     val meetings = arrayOf(Meeting(1, 9), Meeting(2, 6), Meeting(3, 5), Meeting(7, 10))
     val mergedMeetings = mergeRanges(meetings)
     println(mergedMeetings)
-    assert(arrayOf(Meeting(1, 10)).contentEquals(mergedMeetings.toArray() ))
+    assert(arrayOf(Meeting(1, 10)).contentEquals(mergedMeetings.toArray()))
 }

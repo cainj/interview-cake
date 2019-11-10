@@ -13,10 +13,10 @@ fun highestProductOf3(nums: IntArray): Int {
     var secondMin = Int.MAX_VALUE
 
     for (i in nums.indices) {
-        if( nums[i] < min){
+        if (nums[i] < min) {
             secondMin = min
             min = nums[i]
-        } else if(nums[i] < secondMin){
+        } else if (nums[i] < secondMin) {
             secondMin = nums[i]
         }
 
@@ -45,9 +45,7 @@ fun highestProductOf3Sort(nums: IntArray): Int {
     val second = nums[1]
     val third = nums[nums.size - 1]
 
-
-
-    return if(first < 0 && second < 0)
+    return if (first < 0 && second < 0)
         max(first * second * third, nums[nums.size - 3] * nums[nums.size - 2] * nums[nums.size - 1])
     else
         nums[nums.size - 3] * nums[nums.size - 2] * nums[nums.size - 1]

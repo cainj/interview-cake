@@ -39,9 +39,7 @@ fun minTime(roads: Array<Array<Int>>, machines: Array<Int>): Int {
                     nodes[s] = b1
                 }
             }
-
         }
-
     }
 
     return time
@@ -49,13 +47,9 @@ fun minTime(roads: Array<Array<Int>>, machines: Array<Int>): Int {
 
 fun main() {
     val scan = Scanner(System.`in`)
-
     val nk = scan.nextLine().split(" ")
-
     val n = nk[0].trim().toInt()
-
     val k = nk[1].trim().toInt()
-
     val roads = Array(n - 1) { Array(3) { 0 } }
 
     for (i in 0 until n - 1) {

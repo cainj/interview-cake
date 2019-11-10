@@ -42,7 +42,7 @@ fun main() {
     val search = intArrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20)
     val shuffled = intArrayOf(1, 2, 4, 6, 20, 11)
     shuffled.forEach {
-        val found = binarySearchRecursive(it, search, -1 , search.size)
+        val found = binarySearchRecursive(it, search, -1, search.size)
         //val found = binarySearchIterative(it, search, -1 , search.size)
         println("Searching '$it', found: $found.")
     }

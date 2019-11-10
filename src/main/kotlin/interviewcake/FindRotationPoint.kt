@@ -36,7 +36,7 @@ fun findRotationPoint(words: Array<String>): Int {
 
             // between floor and ceiling is where we flipped to the beginning
             // so ceiling is alphabetically first
-            break;
+            break
         }
     }
 

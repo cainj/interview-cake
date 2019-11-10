@@ -16,7 +16,7 @@ fun getClosingParen(sentence: String, openingParenIndex: Int): Int {
     var openParenCount = 0
     val chars = sentence.toCharArray()
 
-    if(chars[openingParenIndex] != '(') throw Exception("Not a valid position")
+    if (chars[openingParenIndex] != '(') throw Exception("Not a valid position")
 
     for (i in openingParenIndex + 1 until chars.size) {
         when (chars[i]) {

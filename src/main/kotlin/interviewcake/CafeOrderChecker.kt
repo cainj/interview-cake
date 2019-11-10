@@ -1,7 +1,7 @@
 package interviewcake
 
 fun isFirstComeFirstServed(takeOutOrders: IntArray, dineInOrders: IntArray, servedOrders: IntArray): Boolean =
-    checkOrderRecursive(takeOutOrders, dineInOrders, servedOrders)
+    checkOrderBruteForce(takeOutOrders, dineInOrders, servedOrders)
 
 private fun checkOrder(orders: IntArray, servedOrders: IntArray): Boolean {
     var servedIndex = 0
@@ -20,7 +20,11 @@ fun checkOrderBruteForce(takeOutOrders: IntArray, dineInOrders: IntArray, served
             && checkOrder(dineInOrders, servedOrders)
             && takeOutOrders.size + dineInOrders.size == servedOrders.size
 
-private tailrec fun checkOrderRecursive(takeOutOrders: IntArray, dineInOrders: IntArray, servedOrders: IntArray): Boolean =
+private tailrec fun checkOrderRecursive(
+    takeOutOrders: IntArray,
+    dineInOrders: IntArray,
+    servedOrders: IntArray
+): Boolean =
     if (takeOutOrders.isNotEmpty() && takeOutOrders[0] == servedOrders[0])
         checkOrderRecursive(
             takeOutOrders.copyOfRange(1, takeOutOrders.size),

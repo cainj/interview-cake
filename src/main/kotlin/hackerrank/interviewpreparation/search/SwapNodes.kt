@@ -6,7 +6,6 @@ fun swapNodes(indexes: Array<IntArray>, queries: Array<Int>) {
     val l = IntArray(indexes.size + 1)
     val r = IntArray(indexes.size + 1)
     val d = IntArray(indexes.size + 1)
-    val ans = mutableListOf<Int>()
 
     for (i in indexes.indices) {
         l[i + 1] = indexes[i][0]
@@ -20,7 +19,7 @@ fun swapNodes(indexes: Array<IntArray>, queries: Array<Int>) {
     }
 
     fun calcDepth(cur: Int, depth: Int) {
-        d[cur] = depth;
+        d[cur] = depth
         if (l[cur] > 0) calcDepth(l[cur], depth + 1)
         if (r[cur] > 0) calcDepth(r[cur], depth + 1)
     }

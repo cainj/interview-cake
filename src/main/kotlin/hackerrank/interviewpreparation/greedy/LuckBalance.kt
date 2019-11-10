@@ -18,13 +18,9 @@ fun luckBalance(allowedToLose: Int, contests: Array<Array<Int>>): Int {
 
 fun main(args: Array<String>) {
     val scan = Scanner(System.`in`)
-
     val nk = scan.nextLine().split(" ")
-
     val n = nk[0].trim().toInt()
-
     val k = nk[1].trim().toInt()
-
     val contests = Array(n) { Array<Int>(2, { 0 }) }
 
     for (i in 0 until n) {

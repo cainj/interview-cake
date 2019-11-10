@@ -9,8 +9,6 @@ fun isBalanced(treeRoot: BinaryTreeNode): Boolean {
     // get the height of the shortest path
     // get the height of the longest path
     // then take the difference of left height vs right height
-    val l = shortestPath(treeRoot)
-    val s = longestPath(treeRoot, 0)
     return depthNodePair(treeRoot)
 }
 

@@ -4,7 +4,7 @@ import utils.swap
 import java.util.*
 
 // Complete the countSwaps function below.
-fun countSwaps(a: Array<Int>): Unit {
+fun countSwaps(a: Array<Int>) {
     var swaps = 0
     for (i in a.indices) {
         for (j in i until a.size) {
@@ -21,8 +21,8 @@ fun countSwaps(a: Array<Int>): Unit {
 }
 
 fun main(args: Array<String>) {
-    val scan = Scanner(System.`in`)
 
+    val scan = Scanner(System.`in`)
     val a = scan.nextLine().split(" ").map { it.trim().toInt() }.toTypedArray()
 
     countSwaps(a)

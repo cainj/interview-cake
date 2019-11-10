@@ -49,30 +49,3 @@ class DisjointSet<T> {
 
     }
 }
-
-fun main() {
-    val disjointSet = DisjointSet<Int>()
-
-    disjointSet.makeSet(1)
-    disjointSet.makeSet(2)
-    disjointSet.makeSet(3)
-    disjointSet.makeSet(4)
-    disjointSet.makeSet(5)
-    disjointSet.makeSet(6)
-    disjointSet.makeSet(7)
-
-    disjointSet.union(1, 2)
-    disjointSet.union(2, 3)
-    disjointSet.union(3, 4)
-    disjointSet.union(4, 5)
-    disjointSet.union(5, 8)
-    disjointSet.union(6, 7)
-    println(disjointSet.findSet(1))
-    println(disjointSet.findSet(2))
-    println(disjointSet.findSet(3))
-    println(disjointSet.findSet(4))
-    println(disjointSet.findSet(5))
-    println(disjointSet.findSet(6))
-    println(disjointSet.findSet(7))
-
-}

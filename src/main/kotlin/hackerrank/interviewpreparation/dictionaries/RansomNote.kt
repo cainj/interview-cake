@@ -3,7 +3,7 @@ package hackerrank.interviewpreparation.dictionaries
 import java.util.*
 
 // Complete the checkMagazine function below.
-fun checkMagazine(magazine: Array<String>, note: Array<String>): Unit {
+fun checkMagazine(magazine: Array<String>, note: Array<String>) {
     val hashMap = mutableMapOf<String, Int>()
     for (word in magazine) {
         if (hashMap[word] == null)
@@ -23,15 +23,7 @@ fun checkMagazine(magazine: Array<String>, note: Array<String>): Unit {
 
 fun main(args: Array<String>) {
     val scan = Scanner(System.`in`)
-
-    val mn = scan.nextLine().split(" ")
-
-    val m = mn[0].trim().toInt()
-
-    val n = mn[1].trim().toInt()
-
     val magazine = scan.nextLine().split(" ").toTypedArray()
-
     val note = scan.nextLine().split(" ").toTypedArray()
 
     checkMagazine(magazine, note)

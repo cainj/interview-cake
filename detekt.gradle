@@ -1,0 +1,14 @@
+configurations{
+    detekt
+}
+
+dependencies{
+    detekt("io.gitlab.arturbosch.detekt:detekt-formatting:${detekt_version}")
+    detekt("io.gitlab.arturbosch.detekt:detekt-cli:${detekt_version}")
+}
+
+detekt {
+    debug = true
+    input = files("src/main/kotlin")
+    config = files( "detekt.yml")
+}

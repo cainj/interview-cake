@@ -12,7 +12,6 @@ fun getPath(graph: Graph, startNode: String, endNode: String): Array<String>? {
     }
 
     return bfsShortPath(startNode, endNode, graph)
-
 }
 
 private fun dfs(node: String, endNode: String, graph: Graph, path: Path): Array<String>? {
