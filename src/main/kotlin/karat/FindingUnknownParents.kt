@@ -1,6 +1,5 @@
 package karat
 
-
 /**
  *
  * Suppose we have some input data describing a graph of relationships between parents
