@@ -13,6 +13,7 @@ fun minimumMoves(grid: Array<String>, startX: Int, startY: Int, goalX: Int, goal
                 ans[i][j] = 100
         }
     }
+
     val dequeue = ArrayDeque<Pos>()
     val visited = hashSetOf<Pos>()
     dequeue.add(Pos(startX, startY))
@@ -32,7 +33,7 @@ fun minimumMoves(grid: Array<String>, startX: Int, startY: Int, goalX: Int, goal
 fun findMinimumPath(deque: Deque<Pos>, pos: Pos, grid: Array<String>, rover: Array<IntArray>) {
     val value = rover[pos.x][pos.y]
 
-    //far down
+    //all down
     var count = pos.x
     while (count < grid.size && grid[count][pos.y] == '.') {
         addStep(count, pos.y, value, rover)
@@ -40,7 +41,7 @@ fun findMinimumPath(deque: Deque<Pos>, pos: Pos, grid: Array<String>, rover: Arr
         count++
     }
 
-    //far up
+    //all up
     count = pos.x
     while (count > -1 && grid[count][pos.y] == '.') {
         addStep(count, pos.y, value, rover)
@@ -48,7 +49,7 @@ fun findMinimumPath(deque: Deque<Pos>, pos: Pos, grid: Array<String>, rover: Arr
         count--
     }
 
-    //far right
+    //all right
     count = pos.y
     while (count < grid[pos.x].length && grid[pos.x][count] == '.') {
         addStep(pos.x, count, value, rover)
@@ -56,7 +57,7 @@ fun findMinimumPath(deque: Deque<Pos>, pos: Pos, grid: Array<String>, rover: Arr
         count++
     }
 
-    //far left
+    //all left
     count = pos.y
     while (count > -1 && grid[pos.x][count] == '.') {
         addStep(pos.x, count, value, rover)
@@ -70,10 +71,10 @@ fun addStep(x: Int, y: Int, value: Int, rover: Array<IntArray>) =
         rover[x][y] = value + 1
     else Unit
 
-fun main(args: Array<String>) {
+fun main() {
     val scan = Scanner(System.`in`)
     val n = scan.nextLine().trim().toInt()
-    val grid = Array<String>(n) { "" }
+    val grid = Array(n) { "" }
 
     for (i in 0 until n) {
         val gridItem = scan.nextLine()
