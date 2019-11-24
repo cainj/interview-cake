@@ -1,10 +1,11 @@
 package karat
 
-
 /**
  *
- * Suppose we have some input data describing a graph of relationships between parents and children over multiple generations.
- * The data is formatted as a list of (parent, child) pairs, where each individual is assigned a unique integer identifier.
+ * Suppose we have some input data describing a graph of relationships between parents
+ * and children over multiple generations.
+ * The data is formatted as a list of (parent, child) pairs, w
+ * here each individual is assigned a unique integer identifier.
  *
  * For example, in this diagram, 3 is a child of 1 and 2, and 5 is a child of 4:
  *
@@ -18,7 +19,8 @@ package karat
  *  2 ->
  *  3 ->
  *
- * Write a function that takes this data as input and returns two collections: one containing all individuals with zero known parents, and one containing all individuals with exactly one known parent.
+ * Write a function that takes this data as input and returns two collections: one containing all individuals
+ * with zero known parents, and one containing all individuals with exactly one known parent.
  * Sample input/output (pseudodata):
  *
  * parentChildPairs = [
