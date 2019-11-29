@@ -10,7 +10,7 @@ fun twoStrings(s1: String, s2: String): String {
     return "NO"
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val scan = Scanner(System.`in`)
 
     val q = scan.nextLine().trim().toInt()

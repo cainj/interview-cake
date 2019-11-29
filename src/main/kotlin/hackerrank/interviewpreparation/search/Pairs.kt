@@ -14,7 +14,7 @@ fun pairs(k: Int, arr: Array<Int>): Int {
     return diff.intersect(sum).size
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val scan = Scanner(System.`in`)
     val nk = scan.nextLine().split(" ")
     val k = nk[1].trim().toInt()

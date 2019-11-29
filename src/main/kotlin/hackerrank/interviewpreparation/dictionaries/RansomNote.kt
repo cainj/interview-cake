@@ -21,7 +21,7 @@ fun checkMagazine(magazine: Array<String>, note: Array<String>) {
     println("Yes")
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val scan = Scanner(System.`in`)
     val magazine = scan.nextLine().split(" ").toTypedArray()
     val note = scan.nextLine().split(" ").toTypedArray()

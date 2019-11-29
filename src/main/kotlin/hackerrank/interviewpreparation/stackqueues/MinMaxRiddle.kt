@@ -13,7 +13,7 @@ fun riddle(arr: Array<Long>): List<Long> {
     for (value in riddle) {
         var window = 0L
         while (dequeue.isNotEmpty() && dequeue.peek().first > value) {
-            window += dequeue.peek().second;
+            window += dequeue.peek().second
             if (maxWindows[window + 1] != null)
                 maxWindows[window + 1] = max(maxWindows[window + 1] ?: -1L, dequeue.peek().first)
             else
@@ -62,6 +62,6 @@ fun main() {
     val scan = Scanner(System.`in`)
     scan.nextLine().trim().toInt()
     val arr = scan.nextLine().split(" ").map { it.trim().toLong() }.toTypedArray()
-    val res =riddle(arr)
+    val res = riddle(arr)
     println(res.joinToString(" "))
 }

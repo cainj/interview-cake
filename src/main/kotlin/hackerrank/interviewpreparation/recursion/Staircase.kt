@@ -8,7 +8,7 @@ fun stepPerms(n: Int): Int {
     return result
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val scan = Scanner(System.`in`)
     val s = scan.nextLine().trim().toInt()
 

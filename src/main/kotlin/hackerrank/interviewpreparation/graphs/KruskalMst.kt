@@ -69,7 +69,7 @@ fun isNotCycle(edge: Edge, disjointSet: DisjointSet<Int>) =
 object Solution {
     @Throws(IOException::class)
     @JvmStatic
-    fun main(args: Array<String>) {
+    fun main() {
         val bufferedReader = BufferedReader(InputStreamReader(System.`in`))
 
         val gNodesEdges =

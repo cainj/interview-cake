@@ -19,7 +19,7 @@ fun minimumSwaps(arr: Array<Int>): Int {
     return swap
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val scan = Scanner(System.`in`)
     val arr = scan.nextLine().split(" ").map { it.trim().toInt() }.toTypedArray()
     val res = minimumSwaps(arr)

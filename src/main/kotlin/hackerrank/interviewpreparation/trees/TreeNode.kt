@@ -83,5 +83,4 @@ fun main() {
     val rootNode = TreeNode(3, leftTree, rightTree)
 
     println(checkBSTRecursive(rootNode, Int.MIN_VALUE, Int.MAX_VALUE))
-    //rootNode.printInOrder()
 }

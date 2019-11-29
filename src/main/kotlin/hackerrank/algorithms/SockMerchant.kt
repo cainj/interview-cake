@@ -22,7 +22,7 @@ fun sockMerchant(n: Int, ar: Array<Int>): Int {
     return pairs
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val scan = Scanner(System.`in`)
 
     val n = scan.nextLine().trim().toInt()

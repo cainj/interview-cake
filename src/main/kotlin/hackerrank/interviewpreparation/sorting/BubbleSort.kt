@@ -20,7 +20,7 @@ fun countSwaps(a: Array<Int>) {
     println(a.toList())
 }
 
-fun main(args: Array<String>) {
+fun main() {
 
     val scan = Scanner(System.`in`)
     val a = scan.nextLine().split(" ").map { it.trim().toInt() }.toTypedArray()

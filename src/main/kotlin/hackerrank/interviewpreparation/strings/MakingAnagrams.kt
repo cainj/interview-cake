@@ -10,9 +10,8 @@ fun makeAnagram(a: String, b: String): Int {
         rover[c.toInt() - 'a'.toInt()] += 1
     }
 
-    for (c in b) {
+    for (c in b)
         rover[c.toInt() - 'a'.toInt()] -= 1
-    }
 
     for (i in rover.indices)
         removeCount +=
@@ -23,7 +22,7 @@ fun makeAnagram(a: String, b: String): Int {
     return removeCount
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val scan = Scanner(System.`in`)
     val a = scan.nextLine()
     val b = scan.nextLine()

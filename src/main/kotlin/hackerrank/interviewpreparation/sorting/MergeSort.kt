@@ -63,7 +63,7 @@ fun merge(arr: Array<Int>, temp: Array<Int>, left: Int, mid: Int, right: Int): L
     return inversionCount
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val scan = Scanner(System.`in`)
     val t = scan.nextLine().trim().toInt()
 
