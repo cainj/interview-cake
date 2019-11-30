@@ -7,19 +7,19 @@ import java.util.*
 fun stepPerms(n: Int): Int {
     if (n == 1)
         return 1
-    val m = IntArray(n + 1)
-    m[0] = 1
-    return countSteps(n, m)
+    val memo = IntArray(n + 1)
+    memo[0] = 1
+    return countSteps(n, memo)
 }
 
-fun countSteps(n: Int, m: IntArray): Int {
+fun countSteps(n: Int, memo: IntArray): Int {
     return when {
         n < 0 -> 0
-        m[n] != 0 -> m[n]
+        memo[n] != 0 -> memo[n]
         n == 1 -> 1
         else -> {
-            m[n] = countSteps(n - 3, m) + countSteps(n - 2, m) + countSteps(n - 1, m)
-            m[n]
+            memo[n] = countSteps(n - 3, memo) + countSteps(n - 2, memo) + countSteps(n - 1, memo)
+            memo[n]
         }
     }
 }
