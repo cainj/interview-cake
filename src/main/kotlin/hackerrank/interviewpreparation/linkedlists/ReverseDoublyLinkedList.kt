@@ -15,7 +15,6 @@ fun reverse(head: DoublyLinkedListNode?): DoublyLinkedListNode? {
         rover?.prev = hold
         hold?.next = rover
         rover = hold
-
     }
 
     return rover
@@ -35,7 +34,7 @@ fun main() {
             linkedList.insertNode(item)
         }
 
-        val linkedListNode = reverse(linkedList?.head)
+        val linkedListNode = reverse(linkedList.head)
         printDoublyLinkedList(linkedListNode, " ")
         println()
     }

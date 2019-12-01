@@ -51,20 +51,19 @@ fun printDoublyLinkedList(head: DoublyLinkedListNode?, sep: String) {
 /*
  * For your reference:
  *
- * hackerrank.interviewpreparation.linkedlists.DoublyLinkedListNode {
+ * DoublyLinkedListNode {
  *     data: Int
- *     next: hackerrank.interviewpreparation.linkedlists.DoublyLinkedListNode
- *     prev: hackerrank.interviewpreparation.linkedlists.DoublyLinkedListNode
+ *     next: DoublyLinkedListNode
+ *     prev: DoublyLinkedListNode
  * }
  *
  */
-fun sortedInsert(llist: DoublyLinkedListNode?, data: Int): DoublyLinkedListNode? {
+fun sortedInsert(linkedListNode: DoublyLinkedListNode?, data: Int): DoublyLinkedListNode? {
     return null
 }
 
 fun main() {
     val scan = Scanner(System.`in`)
-
     val t = scan.nextLine().trim().toInt()
 
     for (tItr in 1..t) {
@@ -77,7 +76,6 @@ fun main() {
         }
 
         val data = scan.nextLine().trim().toInt()
-
         val linkedListNode = sortedInsert(linkedList.head, data)
 
         printDoublyLinkedList(linkedListNode, " ")

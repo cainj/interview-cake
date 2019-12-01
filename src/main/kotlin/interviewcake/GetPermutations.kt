@@ -1,39 +1,17 @@
 package interviewcake
 
-import utils.swap
-
-fun getPermutations(inputString: String): Set<String> {
-    return recursivePermutation(
-        0,
-        inputString.toCharArray(),
-        hashSetOf(inputString)
-    )
+fun getPermutations(input: String): HashSet<String> {
+    return input.foldIndexed(hashSetOf<List<String>>()) { index, accum, next ->
+        accum.add(recursivePermutation(next.toString(), input.removeRange(index..index), emptyList()))
+        accum
+    }.flatten().toHashSet()
 }
 
-fun recursivePermutation(
-    index: Int,
-    input: CharArray,
-    perms: HashSet<String>
-): Set<String> {
-
-    if (index >= input.size)
-        return perms
-    else {
-        for (j in input.indices) {
-            val pair: Pair<Char, CharArray> = createHeadAndTail(index, j, input.copyOf())
-            perms.add(pair.first.plus(String(pair.second)))
-            println("Head: ${pair.first}, Tail: ${String(pair.second)}")
-            recursivePermutation(index + 1, pair.second, perms)
+fun recursivePermutation(result: String, input: String, accum: List<String>): List<String> =
+    when {
+        input.isEmpty() ->
+            accum + result
+        else -> input.indices.flatMap { i ->
+            recursivePermutation(result + input[i], input.removeRange(i..i), accum)
         }
     }
-    return perms
-}
-
-fun createHeadAndTail(i: Int, j: Int, input: CharArray): Pair<Char, CharArray> {
-    swap(i, j, input)
-    return Pair(input.head(), input.tail())
-}
-
-fun CharArray.tail() = drop(1).joinToString(separator = "").toCharArray()
-
-fun CharArray.head() = first()
