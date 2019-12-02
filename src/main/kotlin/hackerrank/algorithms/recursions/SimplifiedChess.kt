@@ -19,7 +19,7 @@ fun main() {
         val w = wbm[0].trim().toInt()
         val b = wbm[1].trim().toInt()
         val m = wbm[2].trim().toInt()
-        val whites = Array<Array<Char>>(w) { Array<Char>(3) { 0.toChar() } }
+        val whites = Array(w) { Array<Char>(3) { 0.toChar() } }
 
         for (whitesRowItr in 0 until w) {
             whites[whitesRowItr] = scan.nextLine().split(" ").map { it[0] }.toTypedArray()
