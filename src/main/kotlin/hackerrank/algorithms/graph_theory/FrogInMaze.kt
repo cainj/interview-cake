@@ -74,6 +74,6 @@ fun main(args: Array<String>) {
         tunnels[kItr] = Tunnel(Cell(i1 - 1, j1 - 1), Cell(i2 - 1, j2 - 1))
     }
     val alef = findAlef(maze)
-    calculateProbability(alef, maze, tunnels)
+    println(calculateProbability(alef, maze, tunnels))
 }
 
