@@ -11,7 +11,6 @@ data class Cell(val x: Int, val y: Int) {
     private val left = Cell(x, y - 1)
     private val right = Cell(x, y + 1)
     private val up = Cell(x - 1, y)
-
     private val down = Cell(x + 1, y)
 
     private val moves = listOf(left, right, up, down)
