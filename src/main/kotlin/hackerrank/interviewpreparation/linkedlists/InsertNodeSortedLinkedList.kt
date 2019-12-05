@@ -58,8 +58,30 @@ fun printDoublyLinkedList(head: DoublyLinkedListNode?, sep: String) {
  * }
  *
  */
-fun sortedInsert(linkedListNode: DoublyLinkedListNode?, data: Int): DoublyLinkedListNode? {
-    return null
+fun sortedInsert(head: DoublyLinkedListNode?, data: Int): DoublyLinkedListNode? {
+    if (head == null)
+        return DoublyLinkedListNode(data)
+    else if (data < head.data) {
+        val newHead = DoublyLinkedListNode(data)
+        newHead.next = head
+        head.prev = newHead
+        return newHead
+    }
+
+    var currentNode = head
+    while (currentNode != null) {
+        if (currentNode.data <= data && (currentNode.next == null || data < currentNode.next!!.data)) {
+            val hold = currentNode.next
+            val node = DoublyLinkedListNode(data)
+            node.prev = currentNode
+            currentNode.next = node
+            node.next = hold
+            hold?.prev = node
+            break
+        } else
+            currentNode = currentNode.next
+    }
+    return head
 }
 
 fun main() {
