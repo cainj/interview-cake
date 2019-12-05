@@ -29,7 +29,7 @@ data class Cell(val x: Int, val y: Int) {
                 return listOf(t.a)
         }
 
-        return emptyList()
+        return null
     }
 
     companion object {
