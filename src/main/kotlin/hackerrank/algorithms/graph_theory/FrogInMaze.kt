@@ -3,8 +3,9 @@ package hackerrank.algorithms.graph_theory
 import java.util.*
 
 typealias Maze = Array<CharArray>
+typealias Tunnels = Array<Tunnel?>
 
-data class Tunnel(val x: Cell, val y: Cell)
+data class Tunnel(val a: Cell, val b: Cell)
 
 data class Cell(val x: Int, val y: Int) {
 
@@ -15,8 +16,20 @@ data class Cell(val x: Int, val y: Int) {
 
     private val moves = listOf(left, right, up, down)
 
-    fun availableMoves(maze: Maze): List<Cell> = moves.filter { move ->
-        (move.y <= maze.size - 1 && move.x <= maze[y].size - 1) && !OBSTACLES.contains(maze[move.y][move.x])
+    fun availableMoves(maze: Maze, tunnels: Tunnels): List<Cell> =
+        inTunnel(tunnels) ?: moves.filter { move ->
+            (move.y <= maze.size - 1 && move.x <= maze[y].size - 1) && !OBSTACLES.contains(maze[move.y][move.x])
+        }
+
+    private fun inTunnel(tunnels: Tunnels): List<Cell>? {
+        for (t in tunnels) {
+            if (t?.a == this)
+                return listOf(t.b)
+            if (t?.b == this)
+                return listOf(t.a)
+        }
+
+        return emptyList()
     }
 
     companion object {
@@ -29,7 +42,14 @@ data class Cell(val x: Int, val y: Int) {
 
 }
 
-fun calculateProbability(start: Cell, maze: Maze): Float = TODO()
+/**
+ * Find the frog
+ */
+fun findAlef(maze: Array<CharArray>): Cell {
+
+}
+
+fun calculateProbability(start: Cell, maze: Maze, tunnels: Tunnels): Float = TODO()
 
 fun main(args: Array<String>) {
     val scan = Scanner(System.`in`)
@@ -53,5 +73,7 @@ fun main(args: Array<String>) {
         // Write Your Code Here
         tunnels[kItr] = Tunnel(Cell(i1 - 1, j1 - 1), Cell(i2 - 1, j2 - 1))
     }
-    // Write Your Code Here
+    val alef = findAlef(maze)
+    calculateProbability(alef, maze, tunnels)
 }
+
