@@ -16,7 +16,7 @@ data class Cell(val x: Int, val y: Int) {
     private val moves = listOf(left, right, up, down)
 
     fun availableMoves(maze: Maze): List<Cell> = moves.filter { move ->
-        (move.y <= maze.size - 1 || move.x <= maze[y].size - 1) && !OBSTACLES.contains(maze[move.y][move.x])
+        (move.y <= maze.size - 1 && move.x <= maze[y].size - 1) && !OBSTACLES.contains(maze[move.y][move.x])
     }
 
     companion object {
