@@ -43,7 +43,12 @@ data class Cell(val x: Int, val y: Int) {
  * Find the frog
  */
 fun findAlef(maze: Array<CharArray>): Cell {
-
+    for (i in maze.indices) {
+        for (j in maze[i].indices)
+            if (maze[i][j] == Cell.ALEF)
+                return Cell(i, j)
+    }
+    throw IllegalStateException("Couldn't find Alef")
 }
 
 fun calculateProbability(start: Cell, maze: Maze, tunnels: Tunnels): Float = TODO()
