@@ -16,12 +16,7 @@ data class Cell(val x: Int, val y: Int) {
 
     private val moves = listOf(left, right, up, down)
 
-    fun availableMoves(maze: Maze, tunnels: Tunnels): List<Cell> =
-        inTunnel(tunnels) ?: moves.filter { move ->
-            (move.y <= maze.size - 1 && move.x <= maze[y].size - 1) && !OBSTACLES.contains(maze[move.y][move.x])
-        }
-
-    private fun inTunnel(tunnels: Tunnels): List<Cell>? {
+    fun availableMoves(maze: Maze, tunnels: Tunnels): List<Cell> {
         for (t in tunnels) {
             if (t?.a == this)
                 return listOf(t.b)
@@ -29,7 +24,9 @@ data class Cell(val x: Int, val y: Int) {
                 return listOf(t.a)
         }
 
-        return null
+        return moves.filter { move ->
+            (move.y <= maze.size - 1 && move.x <= maze[y].size - 1) && !OBSTACLES.contains(maze[move.y][move.x])
+        }
     }
 
     companion object {
@@ -76,4 +73,3 @@ fun main(args: Array<String>) {
     val alef = findAlef(maze)
     println(calculateProbability(alef, maze, tunnels))
 }
-
