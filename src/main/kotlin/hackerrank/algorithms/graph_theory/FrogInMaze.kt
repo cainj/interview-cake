@@ -18,9 +18,9 @@ data class Cell(val x: Int, val y: Int) {
 
     fun availableMoves(maze: Maze, tunnels: Tunnels): List<Cell> {
         for (t in tunnels) {
-            if (t?.a == this)
+            if (t?.a == this && !OBSTACLES.contains(maze[t.b.y][t.b.x]))
                 return listOf(t.b)
-            if (t?.b == this)
+            if (t?.b == this && !OBSTACLES.contains(maze[t.a.y][t.a.x]))
                 return listOf(t.a)
         }
 
