@@ -70,7 +70,6 @@ fun minimax(depth: Int, player: Char): Int {
         }
         return minEval
     }
-    return -1
 }
 
 fun isGameOver(player: Char): Boolean {
