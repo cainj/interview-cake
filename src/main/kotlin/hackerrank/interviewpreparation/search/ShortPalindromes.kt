@@ -8,11 +8,9 @@ fun shortPalindrome(s: String): Int {
     return solution
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val scan = Scanner(System.`in`)
-
     val s = scan.nextLine()
-
     val result = shortPalindrome(s)
 
     println(result)
