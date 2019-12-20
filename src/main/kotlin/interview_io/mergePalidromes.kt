@@ -29,7 +29,7 @@ A linear solution is expected
 //then take that index from that point on B and compare it to A
 // Length of A / 2 + Length of B / 2 = Length of the String  = O(n)
 
-fun palidrome(a: String, b: String): Int {
+fun palindrome(a: String, b: String): Int {
     val half = a.length / 2
     var index = 0
     for (i in a.indices) {
