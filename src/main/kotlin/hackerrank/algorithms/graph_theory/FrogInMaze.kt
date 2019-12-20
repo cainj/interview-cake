@@ -9,35 +9,44 @@ data class Tunnel(val a: Cell, val b: Cell)
 
 data class Cell(val x: Int, val y: Int) {
 
-    private val left = Cell(x, y - 1)
-    private val right = Cell(x, y + 1)
-    private val up = Cell(x - 1, y)
-    private val down = Cell(x + 1, y)
-
-    private val moves = listOf(left, right, up, down)
+    private fun moves() =
+        listOf(
+            Cell(x, y - 1),
+            Cell(x, y + 1),
+            Cell(x - 1, y), Cell(x + 1, y)
+        )
 
     fun availableMoves(maze: Maze, tunnels: Tunnels): List<Cell> {
-        for (t in tunnels) {
-            if (t?.a == this && !OBSTACLES.contains(maze[t.b.y][t.b.x]))
-                return listOf(t.b)
-            if (t?.b == this && !OBSTACLES.contains(maze[t.a.y][t.a.x]))
-                return listOf(t.a)
-        }
 
-        return moves.filter { move ->
-            (move.y <= maze.size - 1 && move.x <= maze[y].size - 1) && !OBSTACLES.contains(maze[move.y][move.x])
+        return moves().fold(listOf()) { accum, move ->
+            if (inBounds(move, maze) && maze[move.y][move.x] != WALL) {
+                val tunnel = inTunnel(move, tunnels)
+                when (tunnel != null) {
+                    true -> {
+                        if (tunnel.a == move)
+                            accum + tunnel.b
+                        else
+                            accum + tunnel.a
+                    }
+                    false -> accum + move
+                }
+            } else
+                accum
         }
     }
+
+    private fun inBounds(move: Cell, maze: Maze) =
+        (move.y <= maze.size - 1 && move.x <= maze[y].size - 1) && (move.x > -1 && move.y > -1)
 
     companion object {
-        private const val WALL = '#'
         const val ALEF = 'A'
-        private const val MINE = '*'
-        private const val EXIT = '%'
-        val OBSTACLES = setOf(WALL, MINE)
+        const val EXIT = '%'
+        private const val WALL = '#'
+        const val MINE = '*'
     }
-
 }
+
+fun inTunnel(c: Cell, tunnels: Tunnels): Tunnel? = tunnels.find { t -> t?.a == c || t?.b == c }
 
 /**
  * Find the frog
@@ -46,35 +55,54 @@ fun findAlef(maze: Array<CharArray>): Cell {
     for (i in maze.indices) {
         for (j in maze[i].indices)
             if (maze[i][j] == Cell.ALEF)
-                return Cell(i, j)
+                return Cell(j, i)
     }
     throw IllegalStateException("Couldn't find Alef")
 }
 
-fun calculateProbability(start: Cell, maze: Maze, tunnels: Tunnels): Float = TODO()
+var trapped = 0.0
+var exit = 0.0
 
-fun main(args: Array<String>) {
-    val scan = Scanner(System.`in`)
-    val nmk = scan.nextLine().split(" ")
-    val n = nmk[0].trim().toInt()
-    val m = nmk[1].trim().toInt()
-    val k = nmk[2].trim().toInt()
+fun calculateProbability(cell: Cell, maze: Maze, tunnels: Tunnels, visited: Set<Cell>) {
+    when {
+        Cell.MINE == maze[cell.y][cell.x] -> trapped++
+        Cell.EXIT == maze[cell.y][cell.x] -> exit++
+        else -> {
+            val moves = cell.availableMoves(maze, tunnels).filter { !visited.contains(it) }
+            if (moves.isEmpty()) trapped++
+            else
+                for (move in moves)
+                    calculateProbability(move, maze, tunnels, visited + move)
+        }
+    }
+
+}
+
+private val scanner: Scanner = Scanner(System.`in`)
+
+fun main() {
+    val nmk: Array<String> = scanner.nextLine().split(" ").toTypedArray()
+    val n = nmk[0].toInt()
+    val m = nmk[1].toInt()
+    val k = nmk[2].toInt()
     val maze = Array(n) { CharArray(m) }
     val tunnels = Array<Tunnel?>(k) { null }
-    for (nItr in 1..n) {
-        val row = scan.nextLine()
-        maze[nItr] = scan.next().toCharArray()
+
+    for (nItr in 0 until n) {
+        val row: String = scanner.nextLine()
+        maze[nItr] = row.toCharArray()
+    }
+    for (kItr in 0 until k) {
+        val i1J1I2J2: Array<String> = scanner.nextLine().split(" ").toTypedArray()
+        val i1 = i1J1I2J2[0].toInt()
+        val j1 = i1J1I2J2[1].toInt()
+        val i2 = i1J1I2J2[2].toInt()
+        val j2 = i1J1I2J2[3].toInt()
+        tunnels[kItr] = Tunnel(Cell(j1 - 1, i1 - 1), Cell(j2 - 1, i2 - 1))
     }
 
-    for (kItr in 1..k) {
-        val sc = scan.nextLine().split(" ")
-        val i1 = sc[0].trim().toInt()
-        val j1 = sc[1].trim().toInt()
-        val i2 = sc[2].trim().toInt()
-        val j2 = sc[3].trim().toInt()
-        // Write Your Code Here
-        tunnels[kItr] = Tunnel(Cell(i1 - 1, j1 - 1), Cell(i2 - 1, j2 - 1))
-    }
     val alef = findAlef(maze)
-    println(calculateProbability(alef, maze, tunnels))
+    calculateProbability(alef, maze, tunnels, setOf(alef))
+    val probability: Double = if (trapped + exit == 0.0) 0.0 else exit / (trapped + exit)
+    println(probability)
 }
