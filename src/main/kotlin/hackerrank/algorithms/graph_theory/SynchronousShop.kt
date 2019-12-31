@@ -17,10 +17,10 @@ fun shop(n: Int, k: Int, centers: Array<String>, roads: Array<Array<Int>>): Int 
 }
 
 fun main(args: Array<String>) {
-    val first_multiple_input = readLine()!!.trimEnd().split(" ")
-    val n = first_multiple_input[0].toInt()
-    val m = first_multiple_input[1].toInt()
-    val k = first_multiple_input[2].toInt()
+    val firstMultipleInput = readLine()!!.trimEnd().split(" ")
+    val n = firstMultipleInput[0].toInt()
+    val m = firstMultipleInput[1].toInt()
+    val k = firstMultipleInput[2].toInt()
 
     val centers = Array<String>(n) { "" }
     for (i in 0 until n) {

@@ -24,7 +24,7 @@ val up_left = (-1 to -1)
 val down_left = (-1 to 1)
 
 typealias Pos = Pair<Int, Int>
-typealias Board = Array<Array<String>>
+private typealias Board = Array<Array<String>>
 
 data class Piece(val pos: Pos, val type: Char, val color: Char) {
     fun makeMove(move: Pos): Piece = this.copy(pos = move)
