@@ -1,4 +1,4 @@
-package interview_io
+package interviewio
 
 fun grep(haystack: String, needle: String): List<Int> {
 

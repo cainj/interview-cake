@@ -1,4 +1,4 @@
-package hackerrank.algorithms.graph_theory
+package hackerrank.algorithms.graphtheory
 
 import java.util.*
 

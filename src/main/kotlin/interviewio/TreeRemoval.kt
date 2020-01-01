@@ -1,4 +1,4 @@
-package interview_io
+package interviewio
 
 // To execute Kotlin code, please define a top level function named main
 
@@ -27,6 +27,7 @@ fun deleteNodes(root: TreeNode?): List<TreeNode> {
     return deleteHelper(root, null, mutableListOf())
 }
 
+@Suppress("ComplexCondition")
 fun deleteHelper(currentNode: TreeNode?, parentNode: TreeNode?, accum: MutableList<TreeNode>): List<TreeNode> {
 
     if ((parentNode != null && shouldDelete(parentNode)) && (currentNode != null && !shouldDelete(currentNode))) {

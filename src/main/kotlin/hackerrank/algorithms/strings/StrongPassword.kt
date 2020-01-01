@@ -18,7 +18,7 @@ fun minimumNumber(length: Int, password: String): Int {
 
     for (c in password) {
 
-        if(violations.size ==0)
+        if (violations.size == 0)
             break
 
         when (c.toInt()) {
@@ -35,7 +35,8 @@ fun minimumNumber(length: Int, password: String): Int {
             val newPassword = password.length + violations.size
 
             //after we apply if it's less than required length then 6 - length
-            if( newPassword < REQUIRED_LENGTH) REQUIRED_LENGTH - length
+            if (newPassword < REQUIRED_LENGTH)
+                REQUIRED_LENGTH - length
             else
                 violations.size
         }

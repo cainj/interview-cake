@@ -1,9 +1,5 @@
 package hackerrank.algorithms.recursions
 
-import java.util.*
-import kotlin.math.max
-import kotlin.math.min
-
 /**
  * 4 bQ
  * 3
@@ -11,6 +7,11 @@ import kotlin.math.min
  * 1   wQ
  *   A B C D
  */
+
+
+import java.util.*
+import kotlin.math.max
+import kotlin.math.min
 
 const val EMPTY = "  "
 val map = mapOf('A' to 0, 'B' to 1, 'C' to 2, 'D' to 3, '1' to 3, '2' to 2, '3' to 1, '4' to 0)
@@ -40,6 +41,7 @@ fun simplifiedChessEngine(whites: Array<Array<Char>>, blacks: Array<Array<Char>>
     return if (alphaBeta(0, Int.MIN_VALUE, Int.MAX_VALUE, 'w', wh, bl) == -2) "YES" else "NO"
 }
 
+@Suppress("ComplexCondition", "LongMethod")
 fun alphaBeta(
     depth: Int,
     alpha: Int,
@@ -52,7 +54,6 @@ fun alphaBeta(
     if (player == 'w') {
         if (isGameOver(whitePieces)) return -1
         val board = createTransitionBoard(whitePieces + blackPieces)
-        printBoard(board)
         var best = Integer.MAX_VALUE
         var newBeta = beta
         for (piece in whitePieces) {
@@ -90,7 +91,6 @@ fun alphaBeta(
         var newAlpha = alpha
         for (piece in blackPieces) {
             val board = createTransitionBoard(whitePieces + blackPieces)
-            printBoard(board)
             val moves = availableMoves(piece, board)
             val wp = whitePieces.toMutableList()
             val bp = blackPieces.toMutableList()
@@ -164,6 +164,7 @@ fun rookMoves(pos: Pos, board: Board) = findAvailableMoves(arrayOf(up, down, lef
 fun bishopMoves(pos: Pos, board: Board) =
     findAvailableMoves(arrayOf(up_left, up_right, down_left, down_right), pos, board)
 
+@Suppress("ComplexCondition")
 fun findAvailableMoves(moves: Array<Pos>, pos: Pos, board: Board): List<Pos> {
     val mutableList = mutableListOf<Pos>()
     for (move in moves) {
