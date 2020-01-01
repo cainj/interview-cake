@@ -1,3 +1,5 @@
+package hackerrank.algorithms.strings
+
 import java.util.*
 
 // Complete the palindromeIndex function below.
@@ -17,9 +19,8 @@ fun palindromeIndex(s: String): Int {
     return -1
 }
 
-fun main(args: Array<String>) {
+fun main() {
     val scan = Scanner(System.`in`)
-
     val q = scan.nextLine().trim().toInt()
 
     for (qItr in 1..q) {
