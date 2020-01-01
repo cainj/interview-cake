@@ -8,6 +8,7 @@ val numbersRange = (48..57)
 val specialCharsRange = (33..47)
 val upperCaseRange = (65..90)
 val lowercaseRange = (97..122)
+const val REQUIRED_LENGTH = 6
 
 // Complete the minimumNumber function below.
 fun minimumNumber(length: Int, password: String): Int {
@@ -15,19 +16,26 @@ fun minimumNumber(length: Int, password: String): Int {
     //We traverse through the string by each character.  Checking the character
     //to make sure that it meets the requirement each requirement
 
-    for (c in password)
+    for (c in password) {
+
+        if(violations.size ==0)
+            break
+
         when (c.toInt()) {
             in upperCaseRange -> violations.remove(1)
             in lowercaseRange -> violations.remove(2)
             in numbersRange -> violations.remove(3)
             in specialCharsRange -> violations.remove(4)
         }
+    }
 
     return when {
-        length < 6 -> {
+        length < REQUIRED_LENGTH -> {
+            //apply violations to newPassword count
             val newPassword = password.length + violations.size
-            if( newPassword < 6)
-                6 - newPassword + violations.size
+
+            //after we apply if it's less than required length then 6 - length
+            if( newPassword < REQUIRED_LENGTH) REQUIRED_LENGTH - length
             else
                 violations.size
         }
