@@ -2,13 +2,10 @@ package interviewcake
 
 import java.util.*
 import kotlin.math.abs
-import kotlin.math.max
 
 data class NodeDepthPair(val node: BinaryTreeNode, val depth: Int)
 
-fun isBalanced(treeRoot: BinaryTreeNode): Boolean {
-    return depthNodePair(treeRoot)
-}
+fun isBalanced(treeRoot: BinaryTreeNode): Boolean = depthNodePair(treeRoot)
 
 private fun depthNodePair(treeRoot: BinaryTreeNode?): Boolean {
     if (treeRoot == null) return true
@@ -24,15 +21,11 @@ private fun depthNodePair(treeRoot: BinaryTreeNode?): Boolean {
 
         if (isLeafNode(node)) {
 
-            if (!depths.contains(depth)) {
+            if (!depths.contains(depth))
                 depths.add(depth)
-            }
 
-            if (depths.size > 2 || (depths.size == 2
-                        && abs(depths[0] - depths[1]) > 1)
-            ) {
+            if (depths.size > 2 || (depths.size == 2 && abs(depths[0] - depths[1]) > 1))
                 return false
-            }
 
         } else {
             if (node.left != null)
