@@ -4,6 +4,8 @@ import ibotta.datastructures.HashMap.Companion.emptyHashMap
 
 class HashMap<K, T>(private var capacity: Int = MAX_CAPACITY, private var loadFactor: Float = INITIAL_LOAD_FACTOR) {
 
+    private var store: Array<MutableList<MapEntry<K, T>>> = Array(capacity) { mutableListOf<MapEntry<K, T>>() }
+
     var size: Int = 0
 
     init {
@@ -14,8 +16,6 @@ class HashMap<K, T>(private var capacity: Int = MAX_CAPACITY, private var loadFa
     }
 
     data class MapEntry<K, T>(var key: K, var value: T)
-
-    private var store: Array<MutableList<MapEntry<K, T>>> = Array(capacity) { mutableListOf<MapEntry<K, T>>() }
 
     operator fun set(key: K, value: T) {
         when (get(key)) {
@@ -68,7 +68,7 @@ class HashMap<K, T>(private var capacity: Int = MAX_CAPACITY, private var loadFa
 
     companion object {
         fun <K, T> emptyHashMap() = HashMap<K, T>()
-        const val MAX_CAPACITY = 512
+        const val MAX_CAPACITY = 512 //make sure that it's the power of 2 minimize collisions
         const val INITIAL_LOAD_FACTOR = .75f
     }
 
