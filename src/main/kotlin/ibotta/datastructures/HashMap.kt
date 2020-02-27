@@ -2,9 +2,9 @@ package ibotta.datastructures
 
 import ibotta.datastructures.HashMap.Companion.emptyHashMap
 
-class HashMap<K, T>(private var capacity: Int = MAX_CAPACITY, private var loadFactor: Float = INITIAL_LOAD_FACTOR) {
+class HashMap<K, V>(private var capacity: Int = MAX_CAPACITY, private var loadFactor: Float = INITIAL_LOAD_FACTOR) {
 
-    private var store: Array<MutableList<MapEntry<K, T>>> = Array(capacity) { mutableListOf<MapEntry<K, T>>() }
+    private var store: Array<MutableList<MapEntry<K, V>>> = Array(capacity) { mutableListOf<MapEntry<K, V>>() }
 
     var size: Int = 0
 
@@ -15,9 +15,9 @@ class HashMap<K, T>(private var capacity: Int = MAX_CAPACITY, private var loadFa
             loadFactor = INITIAL_LOAD_FACTOR
     }
 
-    data class MapEntry<K, T>(var key: K, var value: T)
+    data class MapEntry<K, V>(var key: K, var value: V)
 
-    operator fun set(key: K, value: T) {
+    operator fun set(key: K, value: V) {
         when (get(key)) {
             null -> {
                 rehash()
@@ -29,7 +29,7 @@ class HashMap<K, T>(private var capacity: Int = MAX_CAPACITY, private var loadFa
     }
 
     /** Returns the value to which the specified key is mapped */
-    operator fun get(key: K): T? {
+    operator fun get(key: K): V? {
         val entries = store[hash(key)]
         for (value in entries)
             if (value.key == key)
@@ -54,7 +54,7 @@ class HashMap<K, T>(private var capacity: Int = MAX_CAPACITY, private var loadFa
         if ( size.toFloat() / store.size > loadFactor) {
             capacity *= 2
             val temp = store
-            store = Array(capacity * 2) { mutableListOf<MapEntry<K, T>>() }
+            store = Array(capacity * 2) { mutableListOf<MapEntry<K, V>>() }
             for (entries in temp)
                 for(entry in entries)
                     this[entry.key] = entry.value
@@ -64,10 +64,10 @@ class HashMap<K, T>(private var capacity: Int = MAX_CAPACITY, private var loadFa
 
     private fun hash(key: K): Int = key.hashCode() % store.size
 
-    private fun findEntry(key: K): MapEntry<K, T> = store[hash(key)].find { it.key == key }!!
+    private fun findEntry(key: K): MapEntry<K, V> = store[hash(key)].find { it.key == key }!!
 
     companion object {
-        fun <K, T> emptyHashMap() = HashMap<K, T>()
+        fun <K, V> emptyHashMap() = HashMap<K, V>()
         const val MAX_CAPACITY = 512 //make sure that it's the power of 2 minimize collisions
         const val INITIAL_LOAD_FACTOR = .75f
     }
