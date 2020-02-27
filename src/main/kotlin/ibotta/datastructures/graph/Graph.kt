@@ -120,7 +120,7 @@ fun main() {
 }
 
 fun unweightedGraphShortestPathTest() {
-    val straightLine = Graph<Int>()
+    val straightLine = Graph()
     (1..10).forEach { straightLine.addVertex(it.toString()) }
     straightLine.addEdge("1", "2")
     straightLine.addEdge("2", "3")
