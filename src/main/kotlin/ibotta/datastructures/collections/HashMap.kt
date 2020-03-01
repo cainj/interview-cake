@@ -1,11 +1,8 @@
-package ibotta.datastructures
-
-import ibotta.datastructures.HashMap.Companion.emptyHashMap
+package ibotta.datastructures.collections
 
 class HashMap<K, V>(private var capacity: Int = MAX_CAPACITY, private var loadFactor: Float = INITIAL_LOAD_FACTOR) {
 
     private var store: Array<MutableList<MapEntry<K, V>>> = Array(capacity) { mutableListOf<MapEntry<K, V>>() }
-
     var size: Int = 0
 
     init {
@@ -72,25 +69,4 @@ class HashMap<K, V>(private var capacity: Int = MAX_CAPACITY, private var loadFa
         const val INITIAL_LOAD_FACTOR = .75f
     }
 
-}
-
-fun main() {
-    val hashMap = emptyHashMap<Any, Any>()
-    hashMap[1] = 1
-    check(hashMap[1] == 1)
-    hashMap[1] = 2
-    hashMap[2] = 2
-    hashMap[3] = 3
-    check(hashMap[1] == 2)
-    check(hashMap[2] == 2)
-    check(hashMap[3] == 3)
-    println(hashMap.size)
-    check(hashMap.size == 3)
-    hashMap.remove(1)
-    hashMap.remove(2)
-    check(hashMap.size == 1)
-    hashMap["this"] = "that"
-    hashMap["yin"] = "yang"
-    check(hashMap["this"] == "that")
-    check(hashMap["yin"] == "yang")
 }
