@@ -1,14 +1,15 @@
 package ibotta.datastructures.collection
 
 import ibotta.datastructures.collections.Queue
+import ibotta.datastructures.collections.QueueTwoStacks
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
-class QueueTest {
+class QueueTwoStacksTest {
 
     @Test
     fun basicOperations() {
-        val queue = Queue<Int>()
+        val queue = QueueTwoStacks<Int>()
         queue.enqueue(0)
         queue.enqueue(1)
         queue.enqueue(2)

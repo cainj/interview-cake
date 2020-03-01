@@ -97,7 +97,7 @@ class List<T>(vararg elements: T) {
     }
 
     fun kthFromLast(kth: Int): T {
-        if(kth >= size) throw IndexOutOfBoundsException("kth $kth is out of bounds.")
+        if (kth >= size) throw IndexOutOfBoundsException("kth $kth is out of bounds.")
 
         var counter = 0
         var current = head
@@ -121,6 +121,8 @@ class List<T>(vararg elements: T) {
     fun first(): T? = head?.data
 
     fun last(): T? = tail?.data
+
+    fun isEmpty(): Boolean = size == 0
 
     override fun toString(): String {
         val buffer = StringBuffer("[${head?.data}")
