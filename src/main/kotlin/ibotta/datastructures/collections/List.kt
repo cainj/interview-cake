@@ -115,7 +115,24 @@ class List<T>(vararg elements: T) {
     }
 
     fun interleave(other: List<T>): List<T> {
-        TODO()
+        var otherCurrent = other.head
+        var current = head
+        val iList = List<T>()
+
+        while(current != null || otherCurrent != null){
+
+            if(current != null) {
+                iList.append(current.data)
+                current = current.next
+            }
+
+            if(otherCurrent != null) {
+                iList.append(otherCurrent.data)
+                otherCurrent = otherCurrent.next
+            }
+        }
+
+        return iList
     }
 
     fun first(): T? = head?.data
@@ -123,6 +140,12 @@ class List<T>(vararg elements: T) {
     fun last(): T? = tail?.data
 
     fun isEmpty(): Boolean = size == 0
+
+    fun removeAll() {
+        head = null
+        tail = head
+        size = 0
+    }
 
     override fun toString(): String {
         val buffer = StringBuffer("[${head?.data}")
@@ -135,6 +158,16 @@ class List<T>(vararg elements: T) {
 
         buffer.append("]")
         return String(buffer)
+    }
+
+    /** Just for testing **/
+    override fun equals(other: Any?): Boolean = other.toString() == this.toString()
+
+    override fun hashCode(): Int {
+        var result = head?.hashCode() ?: 0
+        result = 31 * result + (tail?.hashCode() ?: 0)
+        result = 31 * result + size
+        return result
     }
 
     companion object {

@@ -4,7 +4,6 @@ import ibotta.datastructures.collections.List
 import ibotta.datastructures.collections.Node
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
-import java.lang.IndexOutOfBoundsException
 
 class ListTest {
 
@@ -33,6 +32,12 @@ class ListTest {
         Assertions.assertEquals(list.contains(4), true)
         list.insertAt(2, 2)
         Assertions.assertEquals(list.contains(2), true)
+        Assertions.assertEquals(list.isEmpty(), false)
+        Assertions.assertEquals(list.size, 5)
+        list.removeAll()
+        Assertions.assertEquals(list.size, 0)
+        Assertions.assertEquals(list.first(), null)
+        Assertions.assertEquals(list.last(), null)
     }
 
     @Test
@@ -42,7 +47,22 @@ class ListTest {
         Assertions.assertEquals(list.kthFromLast(2), 4)
         Assertions.assertEquals(list.kthFromLast(5), 1)
         Assertions.assertEquals(list.kthFromLast(6), 0)
-        Assertions.assertThrows(IndexOutOfBoundsException::class.java){list.kthFromLast(7)}
+        Assertions.assertThrows(IndexOutOfBoundsException::class.java) { list.kthFromLast(7) }
+    }
+
+    @Test
+    fun interleave() {
+        var list = List(5, 7, 17, 13, 11)
+        val interleave = list.interleave(List(12, 10, 2, 4, 6))
+        Assertions.assertEquals(interleave, List(5, 12, 7, 10, 17, 2, 13, 4, 11, 6))
+
+        list = List(5, 7, 17, 13, 11)
+        val moreThisThanThat = list.interleave(List(12, 10, 2))
+        Assertions.assertEquals(moreThisThanThat, List(5, 12, 7, 10, 17, 2, 13, 11))
+
+        list = List(5, 7)
+        val moreThatThanThis = list.interleave(List(12, 10, 2, 4, 6))
+        Assertions.assertEquals(moreThatThanThis, List(5, 12, 7, 10, 2, 4, 6))
     }
 
     @Test
