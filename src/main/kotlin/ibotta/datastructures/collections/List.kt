@@ -119,14 +119,14 @@ class List<T>(vararg elements: T) {
         var current = head
         val iList = List<T>()
 
-        while(current != null || otherCurrent != null){
+        while (current != null || otherCurrent != null) {
 
-            if(current != null) {
+            if (current != null) {
                 iList.append(current.data)
                 current = current.next
             }
 
-            if(otherCurrent != null) {
+            if (otherCurrent != null) {
                 iList.append(otherCurrent.data)
                 otherCurrent = otherCurrent.next
             }
@@ -148,7 +148,7 @@ class List<T>(vararg elements: T) {
     }
 
     override fun toString(): String {
-        val buffer = StringBuffer("[${head?.data}")
+        val buffer = StringBuffer("[${if (head?.data == null) "" else head!!.data.toString()}")
         var current = head?.next
 
         while (current != null) {
