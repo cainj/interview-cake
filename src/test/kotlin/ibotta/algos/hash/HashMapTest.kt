@@ -1,6 +1,6 @@
-package ibotta.datastructures.collection
+package ibotta.algos.hash
 
-import ibotta.datastructures.collections.HashMap
+import ibotta.algos.hash.HashMap
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 

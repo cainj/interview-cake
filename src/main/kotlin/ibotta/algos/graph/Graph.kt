@@ -1,4 +1,4 @@
-package ibotta.datastructures.graph
+package ibotta.algos.graph
 
 import java.util.*
 

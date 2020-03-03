@@ -1,6 +1,5 @@
-package ibotta.datastructures.collection
+package ibotta.algos.stacks_queues
 
-import ibotta.datastructures.collections.Stack
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 

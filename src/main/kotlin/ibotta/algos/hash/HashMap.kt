@@ -1,4 +1,4 @@
-package ibotta.datastructures.collections
+package ibotta.algos.hash
 
 class HashMap<K, V>(private var capacity: Int = MAX_CAPACITY, private var loadFactor: Float = INITIAL_LOAD_FACTOR) {
 
