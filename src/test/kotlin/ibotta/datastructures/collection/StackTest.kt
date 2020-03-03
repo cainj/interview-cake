@@ -22,8 +22,11 @@ class StackTest {
         stack.push(4)
         Assertions.assertEquals(stack.peek(), 4)
         Assertions.assertEquals(stack.pop(), 4)
+        Assertions.assertEquals(stack.peek(), 3)
         Assertions.assertEquals(stack.pop(), 3)
+        Assertions.assertEquals(stack.peek(), 2)
         Assertions.assertEquals(stack.pop(), 2)
+        Assertions.assertEquals(stack.peek(), 1)
         Assertions.assertEquals(stack.pop(), 1)
     }
 }

@@ -1,6 +1,5 @@
-package ibotta.datastructures
+package ibotta.datastructures.graph
 
-import ibotta.datastructures.graph.Graph
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
