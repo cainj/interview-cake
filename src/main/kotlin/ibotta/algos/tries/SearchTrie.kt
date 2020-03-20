@@ -2,7 +2,7 @@ package ibotta.algos.tries
 
 
 /**
- *  Trie are used for storing a collection of strings, ie dictionary, prefix search, etc.
+ *  Trie are used for storing a collection of strings in lexicographic order, ie dictionary, prefix search, etc.
  *
  *  The trie below represents a storing the following words: ace, all, ale, ally, me , pie, peel.
  *
