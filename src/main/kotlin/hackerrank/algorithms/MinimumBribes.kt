@@ -2,8 +2,6 @@ package hackerrank.algorithms
 
 import java.util.*
 
-typealias Pos = Pair<Int, Int>
-
 // Complete the minimumBribes function below.
 fun minimumBribes(q: Array<Int>) {
     var bribes = 0
