@@ -1,9 +1,9 @@
-package ibotta.algos.stacks_queues
+package ibotta.algos.collections
 
 class QueueTwoStacks<T> {
 
     private val out: Stack<T> = Stack()
-    private val `in`: Stack<T> = Stack()
+    private val incoming: Stack<T> = Stack()
 
     fun dequeue(): T? {
         fill()
@@ -11,7 +11,7 @@ class QueueTwoStacks<T> {
         return out.pop()
     }
 
-    fun enqueue(element: T) = `in`.push(element)
+    fun enqueue(element: T) = incoming.push(element)
 
     fun peek(): T? {
         fill()
@@ -20,8 +20,7 @@ class QueueTwoStacks<T> {
 
     private fun fill() {
         if (out.peek() == null)
-            while (`in`.peek() != null)
-                out.push(`in`.pop()!!)
+            while (incoming.peek() != null)
+                out.push(incoming.pop()!!)
     }
-
 }

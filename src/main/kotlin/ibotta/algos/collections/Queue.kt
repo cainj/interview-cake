@@ -1,4 +1,4 @@
-package ibotta.algos.stacks_queues
+package ibotta.algos.collections
 
 class Queue<T> {
 
@@ -8,7 +8,7 @@ class Queue<T> {
     fun dequeue(): T? {
         val temp = head?.data
         head = head?.next
-        if(head == null)
+        if (head == null)
             tail = null
 
         return temp

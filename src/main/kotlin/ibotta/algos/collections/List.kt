@@ -1,4 +1,4 @@
-package ibotta.algos.stacks_queues
+package ibotta.algos.collections
 
 class Node<T>(val data: T, var next: Node<T>? = null)
 

@@ -23,10 +23,9 @@ package ibotta.algos.tries
  *
  *  Note: '*' in the tree indicates end of word
  */
-
-class Node(var value: Char = ' ', var endOfWord: Boolean = false, val children: HashMap<Char, Node> = hashMapOf())
-
 class SearchTrie {
+
+    class Node(var value: Char = ' ', var endOfWord: Boolean = false, val children: HashMap<Char, Node> = hashMapOf())
 
     private val rootNode = Node()
 

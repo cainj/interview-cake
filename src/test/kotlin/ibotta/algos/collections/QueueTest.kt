@@ -1,13 +1,13 @@
-package ibotta.algos.stacks_queues
+package ibotta.algos.collections
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
-class QueueTwoStacksTest {
+class QueueTest {
 
     @Test
     fun basicOperations() {
-        val queue = QueueTwoStacks<Int>()
+        val queue = Queue<Int>()
         queue.enqueue(0)
         queue.enqueue(1)
         queue.enqueue(2)

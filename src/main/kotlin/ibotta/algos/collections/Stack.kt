@@ -1,4 +1,4 @@
-package ibotta.algos.stacks_queues
+package ibotta.algos.collections
 
 class Stack<T> {
 

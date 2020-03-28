@@ -1,4 +1,4 @@
-package ibotta.algos.stacks_queues
+package ibotta.algos.collections
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
