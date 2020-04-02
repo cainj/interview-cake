@@ -1,5 +1,6 @@
 package leetcode.challenge
 
+import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 
 class SingleNumberTest {
@@ -7,8 +8,8 @@ class SingleNumberTest {
 
     @Test
     fun singleNumber() {
-        println(sn.singleNumberSort(intArrayOf(4, 1, 2, 1, 2, 4, 3, 3, 9, 9, 8)))
-        println(sn.singleNumberSort(intArrayOf( 1)))
-        println(sn.singleNumberSort(intArrayOf(4, 1, 2, 1, 2, 4, 3, 3, 9, 9, 8)))
+        Assertions.assertEquals(sn.singleNumber(intArrayOf(4, 1, 2, 1, 2, 4, 3, 3, 9, 9, 8)), 8)
+        Assertions.assertEquals(sn.singleNumberBit(intArrayOf(4, 1, 2, 1, 2, 4, 3, 3, 9, 9, 8)), 8)
+        Assertions.assertEquals(sn.singleNumberSort(intArrayOf(4, 1, 2, 1, 2, 4, 3, 3, 9, 9, 8)), 8)
     }
 }
