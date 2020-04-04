@@ -12,7 +12,7 @@ class MaximumSubArray {
             currentMax = max(currentMax + nums[i], nums[i])
             maxSum = max(currentMax, maxSum)
         }
-
+        
         return maxSum
     }
 }
