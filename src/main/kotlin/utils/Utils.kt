@@ -1,13 +1,13 @@
 package utils
 
-fun <T> swap(i: Int, j: Int, array: Array<T>) {
-    val hold = array[i]
-    array[i] = array[j]
-    array[j] = hold
+fun <T> Array<T>.swap(i: Int, j: Int) {
+    val hold = this[i]
+    this[i] = this[j]
+    this[j] = hold
 }
 
-fun swap(i: Int, j: Int, array: CharArray) {
-    val hold = array[i]
-    array[i] = array[j]
-    array[j] = hold
+fun CharArray.swap(i: Int, j: Int) {
+    val hold = this[i]
+    this[i] = this[j]
+    this[j] = hold
 }

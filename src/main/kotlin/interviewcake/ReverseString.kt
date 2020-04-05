@@ -6,7 +6,7 @@ fun reverseString(chars: CharArray): CharArray {
     var beginIndex = 0
     var lastIndex = chars.size - 1
     while (beginIndex < lastIndex) {
-        swap(beginIndex, lastIndex, chars)
+        chars.swap(beginIndex, lastIndex)
         beginIndex++
         lastIndex--
     }

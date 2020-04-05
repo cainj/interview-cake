@@ -20,7 +20,7 @@ fun partitionReverse(beginIndex: Int, lastIndex: Int, actual: CharArray) {
     var i = beginIndex
     var j = lastIndex
     while (i < j) {
-        swap(i, j, actual)
+        actual.swap(i, j)
         i++
         j--
     }

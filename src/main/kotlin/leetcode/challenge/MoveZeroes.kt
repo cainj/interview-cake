@@ -6,6 +6,7 @@ class MoveZeroes {
 
         var lastKnownZero = findZero(nums, 0)
         var i = lastKnownZero
+
         while (i < nums.size && lastKnownZero != -1) {
             if (nums[i] != 0) {
                 nums[lastKnownZero] = nums[i]

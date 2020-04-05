@@ -9,7 +9,7 @@ fun countSwaps(a: Array<Int>) {
     for (i in a.indices) {
         for (j in i until a.size) {
             if (a[i] > a[j]) {
-                swap(i, j, a)
+                a.swap(i, j)
                 swaps++
             }
         }

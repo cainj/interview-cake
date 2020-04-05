@@ -15,7 +15,7 @@ fun colorGraph(graph: Array<GraphNode>, colors: Array<String>) {
 
 private fun shuffle(array: Array<String>): Set<String> {
     for (i in array.indices)
-        swap(random(i, array.size), array.size - 1, array)
+        array.swap(random(i, array.size), array.size - 1)
     return array.toSet()
 }
 

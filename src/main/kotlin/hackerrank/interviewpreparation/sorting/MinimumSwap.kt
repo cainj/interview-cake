@@ -12,7 +12,7 @@ fun minimumSwaps(arr: Array<Int>): Int {
         while (arr[first] == first + 1 && first < last)
             first++
         if (first < last) {
-            swap(arr[first] - 1, first, arr)
+            arr.swap(arr[first] - 1, first)
             swap++
         }
     }

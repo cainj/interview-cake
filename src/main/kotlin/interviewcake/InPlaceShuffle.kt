@@ -10,7 +10,7 @@ fun shuffle(intArray: Array<Char>) {
     for (index in intArray.indices) {
         val random = getRandom(index, intArray.size - 1)
         if (index != random)
-            swap(index, random, intArray)
+            intArray.swap(index, random)
     }
 }
 
