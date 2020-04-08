@@ -3,16 +3,15 @@ package leetcode.challenge
 class CountElements {
 
     fun countElements(arr: IntArray): Int {
-        val keys = IntArray(1001)
+        val keys = hashSetOf<Int>()
 
-        for(i in arr.indices)
-            keys[arr[i]] = keys[arr[i]] + 1
+        for(i in arr)
+            keys.add(i)
 
         var count = 0
-        
-        for(i in 0 until keys.size - 1)
-            if(keys[i] > 0 && keys[i + 1] > 0)
-                count += keys[i]
+        for(i in arr)
+            if(keys.contains(i + 1))
+                count++
 
         return count
     }
