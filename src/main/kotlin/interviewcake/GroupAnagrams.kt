@@ -2,11 +2,11 @@ package interviewcake
 
 class GroupAnagrams {
 
-    fun groupAnagrams(strs: Array<String>): List<List<String>> {
-        val anagrams = hashMapOf<String, MutableList<String>>()
+    fun groupAnagrams(strings: Array<String>): List<List<String>> {
+        val anagrams = hashMapOf<Int, MutableList<String>>()
 
-        for (s in strs) {
-            val grams = anagrams.getOrDefault(s.key(), mutableListOf<String>())
+        for (s in strings) {
+            val grams = anagrams.getOrDefault(s.key(), mutableListOf())
             grams.add(s)
             anagrams[s.key()] = grams
         }
@@ -14,9 +14,5 @@ class GroupAnagrams {
         return anagrams.values.toList()
     }
 
-    private fun String.key(): String {
-        val chars = this.toCharArray()
-        chars.sort()
-        return String(chars)
-    }
+    private fun String.key(): Int = this.toCharArray().sumBy { it.toInt() }
 }

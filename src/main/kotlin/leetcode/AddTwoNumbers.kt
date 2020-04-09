@@ -1,7 +1,7 @@
 package leetcode
 
-data class ListNode(var `val`: Int, var next: ListNode? = null)
 
+data class ListNode(var `val`: Int, var next: ListNode? = null)
 
 fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
     //traverse through the nodes until both node equal null
