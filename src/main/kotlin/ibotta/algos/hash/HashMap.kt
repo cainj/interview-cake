@@ -48,12 +48,12 @@ class HashMap<K, V>(private var capacity: Int = MAX_CAPACITY, private var loadFa
     }
 
     private fun rehash() {
-        if ( size.toFloat() / store.size > loadFactor) {
+        if (size.toFloat() / store.size > loadFactor) {
             capacity *= 2
             val temp = store
             store = Array(capacity * 2) { mutableListOf<MapEntry<K, V>>() }
             for (entries in temp)
-                for(entry in entries)
+                for (entry in entries)
                     this[entry.key] = entry.value
         }
 

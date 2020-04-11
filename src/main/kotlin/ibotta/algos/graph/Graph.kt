@@ -70,7 +70,6 @@ class Graph(private val bidirectional: Boolean = false) {
 
         val distance = distanceMap[getVertex(goalId)] ?: -1
         // find goal then work backwards 0(n)
-        // TODO: probably could build the path while calculating the distance
         var current: Vertex? = getVertex(goalId)
         var path = emptyList<Vertex>()
 

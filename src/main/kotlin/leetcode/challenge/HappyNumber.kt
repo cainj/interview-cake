@@ -2,12 +2,14 @@ package leetcode.challenge
 
 
 class HappyNumber {
+
     fun isHappy(n: Int): Boolean {
+
         val set = hashSetOf<Int>()
         var ans = next(n)
 
-        while(ans != 1){
-            if(!set.contains(ans))
+        while (ans != 1) {
+            if (!set.contains(ans))
                 set.add(ans)
             else
                 return false

@@ -18,7 +18,7 @@ class SingleNumber {
             if (nums[i] != nums[i + 1]) {
                 return when {
                     i == 0 -> nums[0]
-                    nums[i-1] != nums[i] -> nums[i]
+                    nums[i - 1] != nums[i] -> nums[i]
                     else -> nums[i + 1]
                 }
             }

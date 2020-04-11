@@ -1,4 +1,4 @@
-package interviewcake
+package leetcode.challenge
 
 class GroupAnagrams {
 
