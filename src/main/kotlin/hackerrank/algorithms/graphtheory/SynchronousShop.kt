@@ -22,13 +22,13 @@ fun main(args: Array<String>) {
     val m = firstMultipleInput[1].toInt()
     val k = firstMultipleInput[2].toInt()
 
-    val centers = Array<String>(n) { "" }
+    val centers = Array(n) { "" }
     for (i in 0 until n) {
         val centersItem = readLine()!!
         centers[i] = centersItem
     }
 
-    val roads = Array<Array<Int>>(m) { Array<Int>(3) { 0 } }
+    val roads = Array(m) { Array(3) { 0 } }
     for (i in 0 until m) {
         roads[i] = readLine()!!.trimEnd().split(" ").map { it.toInt() }.toTypedArray()
     }

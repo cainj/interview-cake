@@ -10,9 +10,9 @@ class LastStoneWeight {
         for (i in stones.indices)
             sortedStones.add(stones[i])
 
-        while (sortedStones.size > 1) {
+        while (sortedStones.size > 1)
             smash(sortedStones)
-        }
+
         return if (sortedStones.isEmpty()) 0 else sortedStones.peek()
     }
 
