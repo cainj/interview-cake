@@ -63,7 +63,7 @@ fun inorderTraversal(root: TreeNode?, order: MutableList<Int> = mutableListOf())
     while (linkedList.isNotEmpty()) {
 
         var node = linkedList.peek()
-        
+
         if (node.left != null)
             linkedList.push(node.left)
         else {
