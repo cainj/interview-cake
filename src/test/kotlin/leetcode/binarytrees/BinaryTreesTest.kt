@@ -12,4 +12,14 @@ class BinaryTreesTest {
         tree = TreeNode(5, TreeNode(4, TreeNode(2), TreeNode(3)), TreeNode(8, TreeNode(6), TreeNode(7)))
         Assertions.assertEquals(listOf(5,4,2,3,8,6,7), preorderTraversal(tree, listOf()))
     }
+
+    @Test
+    fun inorderTraversal(){
+        var tree = TreeNode(5, TreeNode(2), TreeNode(3))
+        Assertions.assertEquals(listOf(2,5,3), inorderTraversal(tree))
+        tree = TreeNode(5, TreeNode(4, TreeNode(2), TreeNode(3)), TreeNode(8, TreeNode(6), TreeNode(7)))
+        Assertions.assertEquals(listOf(2, 4, 3, 5, 6, 8, 7), inorderTraversal(tree))
+        tree = TreeNode(5, TreeNode(3, TreeNode(2), TreeNode(4)), TreeNode(8, TreeNode(6), TreeNode(9)))
+        Assertions.assertEquals(listOf(2, 3, 4, 5, 6, 8, 9), inorderTraversal(tree))
+    }
 }
