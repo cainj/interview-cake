@@ -45,14 +45,39 @@ fun preorderTraversal(root: TreeNode?, order: List<Int>): List<Int> {
     return bucket
 }
 
-private val order = mutableListOf<Int>()
-
 fun inorderTraversal(root: TreeNode?, order: MutableList<Int> = mutableListOf()): List<Int> {
 
-    if(root != null) {
-        inorderTraversal(root.left, order)
-        order.add(root.`val`)
-        inorderTraversal(root.right, order)
+//    if(root != null) {
+//        inorderTraversal(root.left, order)
+//        order.add(root.`val`)
+//        inorderTraversal(root.right, order)
+//    }
+//
+//    return order
+
+
+    val linkedList = LinkedList<TreeNode>()
+
+    linkedList.push(root)
+
+    while (linkedList.isNotEmpty()) {
+
+        var node = linkedList.peek()
+        
+        if (node.left != null)
+            linkedList.push(node.left)
+        else {
+
+            order.add(linkedList.pop().`val`)
+
+            if (linkedList.peek() != null) {
+                node = linkedList.pop()
+                order.add(node.`val`)
+            }
+
+            if (node.right != null)
+                linkedList.push(node.right)
+        }
     }
 
     return order
