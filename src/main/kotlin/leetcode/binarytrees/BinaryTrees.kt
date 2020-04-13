@@ -82,3 +82,38 @@ fun inorderTraversal(root: TreeNode?, order: MutableList<Int> = mutableListOf())
 
     return order
 }
+
+fun postorderTraversal(root: TreeNode?): List<Int> {
+    //recursive
+//    if(root != null){
+//
+//        if(root.left != null)
+//            postorderTraversal(root.left, ans)
+//        if(root.right != null)
+//            postorderTraversal(root.right, ans)
+//
+//        ans.add(root.`val`)
+//    }
+//
+//    return ans
+
+
+    val stack = LinkedList<TreeNode>()
+    val order = LinkedList<TreeNode>()
+
+    if(root != null)
+        stack.push(root)
+
+    while (stack.isNotEmpty()) {
+        val node = stack.pop()
+
+        if (node.left != null)
+            stack.push(node.left)
+        if (node.right != null)
+            stack.push(node.right)
+
+        order.push(node)
+    }
+
+    return order.map { it.`val` }
+}
