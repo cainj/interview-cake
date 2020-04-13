@@ -19,8 +19,9 @@ class LastStoneWeight {
     private fun smash(stones: PriorityQueue<Int>) {
         val y = stones.poll()
         val x = stones.poll()
-        when {
-            x != y -> stones.offer(y - x)
+        
+        if(x != y)
+            stones.offer(y - x)
         }
     }
 }
