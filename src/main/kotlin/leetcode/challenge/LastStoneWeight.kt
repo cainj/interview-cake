@@ -1,6 +1,6 @@
 package leetcode.challenge
 
-import java.util.*
+import java.util.PriorityQueue
 
 class LastStoneWeight {
 
