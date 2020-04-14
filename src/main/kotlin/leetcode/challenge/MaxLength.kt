@@ -4,10 +4,8 @@ import kotlin.math.max
 
 class MaxLength {
 
-    //bruteForce
     fun findMaxLengthBrute(nums: IntArray): Int {
         var max = 0
-        //[0,0,1,0,0,0,1,1]
         for (j in nums.indices) {
             var zeros = 0
             var ones = 0
@@ -26,8 +24,8 @@ class MaxLength {
     }
 
     fun findMaxLength(nums: IntArray): Int {
-        var sum = 0 // Initialize sum of elements
-        var max = 0 // Initialize result
+        var sum = 0
+        var max = 0
         val map = hashMapOf<Int, Int>()
 
         for (i in nums.indices) {
