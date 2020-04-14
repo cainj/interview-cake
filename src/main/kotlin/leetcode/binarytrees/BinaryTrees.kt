@@ -157,12 +157,7 @@ fun maxDepth(root: TreeNode?): Int {
     return max(maxDepth(root.left), maxDepth(root.right)) + 1
 }
 
-fun isSymmetric(root: TreeNode?): Boolean {
-    if (root == null || isLeaf(root))
-        return true
-
-    return helper(root.left, root.right)
-}
+fun isSymmetric(root: TreeNode?): Boolean = helper(root, root)
 
 private fun helper(node: TreeNode?, otherNode: TreeNode?): Boolean {
     if (node?.`val` != otherNode?.`val`)
