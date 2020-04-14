@@ -32,4 +32,14 @@ class BinaryTreesTest {
         tree = TreeNode(5, TreeNode(3, TreeNode(2), TreeNode(4)), TreeNode(8, TreeNode(6), TreeNode(9)))
         Assertions.assertEquals(listOf(2, 4, 3, 6, 9, 8, 5), postorderTraversal(tree))
     }
+
+    @Test
+    fun levelOrderTraversal() {
+        var tree = TreeNode(5, TreeNode(2), TreeNode(3))
+        Assertions.assertEquals(listOf(listOf(5), listOf(2, 3)), levelOrder(tree))
+        tree = TreeNode(5, TreeNode(4, TreeNode(2), TreeNode(3)), TreeNode(8, TreeNode(6), TreeNode(7)))
+        Assertions.assertEquals(listOf(listOf(5), listOf(4, 8), listOf(2, 3, 6, 7)), levelOrder(tree))
+        tree = TreeNode(5, TreeNode(3, TreeNode(2), TreeNode(4)), TreeNode(8, TreeNode(6), TreeNode(9)))
+        Assertions.assertEquals(listOf(listOf(5), listOf(3, 8), listOf(2, 4, 6, 9)), levelOrder(tree))
+    }
 }

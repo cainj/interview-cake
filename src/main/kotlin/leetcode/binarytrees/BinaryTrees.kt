@@ -101,7 +101,7 @@ fun postorderTraversal(root: TreeNode?): List<Int> {
     val stack = LinkedList<TreeNode>()
     val order = LinkedList<TreeNode>()
 
-    if(root != null)
+    if (root != null)
         stack.push(root)
 
     while (stack.isNotEmpty()) {
@@ -116,4 +116,35 @@ fun postorderTraversal(root: TreeNode?): List<Int> {
     }
 
     return order.map { it.`val` }
+}
+
+fun levelOrder(root: TreeNode?, ans: MutableList<List<Int>> = mutableListOf()): List<List<Int>> {
+
+    val deque = ArrayDeque<List<TreeNode>>()
+
+    if (root != null)
+        deque.offer(listOf(root))
+
+    while (deque.isNotEmpty()) {
+        val nodes = deque.poll()
+        val children = mutableListOf<TreeNode>()
+        val levels = mutableListOf<Int>()
+
+        for (node in nodes) {
+            if (node.left != null)
+                children.add(node.left)
+            if (node.right != null)
+                children.add(node.right)
+
+            levels.add(node.`val`)
+        }
+
+
+        if (children.isNotEmpty())
+            deque.offer(children)
+
+        ans.add(levels)
+    }
+
+    return ans
 }
