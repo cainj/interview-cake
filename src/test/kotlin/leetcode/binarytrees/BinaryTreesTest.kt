@@ -34,12 +34,35 @@ class BinaryTreesTest {
     }
 
     @Test
-    fun levelOrderTraversal() {
+    fun levelOrderTraversalTest() {
         var tree = TreeNode(5, TreeNode(2), TreeNode(3))
         Assertions.assertEquals(listOf(listOf(5), listOf(2, 3)), levelOrder(tree))
         tree = TreeNode(5, TreeNode(4, TreeNode(2), TreeNode(3)), TreeNode(8, TreeNode(6), TreeNode(7)))
         Assertions.assertEquals(listOf(listOf(5), listOf(4, 8), listOf(2, 3, 6, 7)), levelOrder(tree))
         tree = TreeNode(5, TreeNode(3, TreeNode(2), TreeNode(4)), TreeNode(8, TreeNode(6), TreeNode(9)))
         Assertions.assertEquals(listOf(listOf(5), listOf(3, 8), listOf(2, 4, 6, 9)), levelOrder(tree))
+    }
+
+    @Test
+    fun maxDepthTest() {
+        var tree = TreeNode(5, TreeNode(2), TreeNode(3))
+        Assertions.assertEquals(2, maxDepth(tree))
+        tree = TreeNode(5, TreeNode(4, TreeNode(2), TreeNode(3)), TreeNode(8, TreeNode(6), TreeNode(7)))
+        Assertions.assertEquals(3, maxDepth(tree))
+        tree = TreeNode(5, TreeNode(3, TreeNode(2), TreeNode(4)), TreeNode(8, TreeNode(6), TreeNode(9, TreeNode(7))))
+        Assertions.assertEquals(4, maxDepth(tree))
+    }
+
+    @Test
+    fun isSymmetricTest() {
+        Assertions.assertEquals(true, isSymmetric(null))
+        var tree = TreeNode(1)
+        Assertions.assertEquals(true, isSymmetric(tree))
+        tree = TreeNode(1, TreeNode(2))
+        Assertions.assertEquals(false, isSymmetric(tree))
+        tree = TreeNode(1, TreeNode(2, TreeNode(3), TreeNode(4)), TreeNode(2, TreeNode(4), TreeNode(3)))
+        Assertions.assertEquals(true, isSymmetric(tree))
+        tree = TreeNode(1, TreeNode(2, right = TreeNode(3)), TreeNode(2, right = TreeNode(3)))
+        Assertions.assertEquals(false, isSymmetric(tree))
     }
 }

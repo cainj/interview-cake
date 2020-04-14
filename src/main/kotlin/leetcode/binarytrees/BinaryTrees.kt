@@ -1,6 +1,7 @@
 package leetcode.binarytrees
 
 import java.util.*
+import kotlin.math.max
 
 data class TreeNode(val `val`: Int, val left: TreeNode? = null, val right: TreeNode? = null)
 
@@ -148,3 +149,29 @@ fun levelOrder(root: TreeNode?, ans: MutableList<List<Int>> = mutableListOf()): 
 
     return ans
 }
+
+fun maxDepth(root: TreeNode?): Int {
+    if (root == null)
+        return 0
+
+    return max(maxDepth(root.left), maxDepth(root.right)) + 1
+}
+
+fun isSymmetric(root: TreeNode?): Boolean {
+    if (root == null || isLeaf(root))
+        return true
+
+    return helper(root.left, root.right)
+}
+
+private fun helper(node: TreeNode?, otherNode: TreeNode?): Boolean {
+    if (node?.`val` != otherNode?.`val`)
+        return false
+
+    if (isLeaf(node) && isLeaf(otherNode))
+        return true
+
+    return helper(node?.left, otherNode?.right) && helper(node?.right, otherNode?.left)
+}
+
+private fun isLeaf(node: TreeNode?) = node?.left == null && node?.right == null
