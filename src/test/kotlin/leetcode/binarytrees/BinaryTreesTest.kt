@@ -78,4 +78,17 @@ class BinaryTreesTest {
         tree = TreeNode(1, TreeNode(2, right = TreeNode(3)), TreeNode(2, right = TreeNode(3)))
         Assertions.assertEquals(false, isSymmetricBFS(tree))
     }
+
+    @Test
+    fun hasPathSum() {
+        Assertions.assertEquals(false, hasPathSum(null, 50))
+        var tree = TreeNode(1)
+        Assertions.assertEquals(true, hasPathSum(tree, 1))
+        tree = TreeNode(1, TreeNode(2))
+        Assertions.assertEquals(true, hasPathSum(tree, 3))
+        tree = TreeNode(1, TreeNode(2, TreeNode(3), TreeNode(4)), TreeNode(2, TreeNode(4), TreeNode(3)))
+        Assertions.assertEquals(true, hasPathSum(tree, 6))
+        tree = TreeNode(1, TreeNode(2, right = TreeNode(3)), TreeNode(2, right = TreeNode(3)))
+        Assertions.assertEquals(false, hasPathSum(tree, 10))
+    }
 }

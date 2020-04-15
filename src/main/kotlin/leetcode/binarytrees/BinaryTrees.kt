@@ -178,7 +178,7 @@ private fun isLeaf(node: TreeNode?) = node?.left == null && node?.right == null
 fun isSymmetricBFS(root: TreeNode?): Boolean {
     val q: Queue<TreeNode?> = LinkedList<TreeNode?>()
 
-    if(root == null)
+    if (root == null)
         return true
 
     q.add(root)
@@ -196,4 +196,25 @@ fun isSymmetricBFS(root: TreeNode?): Boolean {
     }
 
     return true
+}
+
+fun hasPathSum(root: TreeNode?, sum: Int): Boolean =
+    if (root == null)
+        false
+    else
+        findSum(root).contains(sum)
+
+private fun findSum(node: TreeNode, sum: Int = 0, paths: MutableList<Int> = mutableListOf()): List<Int> {
+    if (isLeaf(node)) {
+        paths.add(sum + node.`val`)
+        return paths
+    } else {
+        val newPath = sum + node.`val`
+        if (node.left != null)
+            findSum(node.left, newPath, paths)
+        if (node.right != null)
+            findSum(node.right, newPath, paths)
+    }
+
+    return paths
 }

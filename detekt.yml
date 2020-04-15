@@ -273,7 +273,7 @@ formatting:
     active: true
     autoCorrect: true
   SpacingAroundKeyword:
-    active: true
+    active: false
     autoCorrect: true
   SpacingAroundOperators:
     active: true
