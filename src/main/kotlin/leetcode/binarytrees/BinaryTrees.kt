@@ -3,6 +3,7 @@ package leetcode.binarytrees
 import java.util.*
 import kotlin.math.max
 
+
 data class TreeNode(val `val`: Int, val left: TreeNode? = null, val right: TreeNode? = null)
 
 fun preorderTraversal(root: TreeNode?, order: List<Int>): List<Int> {
@@ -27,6 +28,7 @@ fun preorderTraversal(root: TreeNode?, order: List<Int>): List<Int> {
 
         val newChildren = ArrayDeque<TreeNode>()
         val children = deque.poll()
+
         if (children.isNotEmpty()) {
             val node = children.pop()
             bucket = bucket.plus(node.`val`)
@@ -170,3 +172,28 @@ private fun helper(node: TreeNode?, otherNode: TreeNode?): Boolean {
 }
 
 private fun isLeaf(node: TreeNode?) = node?.left == null && node?.right == null
+
+
+//Hints from Leetcode
+fun isSymmetricBFS(root: TreeNode?): Boolean {
+    val q: Queue<TreeNode?> = LinkedList<TreeNode?>()
+
+    if(root == null)
+        return true
+
+    q.add(root)
+    q.add(root)
+    while (!q.isEmpty()) {
+        val t1 = q.poll()
+        val t2 = q.poll()
+        if (t1 == null && t2 == null) continue
+        if (t1 == null || t2 == null) return false
+        if (t1.`val` != t2.`val`) return false
+        q.add(t1.left)
+        q.add(t2.right)
+        q.add(t1.right)
+        q.add(t2.left)
+    }
+
+    return true
+}

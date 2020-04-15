@@ -65,4 +65,17 @@ class BinaryTreesTest {
         tree = TreeNode(1, TreeNode(2, right = TreeNode(3)), TreeNode(2, right = TreeNode(3)))
         Assertions.assertEquals(false, isSymmetric(tree))
     }
+
+    @Test
+    fun isSymmetricBFSTest() {
+        Assertions.assertEquals(true, isSymmetricBFS(null))
+        var tree = TreeNode(1)
+        Assertions.assertEquals(true, isSymmetricBFS(tree))
+        tree = TreeNode(1, TreeNode(2))
+        Assertions.assertEquals(false, isSymmetricBFS(tree))
+        tree = TreeNode(1, TreeNode(2, TreeNode(3), TreeNode(4)), TreeNode(2, TreeNode(4), TreeNode(3)))
+        Assertions.assertEquals(true, isSymmetricBFS(tree))
+        tree = TreeNode(1, TreeNode(2, right = TreeNode(3)), TreeNode(2, right = TreeNode(3)))
+        Assertions.assertEquals(false, isSymmetricBFS(tree))
+    }
 }
