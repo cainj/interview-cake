@@ -204,7 +204,7 @@ fun hasPathSum(root: TreeNode?, sum: Int): Boolean =
     else
         findSum(root).contains(sum)
 
-private fun findSum(node: TreeNode, sum: Int = 0, paths: MutableList<Int> = mutableListOf()): List<Int> {
+private fun findSum(node: TreeNode, sum: Int = 0, paths: HashSet<Int> = hashSetOf()): Set<Int> {
     if (isLeaf(node)) {
         paths.add(sum + node.`val`)
         return paths
