@@ -4,7 +4,7 @@ import java.util.*
 import kotlin.math.max
 
 
-data class TreeNode(val `val`: Int, val left: TreeNode? = null, val right: TreeNode? = null)
+data class TreeNode(val `val`: Int, var left: TreeNode? = null, var right: TreeNode? = null)
 
 fun preorderTraversal(root: TreeNode?, order: List<Int>): List<Int> {
 
@@ -34,9 +34,9 @@ fun preorderTraversal(root: TreeNode?, order: List<Int>): List<Int> {
             bucket = bucket.plus(node.`val`)
 
             if (node.left != null)
-                newChildren.offer(node.left)
+                newChildren.offer(node.left!!)
             if (node.right != null)
-                newChildren.offer(node.right)
+                newChildren.offer(node.right!!)
 
             while (children.isNotEmpty())
                 newChildren.offer(children.poll())
@@ -135,9 +135,9 @@ fun levelOrder(root: TreeNode?, ans: MutableList<List<Int>> = mutableListOf()): 
 
         for (node in nodes) {
             if (node.left != null)
-                children.add(node.left)
+                children.add(node.left!!)
             if (node.right != null)
-                children.add(node.right)
+                children.add(node.right!!)
 
             levels.add(node.`val`)
         }
@@ -211,10 +211,56 @@ private fun findSum(node: TreeNode, sum: Int = 0, paths: HashSet<Int> = hashSetO
     } else {
         val newPath = sum + node.`val`
         if (node.left != null)
-            findSum(node.left, newPath, paths)
+            findSum(node.left!!, newPath, paths)
         if (node.right != null)
-            findSum(node.right, newPath, paths)
+            findSum(node.right!!, newPath, paths)
     }
 
     return paths
+}
+
+var index = 0
+fun buildTree(inorder: IntArray, postorder: IntArray): TreeNode? {
+
+    if (inorder.isEmpty())
+        return null
+
+    val rootIndex = postorder.size - 1
+    var rootInorderIndex = 0
+
+    while (inorder[rootInorderIndex] != postorder[rootIndex])
+        rootInorderIndex++
+
+    index = rootIndex
+    return help(inorder, postorder, 0, rootIndex)
+}
+
+fun help(
+    inorder: IntArray?, postorder: IntArray, inStartIndex: Int, inEndIndex: Int
+): TreeNode? {
+
+    if (inStartIndex > inEndIndex) return null
+
+    val node = TreeNode(postorder[index])
+    index--
+
+    if (inStartIndex == inEndIndex) return node
+
+    val iIndex = search(inorder!!, inStartIndex, inEndIndex, node.`val`)
+
+    node.right = help(inorder, postorder, iIndex + 1, inEndIndex)
+    node.left = help(inorder, postorder, inStartIndex, iIndex - 1)
+    return node
+}
+
+
+private fun search(nums: IntArray, inorderIndex: Int, inorderEndIndex: Int, `val`: Int): Int {
+    var i = inorderIndex
+    while (i <= inorderEndIndex) {
+        if (nums[i] == `val`)
+            break
+        i++
+    }
+
+    return i
 }

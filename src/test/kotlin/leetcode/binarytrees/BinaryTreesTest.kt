@@ -21,6 +21,8 @@ class BinaryTreesTest {
         Assertions.assertEquals(listOf(2, 4, 3, 5, 6, 8, 7), inorderTraversal(tree))
         tree = TreeNode(5, TreeNode(3, TreeNode(2), TreeNode(4)), TreeNode(8, TreeNode(6), TreeNode(9)))
         Assertions.assertEquals(listOf(2, 3, 4, 5, 6, 8, 9), inorderTraversal(tree))
+        tree = TreeNode(2, TreeNode(3, TreeNode(4, TreeNode(5, TreeNode(6, TreeNode(7))))))
+        Assertions.assertEquals(listOf(7, 6, 5, 4, 3, 2), postorderTraversal(tree))
     }
 
     @Test
@@ -31,6 +33,8 @@ class BinaryTreesTest {
         Assertions.assertEquals(listOf(2, 3, 4, 6, 7, 8, 5), postorderTraversal(tree))
         tree = TreeNode(5, TreeNode(3, TreeNode(2), TreeNode(4)), TreeNode(8, TreeNode(6), TreeNode(9)))
         Assertions.assertEquals(listOf(2, 4, 3, 6, 9, 8, 5), postorderTraversal(tree))
+        tree = TreeNode(2, TreeNode(3, TreeNode(4, TreeNode(5, TreeNode(6, TreeNode(7))))))
+        Assertions.assertEquals(listOf(7, 6, 5, 4, 3, 2), postorderTraversal(tree))
     }
 
     @Test
@@ -90,5 +94,10 @@ class BinaryTreesTest {
         Assertions.assertEquals(true, hasPathSum(tree, 6))
         tree = TreeNode(1, TreeNode(2, right = TreeNode(3)), TreeNode(2, right = TreeNode(3)))
         Assertions.assertEquals(false, hasPathSum(tree, 10))
+    }
+
+    @Test
+    fun buildTreeInorderPostOrder() {
+        Assertions.assertEquals(true, buildTree(intArrayOf(9,3,15,20,7), intArrayOf(9,15,7,20,3)))
     }
 }
