@@ -4,6 +4,8 @@ import java.util.*
 
 class CheckValidString {
 
+    //O(n) = runtime complexity
+    //O(n) = space complexity
     fun checkValidString(s: String): Boolean {
         val asterisks = LinkedList<Int>()
         val leftParens = LinkedList<Int>()
