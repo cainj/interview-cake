@@ -4,7 +4,19 @@ import java.util.*
 import kotlin.math.max
 
 
-data class TreeNode(val `val`: Int, var left: TreeNode? = null, var right: TreeNode? = null)
+data class TreeNode(val `val`: Int, var left: TreeNode? = null, var right: TreeNode? = null) {
+    override fun equals(other: Any?): Boolean {
+        val k = other as TreeNode
+        return k.`val` == this.`val`
+    }
+
+    override fun hashCode(): Int {
+        var result = `val`
+        result = 31 * result + (left?.hashCode() ?: 0)
+        result = 31 * result + (right?.hashCode() ?: 0)
+        return result
+    }
+}
 
 fun preorderTraversal(root: TreeNode?, order: List<Int>): List<Int> {
 
@@ -261,4 +273,46 @@ private fun search(nums: IntArray, inorderIndex: Int, inorderEndIndex: Int, `val
     }
 
     return i
+}
+
+fun lowestCommonAncestor(root: TreeNode?, p: TreeNode, q: TreeNode): TreeNode? {
+    if (root == null || root == p || root == q) return root
+    val left = lowestCommonAncestor(root.left, p, q)
+    val right = lowestCommonAncestor(root.right, p, q)
+    return if (left == null) right else if (right == null) left else root
+}
+
+fun lowestCommonAncestorBloated(root: TreeNode?, p: TreeNode?, q: TreeNode?): TreeNode? {
+    //if p == q then return p
+    //find the path for p
+    //then find the path for q
+    //find the lowest intersection for path q and path p
+
+    if (p == q)
+        return p
+
+    val start = listOf(root)
+    val pPath = findPath(start, p!!.`val`)
+    val qPath = findPath(start, q!!.`val`)
+
+    var ans = root
+    var i = 0
+
+    while (i < pPath.size && i < qPath.size) {
+        if (pPath[i] != qPath[i])
+            break
+        ans = pPath[i]
+        i++
+    }
+
+    return ans
+}
+
+private fun findPath(path: List<TreeNode?>, value: Int): List<TreeNode?> {
+    val node = path.last() ?: return listOf()
+
+    if (node.`val` == value)
+        return path
+
+    return findPath(path + node.left, value) + findPath(path + node.right, value)
 }
