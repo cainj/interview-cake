@@ -235,9 +235,7 @@ fun buildTree(inorder: IntArray, postorder: IntArray): TreeNode? {
     return help(inorder, postorder, 0, rootIndex)
 }
 
-fun help(
-    inorder: IntArray?, postorder: IntArray, inStartIndex: Int, inEndIndex: Int
-): TreeNode? {
+fun help(inorder: IntArray?, postorder: IntArray, inStartIndex: Int, inEndIndex: Int): TreeNode? {
 
     if (inStartIndex > inEndIndex) return null
 
