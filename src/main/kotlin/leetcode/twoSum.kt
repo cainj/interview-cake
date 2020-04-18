@@ -1,6 +1,5 @@
 package leetcode
 
-
 fun twoSum(nums: IntArray, target: Int): IntArray {
     val sums = HashMap<Int, Int>()
 
