@@ -12,13 +12,14 @@ fun search(nums: IntArray, target: Int): Int {
     // else search left -> right = mid - 1, mid = (left + right) / 2,
     // throw exception if target is not found
 
-    while (left <= right) {
+    loop@ while (left <= right) {
         when {
             nums[mid] == target -> return mid
             nums[mid] < target -> {
                 left = mid + 1
                 mid = (left + right) / 2
             }
+            mid == left && mid == right -> break@loop
             else -> {
                 right = mid
                 mid = (left + right) / 2
@@ -26,6 +27,6 @@ fun search(nums: IntArray, target: Int): Int {
         }
     }
 
-    throw IllegalStateException("Target $target not found")
+    return -1
 
 }
