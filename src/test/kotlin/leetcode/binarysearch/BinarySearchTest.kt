@@ -23,7 +23,7 @@ class BinarySearchTest {
         assertEquals(3, leetcode.binarysearch.search(nums, 5))
         assertEquals(4, leetcode.binarysearch.search(nums, 9))
         assertEquals(-1, search(nums, 12))
-        
+
         assertEquals(-1, search(intArrayOf(), 100))
     }
 }
