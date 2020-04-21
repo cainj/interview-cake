@@ -1,7 +1,5 @@
 package leetcode.challenge
 
-typealias Grid = Array<CharArray>
-
 class NumberOfIslands {
 
     //O(4^n) Runtime complexity
@@ -14,7 +12,7 @@ class NumberOfIslands {
         return islands
     }
 
-    private fun search(pos: Pair<Int, Int>, grid: Grid): Int {
+    private fun search(pos: Pair<Int, Int>, grid: Array<CharArray>): Int {
         return when {
             pos.first < 0 || pos.first == grid.size
                     || pos.second < 0 || pos.second == grid[pos.first].size

@@ -2,8 +2,6 @@ package leetcode.challenge
 
 import kotlin.math.min
 
-typealias Pos = Pair<Int, Int>
-
 class MinPathSum {
 
     fun minPathSum(grid: Array<IntArray>): Int {
@@ -31,15 +29,13 @@ class MinPathSum {
         return grid[m][n]
     }
 
-
-    private fun findMin(grid: Array<IntArray>, pos: Pos): Int =
+    private fun findMin(grid: Array<IntArray>, pos: Pair<Int, Int>): Int =
         listOf(pos.first to pos.second - 1, pos.first - 1 to pos.second).filterNot { p ->
             (p.first < 0 || p.second < 0)
         }.fold(Int.MAX_VALUE) { min, next ->
             min(grid[next.first][next.second] + grid[pos.first][pos.second], min)
         }
-
-
+    
     private fun printGrid(grid: Array<IntArray>) =
         grid.forEach { println(it.joinToString { arr -> "$arr" }) }
 }
