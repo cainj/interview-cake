@@ -238,10 +238,6 @@ fun buildTree(inorder: IntArray, postorder: IntArray): TreeNode? {
         return null
 
     val rootIndex = postorder.size - 1
-    var rootInorderIndex = 0
-
-    while (inorder[rootInorderIndex] != postorder[rootIndex])
-        rootInorderIndex++
 
     index = rootIndex
     return help(inorder, postorder, 0, rootIndex)

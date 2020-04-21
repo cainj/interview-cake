@@ -98,12 +98,13 @@ class BinaryTreesTest {
 
     @Test
     fun buildTreeInorderPostOrder() {
-        Assertions.assertEquals(true, buildTree(intArrayOf(9, 3, 15, 20, 7), intArrayOf(9, 15, 7, 20, 3)))
+        val expected = TreeNode(3, left = TreeNode(9), right = TreeNode(20, left = TreeNode(15), right = TreeNode(7)))
+        Assertions.assertEquals(expected, buildTree(intArrayOf(9, 3, 15, 20, 7), intArrayOf(9, 15, 7, 20, 3)))
     }
 
     @Test
     fun lowestCommonAncestor() {
-        var tree = TreeNode(1, TreeNode(5, TreeNode(3), TreeNode(4)), TreeNode(2, TreeNode(7), TreeNode(8)))
+        val tree = TreeNode(1, TreeNode(5, TreeNode(3), TreeNode(4)), TreeNode(2, TreeNode(7), TreeNode(8)))
         Assertions.assertEquals(
             5,
             lowestCommonAncestor(tree, TreeNode(4), TreeNode(5))?.`val`
