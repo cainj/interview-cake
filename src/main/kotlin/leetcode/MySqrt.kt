@@ -5,7 +5,7 @@ class MySqrt {
     fun mySqrt(x: Int): Int {
         if (x <= 1)
             return x
-        var l = 0;
+        var l = 0
         var r = x
         while (l < r) {
             val mid = l + (r - l) / 2
