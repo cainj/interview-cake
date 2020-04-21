@@ -3,10 +3,9 @@ package leetcode.challenge
 import leetcode.binarytrees.TreeNode
 
 class BstFromPreorder {
-    fun bstFromPreorder(preorder: IntArray): TreeNode? {
-        //[8,5,1,7,10,12]
-        return buildTree(0, preorder.size - 1, preorder)
-    }
+
+    fun bstFromPreorder(preorder: IntArray): TreeNode? =
+        buildTree(0, preorder.size - 1, preorder)
 
     private fun buildTree(i: Int, endIndex: Int, preorder: IntArray): TreeNode? {
         if (i > endIndex) return null
