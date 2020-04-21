@@ -35,7 +35,7 @@ class MinPathSum {
         }.fold(Int.MAX_VALUE) { min, next ->
             min(grid[next.first][next.second] + grid[pos.first][pos.second], min)
         }
-    
+
     private fun printGrid(grid: Array<IntArray>) =
         grid.forEach { println(it.joinToString { arr -> "$arr" }) }
 }
