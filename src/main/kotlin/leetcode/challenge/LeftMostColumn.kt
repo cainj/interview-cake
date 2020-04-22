@@ -10,19 +10,19 @@ class LeftMostColumn {
 
         while (l < r) {
             var col = l + (r - l) / 2
-            var row = -1
+            var rover = -1
 
             for (i in 0 until dim[0]) {
                 if (1 == bm.get(i, col)) {
-                    row = i
+                    rover = i
                     break
                 }
             }
 
-            //if found then back track
-            if (row != -1) {
+            //if '1' found then back track
+            if (rover != -1) {
                 while (col >= 0) {
-                    if (bm.get(row, col) != 1) {
+                    if (bm.get(rover, col) != 1) {
                         col++
                         ans = col
                         break
