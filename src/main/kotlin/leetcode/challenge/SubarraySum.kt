@@ -2,6 +2,8 @@ package leetcode.challenge
 
 class SubarraySum {
 
+    //O(n) on Runtime
+    //O(n) on Space Complexity
     fun subarraySum(nums: IntArray, k: Int): Int {
         val cumulativeSum = hashMapOf<Int, Int>()
         var sum = 0
@@ -17,7 +19,9 @@ class SubarraySum {
 
         return count
     }
-      // Runtime O(n^2)
+
+    // Runtime O(n^2)
+    // O(1) on Space complexity
 //    fun subarraySum(nums: IntArray, k: Int): Int {
 //        var count = 0
 //        var sum = nums[0]
