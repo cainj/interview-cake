@@ -4,7 +4,10 @@ class LRUCache(private val capacity: Int) {
 
     private val hashMap = hashMapOf<Int, Node>()
 
-    private class Node(val key: Int = 0, val value: Int = 0, var prev: Node? = null, var next: Node? = null) {
+    private class Node(val key: Int = 0,
+                       val value: Int = 0,
+                       var prev: Node? = null,
+                       var next: Node? = null) {
         override fun toString() = "{$key, $value}"
     }
 
@@ -32,7 +35,7 @@ class LRUCache(private val capacity: Int) {
 
         if (hashMap.contains(key))
             remove(hashMap[key]!!)
-        
+
         hashMap[key] = node
         addToFront(key, node)
         if (capacity < hashMap.size) {
