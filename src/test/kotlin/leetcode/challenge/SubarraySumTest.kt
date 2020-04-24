@@ -11,6 +11,6 @@ internal class SubarraySumTest {
         var nums = intArrayOf(1, 1, 1)
         assertEquals(2, ss.subarraySum(nums, 2))
         nums = intArrayOf(3, 4, 7, 2, -3, 1, 4, 2)
-        assertEquals(3, ss.subarraySum(nums, 14))
+        assertEquals(2, ss.subarraySum(nums, 14))
     }
 }

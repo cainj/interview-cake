@@ -1,10 +1,9 @@
 package leetcode
 
 class LRUCache(private val capacity: Int) {
-    private val cache = mutableMapOf<Int, Node>()
-
     private class Node(var key: Int? = null, var value: Int? = null, var prev: Node? = null, var next: Node? = null)
 
+    private val cache = mutableMapOf<Int, Node>()
     private var head = Node(0)
     private var tail = Node(0)
 
