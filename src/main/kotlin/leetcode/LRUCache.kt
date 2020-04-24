@@ -1,11 +1,15 @@
 package leetcode
 
 class LRUCache(private val capacity: Int) {
-    private class Node(var key: Int? = null, var value: Int? = null, var prev: Node? = null, var next: Node? = null)
 
-    private val cache = mutableMapOf<Int, Node>()
-    private var head = Node(0)
-    private var tail = Node(0)
+    private val hashMap = hashMapOf<Int, Node>()
+
+    private class Node(val key: Int = 0, val value: Int = 0, var prev: Node? = null, var next: Node? = null) {
+        override fun toString() = "{$key, $value}"
+    }
+
+    private val head = Node()
+    private val tail = Node()
 
     init {
         head.next = tail
@@ -13,47 +17,51 @@ class LRUCache(private val capacity: Int) {
     }
 
     fun get(key: Int): Int {
-        if (cache.contains(key)) {
-            val node = cache[key]!!
+        return if (hashMap.contains(key)) {
+            val node = hashMap[key]!!
+            hashMap.remove(key)
             remove(node)
-            add(node)
-            return node.value!!
-        }
-        return -1
+            addToFront(key, node)
+            node.value
+        } else -1
+
     }
 
     fun put(key: Int, value: Int) {
         val node = Node(key, value)
-        if (cache.contains(key)) {
-            remove(cache[key]!!)
-            cache.remove(key)
-        }
 
-        if (cache.size == capacity) {
+        if (hashMap.contains(key))
+            remove(hashMap[key]!!)
+        
+        hashMap[key] = node
+        addToFront(key, node)
+        if (capacity < hashMap.size) {
             val last = tail.prev!!
-            last.prev?.next = tail
             tail.prev = last.prev
-            cache.remove(last.key)
+            last.prev?.next = tail
+            hashMap.remove(last.key)
         }
-
-        add(node)
-        cache[key] = node
     }
 
     private fun remove(node: Node) {
-        val next = node.next!!
         val prev = node.prev!!
-        prev.next = next
-        next.prev = prev
+        prev.next = node.next
+        node.next?.prev = prev
     }
 
-    //adds to the head
-    private fun add(node: Node) {
-        val next = head.next!!
-        node.next = next
-        node.prev = head
-        next.prev = node
+    private fun addToFront(key: Int, node: Node) {
+        val second = head.next
         head.next = node
+        node.next = second
+        node.prev = head
+        second?.prev = node
+        hashMap[key] = node
     }
-
 }
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * var obj = LRUCache(capacity)
+ * var param_1 = obj.get(key)
+ * obj.put(key,value)
+ */
