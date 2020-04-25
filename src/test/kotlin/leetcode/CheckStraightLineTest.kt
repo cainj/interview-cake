@@ -7,7 +7,8 @@ class CheckStraightLineTest {
 
     @Test
     fun simpleTwoSumTest() {
-        val actual = checkStraightLine(
+        val csl = CheckStraightLine()
+        val actual = csl.checkStraightLine(
             arrayOf(
                 intArrayOf(-3, -2),
                 intArrayOf(-1, -2),
