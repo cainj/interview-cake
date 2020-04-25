@@ -1,6 +1,5 @@
-package bs
+package leetcode.binarysearch
 
-import leetcode.binarysearch.BinarySearch
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
