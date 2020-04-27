@@ -12,5 +12,7 @@ internal class FindClosestElementsTest {
         assertEquals(listOf(1, 2, 3, 4, 5), fce.findClosestElements(intArrayOf(1, 2, 3, 4, 5), 5, 1))
         assertEquals(listOf(2, 3, 4, 5), fce.findClosestElements(intArrayOf(1, 2, 3, 4, 5), 4, 6))
         assertEquals(listOf(1, 2, 3, 4), fce.findClosestElements(intArrayOf(1, 2, 3, 4, 5), 4, 0))
+        assertEquals(listOf(0), fce.findClosestElements(intArrayOf(0), 1, 0))
+        assertEquals(listOf(0), fce.findClosestElements(intArrayOf(0), 1, 1))
     }
 }
