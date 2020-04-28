@@ -1,6 +1,5 @@
 package leetcode.binarysearch
 
-
 class FindClosestElements {
 
     // Runtime is O(log n + k)
