@@ -2,9 +2,8 @@ package leetcode.binarytrees
 
 class BinaryTreePreorder {
 
-    fun buildTree(preorder: IntArray, inorder: IntArray): TreeNode? {
-        return treeBuilder(preorder, inorder, 0, 0, preorder.size - 1)
-    }
+    fun buildTree(preorder: IntArray, inorder: IntArray): TreeNode? =
+        treeBuilder(preorder, inorder, 0, 0, preorder.size - 1)
 
     private fun treeBuilder(
         preorder: IntArray,
