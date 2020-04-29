@@ -272,10 +272,13 @@ private fun search(nums: IntArray, inorderIndex: Int, inorderEndIndex: Int, `val
 }
 
 fun lowestCommonAncestor(root: TreeNode?, p: TreeNode, q: TreeNode): TreeNode? {
-    if (root == null || root == p || root == q) return root
+    if (root == null) return null
+    if (root == p || root == q) return root
     val left = lowestCommonAncestor(root.left, p, q)
     val right = lowestCommonAncestor(root.right, p, q)
-    return if (left == null) right else if (right == null) left else root
+    if (left != null && right != null) return root
+    if (left == null && right == null) return null
+    return left ?: right
 }
 
 fun lowestCommonAncestorBloated(root: TreeNode?, p: TreeNode?, q: TreeNode?): TreeNode? {
