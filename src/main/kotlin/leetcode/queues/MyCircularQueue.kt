@@ -1,19 +1,20 @@
 package leetcode.queues
 
-class MyCircularQueue(private val k: Int) {
-    private val storage = IntArray(k) { -1 }
-    private var front: Int = 0
-    private var rear: Int = 0
-    var size: Int = 0
+class MyCircularQueue(val size: Int) {
+    private val storage = IntArray(size) { -1 }
+    private var front: Int = -1
+    private var rear: Int = -1
 
     /** Insert an element into the circular queue. Return true if the operation is successful. */
     fun enQueue(value: Int): Boolean {
         if (isFull())
             return false
 
-        rear = findNewRear(rear)
+        if (isEmpty())
+            front = 0
+
+        rear = (rear + 1) % size
         storage[rear] = value
-        size++
         return true
     }
 
@@ -21,53 +22,30 @@ class MyCircularQueue(private val k: Int) {
     fun deQueue(): Boolean {
         if (isEmpty()) return false
 
-        storage[front] = -1
-        front = findNewHead(front)
-        size--
+        if (front == rear) {
+            front = -1
+            rear = -1
+            return true
+        }
+        front = (front + 1) % size
         return true
     }
 
     /** Get the front item from the queue. */
-    fun front(): Int = storage[front]
+    fun front(): Int =
+        if (isEmpty()) -1
+        else storage[front]
 
     /** Get the last item from the queue. */
-    fun rear(): Int = storage[rear]
+    fun rear(): Int =
+        if (isEmpty()) -1
+        else storage[rear]
 
     /** Checks whether the circular queue is empty or not. */
-    fun isEmpty(): Boolean = size == 0
+    fun isEmpty(): Boolean = front == -1
 
     /** Checks whether the circular queue is full or not. */
-    fun isFull(): Boolean = size == k
-
-    private fun findNewHead(index: Int): Int {
-        var i = index
-        while (i != rear) {
-            i++
-            if (i >= storage.size)
-                i = 0
-            if (storage[i] != -1)
-                return i
-        }
-
-        return i
-    }
-
-    private fun findNewRear(index: Int): Int {
-        if (storage[index] == -1)
-            return index
-
-        //find until you cycle
-        var i = index + 1
-        while (i != front) {
-            if (i >= storage.size)
-                i = 0
-            if (storage[i] == -1)
-                return i
-            i++
-        }
-
-        return i
-    }
+    fun isFull(): Boolean = ((rear + 1) % size) == front
 
 }
 
