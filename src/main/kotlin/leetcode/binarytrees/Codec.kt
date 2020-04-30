@@ -37,7 +37,7 @@ class Codec {
 
     private fun buildTree(deque: Queue<String>): TreeNode? {
         val value = deque.poll()
-        if (value == "null") return null
+        if (value == "null" || value == null) return null
 
         val node = TreeNode(value.toInt())
         node.left = buildTree(deque)
