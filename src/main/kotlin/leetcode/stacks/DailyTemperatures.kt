@@ -21,10 +21,10 @@ class DailyTemperatures {
         val n = T.size - 1
 
         for (i in n downTo 0) {
-            while (stack.peek() != null && T[i] >= stack.peek().second)
+            while (stack.isNotEmpty() && T[i] >= stack.peek().second)
                 stack.pop()
 
-            if (stack.peek() != null)
+            if (stack.isNotEmpty())
                 ans[i] = stack.peek().first - i
 
             stack.push(i to T[i])
