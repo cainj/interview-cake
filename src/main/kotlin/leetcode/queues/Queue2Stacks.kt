@@ -2,7 +2,7 @@ package leetcode.queues
 
 import java.util.*
 
-class QueueTwoStacks {
+class Queue2Stacks {
 
     /** Initialize your data structure here. */
     private val `in` = LinkedList<Int>()

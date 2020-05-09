@@ -3,11 +3,11 @@ package leetcode.queues
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
-internal class QueueTwoStacksTest {
+internal class Queue2StacksTest {
 
     @Test
     fun test() {
-        val queue = QueueTwoStacks()
+        val queue = Queue2Stacks()
         queue.enqueue(1);
         queue.enqueue(2);
         assertEquals(false, queue.empty())
