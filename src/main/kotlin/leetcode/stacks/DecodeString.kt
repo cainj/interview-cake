@@ -6,7 +6,7 @@ class DecodeString {
 
     fun decodeString(s: String): String {
         var ans = StringBuilder()
-        var countStack = LinkedList<Int>()
+        val countStack = LinkedList<Int>()
         val result = LinkedList<String>()
 
         //take the end of the string and work towards the begining
