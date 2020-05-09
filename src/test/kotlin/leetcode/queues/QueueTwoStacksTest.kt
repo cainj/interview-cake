@@ -8,12 +8,12 @@ internal class QueueTwoStacksTest {
     @Test
     fun test() {
         val queue = QueueTwoStacks()
-        queue.push(1);
-        queue.push(2);
+        queue.enqueue(1);
+        queue.enqueue(2);
         assertEquals(false, queue.empty())
-        assertEquals(1, queue.pop())
+        assertEquals(1, queue.deque())
         assertEquals(2, queue.peek())
-        assertEquals(2, queue.pop())
+        assertEquals(2, queue.deque())
         assertEquals(true, queue.empty())
     }
 

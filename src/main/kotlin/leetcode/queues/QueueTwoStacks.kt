@@ -10,10 +10,10 @@ class QueueTwoStacks {
 
 
     /** Push element x to the back of queue. */
-    fun push(x: Int) = `in`.push(x)
+    fun enqueue(x: Int) = `in`.push(x)
 
     /** Removes the element from in front of queue and returns that element. */
-    fun pop(): Int {
+    fun deque(): Int {
         reverse()
         return out.pop()
     }
