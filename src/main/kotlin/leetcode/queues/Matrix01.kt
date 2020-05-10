@@ -37,10 +37,10 @@ class Matrix01 {
                     node.first + 1 to node.second,
                     node.first to node.second - 1,
                     node.first to node.second + 1
-                ).filter { node ->
-                    (node.first >= 0 && node.second >= 0)
-                            && (node.first <= matrix.size - 1 && node.second <= matrix[0].size - 1)
-                            && !visited.contains(node)
+                ).filter { neighbor ->
+                    (neighbor.first >= 0 && neighbor.second >= 0)
+                            && (neighbor.first <= matrix.size - 1 && neighbor.second <= matrix[0].size - 1)
+                            && !visited.contains(neighbor)
                 }
 
                 for (neighbor in neighbors) {
