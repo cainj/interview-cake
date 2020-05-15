@@ -10,12 +10,12 @@ class FloodFill {
     }
 
     private fun flood(image: Array<IntArray>, row: Int, col: Int, newColor: Int, oldColor: Int) {
-        if ((row < 0 || col < 0)
-            || (row > image.size - 1 || col > image[0].size - 1)
+        if (row < 0 || col < 0
+            || row > image.size - 1
+            || col > image[0].size - 1
             || image[row][col] != oldColor
-        ) {
-            return
-        }
+        ) return
+
 
         image[row][col] = newColor
         flood(image, row + 1, col, newColor, oldColor)

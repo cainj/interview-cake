@@ -5,12 +5,12 @@ import java.util.*
 class Queue2Stacks {
 
     /** Initialize your data structure here. */
-    private val `in` = LinkedList<Int>()
+    private val consume = LinkedList<Int>()
     private val out = LinkedList<Int>()
 
 
     /** Push element x to the back of queue. */
-    fun enqueue(x: Int) = `in`.push(x)
+    fun enqueue(x: Int) = consume.push(x)
 
     /** Removes the element from in front of queue and returns that element. */
     fun deque(): Int {
@@ -25,11 +25,11 @@ class Queue2Stacks {
     }
 
     /** Returns whether the queue is empty. */
-    fun empty(): Boolean = `in`.isEmpty() && out.isEmpty()
+    fun empty(): Boolean = consume.isEmpty() && out.isEmpty()
 
     private fun reverse() {
         if (out.isEmpty())
-            while (`in`.isNotEmpty())
-                out.push(`in`.pop())
+            while (consume.isNotEmpty())
+                out.push(consume.pop())
     }
 }
