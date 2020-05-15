@@ -2,6 +2,8 @@ package leetcode.strings
 
 class ValidPalindrome2 {
 
+    //abce
+    //abcdba
     fun validPalindrome(s: String): Boolean {
 
         var i = 0
