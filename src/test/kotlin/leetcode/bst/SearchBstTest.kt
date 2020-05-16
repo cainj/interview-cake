@@ -1,4 +1,4 @@
-package leetcode.recursion
+package leetcode.bst
 
 import leetcode.binarytrees.TreeNode
 import org.junit.jupiter.api.Assertions.assertEquals

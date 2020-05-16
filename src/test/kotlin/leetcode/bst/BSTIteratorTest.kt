@@ -3,7 +3,6 @@ package leetcode.bst
 import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
-import javax.swing.tree.TreeNode
 
 internal class BSTIteratorTest {
 
