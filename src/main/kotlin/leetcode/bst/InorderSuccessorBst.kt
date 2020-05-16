@@ -24,6 +24,5 @@ class InorderSuccessorBst {
         doInorder(node.left)
         inorder.add(node)
         doInorder(node.right)
-
     }
 }
