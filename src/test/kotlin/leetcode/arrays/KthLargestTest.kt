@@ -1,6 +1,5 @@
 package leetcode.arrays
 
-import leetcode.arrays.KthLargest
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
