@@ -4,7 +4,7 @@ import java.util.*
 import kotlin.math.max
 
 
-data class TreeNode(val `val`: Int, var left: TreeNode? = null, var right: TreeNode? = null) {
+data class TreeNode(var `val`: Int, var left: TreeNode? = null, var right: TreeNode? = null) {
     override fun equals(other: Any?): Boolean {
         val k = other as TreeNode
         return k.`val` == this.`val`

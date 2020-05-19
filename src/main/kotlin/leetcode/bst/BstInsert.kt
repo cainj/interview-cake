@@ -10,18 +10,19 @@ class BstInsert {
         var node = root
 
         while (node != null) {
-            if (node.`val` < `val`)
+            if (node.`val` < `val`) {
                 if (node.right != null) node = node.right
                 else {
                     node.right = TreeNode(`val`)
                     break
                 }
-            else
+            } else {
                 if (node.left != null) node = node.left
                 else {
                     node.left = TreeNode(`val`)
                     break
                 }
+            }
         }
         return root
     }
