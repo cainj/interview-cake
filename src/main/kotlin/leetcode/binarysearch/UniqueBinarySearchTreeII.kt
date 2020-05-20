@@ -1,4 +1,6 @@
-package leetcode.binarytrees
+package leetcode.binarysearch
+
+import leetcode.binarytrees.TreeNode
 
 class UniqueBinarySearchTreeII {
 
