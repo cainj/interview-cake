@@ -16,9 +16,7 @@ class SpiralMatrix {
             //move right
             for (i in x..maxX) spiral.add(matrix[y][i])
             //move down
-
             for (i in y + 1..maxY) spiral.add(matrix[i][maxX])
-
             if (y < maxY && x < maxX) {
                 //move left
                 for (i in maxX - 1 downTo x + 1) spiral.add(matrix[maxY][i])
@@ -33,6 +31,5 @@ class SpiralMatrix {
         }
 
         return spiral
-
     }
 }
