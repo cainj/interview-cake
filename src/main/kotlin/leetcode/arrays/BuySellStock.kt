@@ -4,6 +4,8 @@ import kotlin.math.max
 
 class BuySellStock {
 
+    //Runtime complexity on the is O(n)
+    //Space complexity is O(1)
     fun maxProfit(prices: IntArray): Int {
         if (prices.size < 2) return 0
 
