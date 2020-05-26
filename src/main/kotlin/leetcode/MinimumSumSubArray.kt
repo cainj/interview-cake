@@ -14,8 +14,7 @@ class MinimumSumSubArray {
 
             while (sum >= s) {
                 min = min(i + 1 - left, min ?: i + 1 - left)
-                sum -= nums[left]
-                left++
+                sum -= nums[left++]
             }
         }
 
