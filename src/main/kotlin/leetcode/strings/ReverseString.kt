@@ -2,7 +2,7 @@ package leetcode.strings
 
 class ReverseString {
 
-    fun reverseString(s: CharArray): Unit {
+    fun reverseString(s: CharArray) {
         var begin = 0
         var end = s.size - 1
 
