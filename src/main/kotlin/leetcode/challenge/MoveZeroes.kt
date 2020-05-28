@@ -3,26 +3,25 @@ package leetcode.challenge
 class MoveZeroes {
 
     fun moveZeroes(nums: IntArray): IntArray {
+        var zeros = 0
 
-        var lastKnownZero = findZero(nums, 0)
-        var i = lastKnownZero
-
-        while (i < nums.size && lastKnownZero != -1) {
-            if (nums[i] != 0) {
-                nums[lastKnownZero] = nums[i]
-                nums[i] = 0
-                lastKnownZero = findZero(nums, lastKnownZero)
-                i = lastKnownZero
+        while (zeros < nums.size - 1) {
+            if (nums[zeros] != 0) zeros++
+            else {
+                var i = zeros
+                while (i < nums.size) {
+                    if (nums[i] != 0) {
+                        val hold = nums[i]
+                        nums[i] = nums[zeros]
+                        nums[zeros] = hold
+                        break
+                    }
+                    i++
+                }
+                zeros++
             }
-            i++
         }
-        return nums
-    }
 
-    private fun findZero(nums: IntArray, last: Int): Int {
-        for (i in last until nums.size)
-            if (nums[i] == 0)
-                return i
-        return -1
+        return nums
     }
 }
