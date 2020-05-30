@@ -1,5 +1,7 @@
 package leetcode.recursionII
 
+import kotlin.math.abs
+
 class NQueens {
 
     fun solveNQueens(n: Int): List<List<String>> {
@@ -22,11 +24,10 @@ class NQueens {
     private fun isValid(queens: List<Int>): Boolean {
         val rowId = queens.size - 1
         for (i in 0 until rowId) {
-            val diff = Math.abs(queens[i] - queens[rowId])
-            if (diff == 0 || diff == rowId - i) {
-                return false
-            }
+            val diff = abs(queens[i] - queens[rowId])
+            if (diff == 0 || diff == rowId - i) return false
         }
+
         return true
     }
 
