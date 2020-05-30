@@ -1,4 +1,4 @@
-package leetcode.binarysearch
+package leetcode.recursionII
 
 class MergeSort {
     fun sortArray(nums: IntArray): IntArray {
