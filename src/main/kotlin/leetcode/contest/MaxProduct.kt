@@ -3,22 +3,16 @@ package leetcode.contest
 class MaxProduct {
 
     fun maxProduct(nums: IntArray): Int {
-        var largest = 0
-        var second = 1
+        var largest = 1
+        var second = Int.MIN_VALUE
 
-        if (nums[1] >= nums[0]) {
-            largest = 1
-            second = 0
-        }
-
-
-        for (i in 2 until nums.size)
-            if (nums[i] >= nums[largest]) {
+        for (i in nums.indices)
+            if (nums[i] >= largest) {
                 second = largest
-                largest = i
-            } else if (nums[i] >= nums[second])
-                second = i
+                largest = nums[i]
+            } else if (nums[i] >= second)
+                second = nums[i]
 
-        return (nums[largest] - 1) * (nums[second] - 1)
+        return (largest - 1) * (second - 1)
     }
 }
