@@ -39,7 +39,7 @@ class MyLinkedList {
                 current = current?.next
 
             val node = Node(`val`)
-            node?.next = current?.next
+            node.next = current?.next
             current?.next = node
             size++
         }
