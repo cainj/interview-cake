@@ -1,3 +1,3 @@
 package leetcode.lists
 
-data class ListNode(val `val`: Int, var next: ListNode? = null)
+data class ListNode(var `val`: Int, var next: ListNode? = null)
