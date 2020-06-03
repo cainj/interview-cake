@@ -73,7 +73,7 @@ comments:
 complexity:
   active: true
   ComplexCondition:
-    active: true
+    active: false
     threshold: 4
   ComplexInterface:
     active: false

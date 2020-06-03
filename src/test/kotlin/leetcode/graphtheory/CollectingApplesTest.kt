@@ -11,7 +11,6 @@ internal class CollectingApplesTest {
         assertEquals(
             8,
             minTime.minTime(
-                7,
                 arrayOf(
                     intArrayOf(0, 1),
                     intArrayOf(0, 2),
@@ -27,7 +26,6 @@ internal class CollectingApplesTest {
         assertEquals(
             6,
             minTime.minTime(
-                7,
                 arrayOf(
                     intArrayOf(0, 1),
                     intArrayOf(0, 2),
@@ -43,7 +41,6 @@ internal class CollectingApplesTest {
         assertEquals(
             0,
             minTime.minTime(
-                7,
                 arrayOf(
                     intArrayOf(0, 1),
                     intArrayOf(0, 2),

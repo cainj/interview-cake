@@ -1,12 +1,11 @@
 package leetcode.lists
 
 class MyLinkedList {
-    
+
     private var size: Int = 0
     private var head: ListNode = ListNode(-1)
 
 
-    /** Get the value of the index-th node in the linked list. If the index is invalid, return -1. */
     fun get(index: Int): Int {
         if (index < 0 || index >= size) return -1
 
@@ -16,19 +15,16 @@ class MyLinkedList {
         return current?.`val` ?: -1
     }
 
-    /** Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list. */
     fun addAtHead(`val`: Int) {
         val temp = head.next
         head.next = ListNode(`val`, temp)
         size++
     }
 
-    /** Append a node of value val to the last element of the linked list. */
     fun addAtTail(`val`: Int) {
         addAtIndex(size, `val`)
     }
 
-    /** Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted. */
     fun addAtIndex(index: Int, `val`: Int) {
         if (index > -1) {
             var current: ListNode? = head

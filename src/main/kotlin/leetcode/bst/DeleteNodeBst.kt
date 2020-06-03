@@ -7,7 +7,7 @@ class DeleteNodeBst {
     private fun successor(root: TreeNode): Int {
         var treeNode: TreeNode? = root
         treeNode = treeNode?.right
-        while (treeNode?.left != null) treeNode = treeNode?.left
+        while (treeNode?.left != null) treeNode = treeNode.left
         return treeNode?.`val` ?: 0
     }
 

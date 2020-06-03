@@ -5,7 +5,7 @@ import kotlin.math.abs
 class ReorderRoutes {
     private var ans: Int = 0
 
-    fun minReorder(n: Int, connections: Array<IntArray>): Int {
+    fun minReorder(connections: Array<IntArray>): Int {
         ans = 0
 
         if (connections.isEmpty() || connections[0].isEmpty()) return 0
