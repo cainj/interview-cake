@@ -11,5 +11,6 @@ internal class ValidPalindrome2Test {
         assertEquals(true, palindrome.validPalindrome("abac"))
         assertEquals(true, palindrome.validPalindrome("aba"))
         assertEquals(false, palindrome.validPalindrome("abc"))
+        assertEquals(false, palindrome.validPalindrome("abcdeba"))
     }
 }

@@ -8,6 +8,5 @@ internal class WeightedIndexTest {
     @Test
     fun pickIndex() {
         val wi = WeightedIndex(intArrayOf(3, 14, 1, 7))
-        assertEquals(true, wi.pickIndex() != 0)
     }
 }
