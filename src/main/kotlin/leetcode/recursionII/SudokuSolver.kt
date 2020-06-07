@@ -2,7 +2,7 @@ package leetcode.recursionII
 
 class SudokuSolver {
 
-    fun solveSudoku(board: Array<CharArray>): Unit {
+    fun solveSudoku(board: Array<CharArray>) {
         backtrack(board)
         printBoard(board)
     }
