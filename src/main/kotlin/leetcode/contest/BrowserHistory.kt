@@ -1,6 +1,8 @@
 package leetcode.contest
 
 import java.util.*
+import kotlin.math.max
+import kotlin.math.min
 
 /**
  * You have a browser of one tab where you start on the homepage and you can visit another url, get back in the
@@ -33,15 +35,12 @@ class BrowserHistory(homepage: String) {
     }
 
     fun back(steps: Int): String {
-        val limit = if (currentPos - steps > -1) currentPos - steps else 0
-        while (currentPos > limit) currentPos--
+        currentPos = max(currentPos - steps, 0)
         return history[currentPos]
     }
 
     fun forward(steps: Int): String {
-        val limit = if (currentPos + steps > history.size - 1) history.size - 1 else currentPos + steps
-        while (currentPos < limit) currentPos++
-
+        currentPos = min(history.size - 1, currentPos + steps)
         return history[currentPos]
     }
 }
