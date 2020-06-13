@@ -2,7 +2,7 @@ package leetcode.challenge.june
 
 class SortColors {
 
-    fun sortColors(nums: IntArray): Unit {
+    fun sortColors(nums: IntArray) {
         var reds = 0
         var blues = nums.size - 1
         var i = 0
