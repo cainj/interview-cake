@@ -25,9 +25,7 @@ class BinaryMinHeap<T> {
     /**
      * Checks where the key exists in heap or not
      */
-    fun containsData(key: T): Boolean {
-        return nodePosition.containsKey(key)
-    }
+    fun containsData(key: T): Boolean = nodePosition.containsKey(key)
 
     /**
      * Add key and its weight to they heap
@@ -48,25 +46,19 @@ class BinaryMinHeap<T> {
                 updatePositionMap(parentNode.key, currentNode.key, parentIndex, current)
                 current = parentIndex
                 parentIndex = (parentIndex - 1) / 2
-            } else {
-                break
-            }
+            } else break
         }
     }
 
     /**
      * Get the heap min without extracting the key
      */
-    fun min(): T {
-        return allNodes[0].key
-    }
+    fun min(): T = allNodes[0].key
 
     /**
      * Checks with heap is empty or not
      */
-    fun empty(): Boolean {
-        return allNodes.size == 0
-    }
+    fun empty(): Boolean = allNodes.size == 0
 
     /**
      * Decreases the weight of given key to newWeight
@@ -106,23 +98,23 @@ class BinaryMinHeap<T> {
         var size = allNodes.size - 1
         val minNode = Node(allNodes[0].weight, allNodes[0].key)
         val lastNodeWeight = allNodes[size].weight
+
         allNodes[0].weight = lastNodeWeight
         allNodes[0].key = allNodes[size].key
         nodePosition.remove(minNode.key)
         nodePosition.remove(allNodes[0].key)
         nodePosition[allNodes[0].key] = 0
         allNodes.removeAt(size)
+
         var currentIndex = 0
         size--
+
         while (true) {
             val left = 2 * currentIndex + 1
             var right = 2 * currentIndex + 2
-            if (left > size) {
-                break
-            }
-            if (right > size) {
-                right = left
-            }
+            if (left > size) break
+            if (right > size) right = left
+
             val smallerIndex = if (allNodes[left].weight <= allNodes[right].weight) left else right
             currentIndex = if (allNodes[currentIndex].weight > allNodes[smallerIndex].weight) {
                 swap(allNodes[currentIndex], allNodes[smallerIndex])
@@ -133,20 +125,16 @@ class BinaryMinHeap<T> {
                     smallerIndex
                 )
                 smallerIndex
-            } else {
-                break
-            }
+            } else break
         }
+
         return minNode
     }
 
     /**
      * Extract min value key from the heap
      */
-    fun extractMin(): T {
-        val node = extractMinNode()
-        return node.key
-    }
+    fun extractMin(): T = extractMinNode().key
 
     private fun printPositionMap() {
         println(nodePosition)
@@ -169,9 +157,8 @@ class BinaryMinHeap<T> {
     }
 
     fun printHeap() {
-        for (n in allNodes) {
+        for (n in allNodes)
             println(n.weight.toString() + " " + n.key)
-        }
     }
 
     companion object {
