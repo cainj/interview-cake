@@ -8,7 +8,7 @@ class SubSequence {
         for (k in t.indices)
             map[t[k]] = map.getOrDefault(t[k], listOf<Int>()) + k
 
-        var currMatchIndex = -1;
+        var currMatchIndex = -1
 
         for (c in s.toCharArray()) {
 

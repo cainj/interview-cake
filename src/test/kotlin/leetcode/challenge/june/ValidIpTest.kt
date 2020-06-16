@@ -1,8 +1,7 @@
-package leetcode
+package leetcode.challenge.june
 
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-
-import org.junit.jupiter.api.Assertions.*
 
 internal class ValidIpTest {
 
