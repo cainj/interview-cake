@@ -5,7 +5,7 @@ import leetcode.binarytrees.TreeNode
 class CountTree {
 
     fun countNodes(root: TreeNode?): Int {
-        val tree = root ?: return 0
+        root ?: return 0
 
         val l = goLeft(root)
         val r = goRight(root)
