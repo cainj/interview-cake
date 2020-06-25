@@ -1,6 +1,7 @@
 package leetcode.challenge.june
 
 import leetcode.binarytrees.TreeNode
+import kotlin.math.pow
 
 class CountTree {
 
@@ -10,7 +11,7 @@ class CountTree {
         val l = goLeft(root)
         val r = goRight(root)
 
-        return if (l == r) (Math.pow(2.0, l.toDouble())).toInt() - 1
+        return if (l == r) (2.0.pow(l.toDouble())).toInt() - 1
         else 1 + (countNodes(root.left) + countNodes(root.right))
     }
 
