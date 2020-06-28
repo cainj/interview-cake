@@ -14,6 +14,5 @@ internal class PathCrossingTest {
         assertEquals(true, pathCross.isPathCrossing("NWES"))
         assertEquals(true, pathCross.isPathCrossing("NESWW"))
         assertEquals(true, pathCross.isPathCrossing("NWESWW"))
-
     }
 }
