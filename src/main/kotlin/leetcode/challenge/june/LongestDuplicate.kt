@@ -32,7 +32,7 @@ class LongestDuplicate {
         for (i in 1 until size) pow *= 31
         val n = s.length
         for (i in size until n) {
-            hash = nextHash(size, pow, hash, s[i - size], s[i])
+            hash = nextHash(pow, hash, s[i - size], s[i])
             if (!set.add(hash)) {
                 return s.substring(i - size + 1, i + 1)
             }
@@ -52,6 +52,6 @@ class LongestDuplicate {
         return h
     }
 
-    private fun nextHash(k: Int, pow: Long, hash: Long, left: Char, right: Char): Long =
+    private fun nextHash(pow: Long, hash: Long, left: Char, right: Char): Long =
         (hash - (left - 'a' + 1) * pow) * 31 + (right - 'a' + 1)
 }
