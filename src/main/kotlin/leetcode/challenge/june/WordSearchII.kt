@@ -5,7 +5,7 @@ class WordSearchII {
 
     fun findWords(board: Array<CharArray>, words: Array<String>): List<String> {
         val root = TrieNode()
-        ans =  mutableListOf<String>()
+        ans = mutableListOf()
         for (word in words) {
             var node = root
 

@@ -282,7 +282,7 @@ formatting:
     active: true
     autoCorrect: true
   StringTemplate:
-    active: true
+    active: false
     autoCorrect: true
 
 naming:
