@@ -18,7 +18,7 @@ class UglyNumbersII {
             val threes = numbers[j] * 3
             val fives = numbers[k] * 5
 
-            val min = min(twos, Math.min(threes, fives))
+            val min = min(twos, min(threes, fives))
 
             if (min == twos) i++
             if (min == threes) j++
