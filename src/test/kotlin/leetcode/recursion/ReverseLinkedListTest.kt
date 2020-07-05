@@ -7,6 +7,15 @@ import org.junit.jupiter.api.Test
 internal class ReverseLinkedListTest {
 
     @Test
+    fun reverseListRec() {
+        val reverse = ReverseLinkedList()
+        Assertions.assertEquals(
+            ListNode(5, ListNode(4, ListNode(3, ListNode(2, ListNode(1))))),
+            reverse.reverseListRec(ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5))))))
+        )
+    }
+
+    @Test
     fun reverseList() {
         val reverse = ReverseLinkedList()
         Assertions.assertEquals(
