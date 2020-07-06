@@ -32,7 +32,7 @@ package leetcode.challenge.june
  */
 class PhoneNumber {
 
-    private val numberPad = hashMapOf<Char, String>(
+    private val numberPad = hashMapOf(
         '2' to "abc",
         '3' to "def",
         '4' to "ghi",
@@ -55,6 +55,7 @@ class PhoneNumber {
 
     private fun backtrack(combination: String, digits: String) {
         if (digits.isEmpty()) ans.add(combination)
+
         else {
             val digit = digits[0]
             val letters = numberPad[digit]!!

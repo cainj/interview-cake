@@ -22,5 +22,9 @@ internal class PhoneNumberTest {
             ),
             phoneNumber.letterCombinations("49")
         )
+        assertEquals(
+            listOf("aa", "ab", "ac", "ba", "bb", "bc", "ca", "cb", "cc"),
+            phoneNumber.letterCombinations("22")
+        )
     }
 }
