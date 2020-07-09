@@ -19,10 +19,6 @@ internal class IslandPerimeterTest {
             )
         )
         assertEquals(4, ip.islandPerimeter(arrayOf(intArrayOf(1))))
-        assertEquals(
-            0, ip.islandPerimeter(
-                arrayOf()
-            )
-        )
+        assertEquals(0, ip.islandPerimeter(arrayOf()))
     }
 }
