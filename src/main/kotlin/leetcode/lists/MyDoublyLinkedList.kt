@@ -26,7 +26,8 @@ class MyDoublyLinkedList {
         return currNode
     }
 
-    /** Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list. */
+    /** Add a node of value val before the first element of the linked list. After the insertion, the new node will
+     * be the first node of the linked list. */
     fun addAtHead(`val`: Int) {
         val node = ListNode(`val`, dummyHead, dummyHead.next)
         dummyHead.next?.prev = node
@@ -42,7 +43,9 @@ class MyDoublyLinkedList {
         size++
     }
 
-    /** Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted. */
+    /** Add a node of value val before the index-th node in the linked list. If index equals to the length
+     * of linked list, the node will be appended to the end of linked list. If index is greater than the length,
+     * the node will not be inserted. */
     fun addAtIndex(index: Int, `val`: Int) {
         if (index > size || index < 0) return
 
