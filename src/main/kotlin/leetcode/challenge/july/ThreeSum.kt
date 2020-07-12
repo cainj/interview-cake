@@ -1,6 +1,6 @@
 package leetcode.challenge.july
 
-class `3Sum` {
+class ThreeSum {
     fun threeSum(nums: IntArray): List<List<Int>> {
         nums.sort()
         val ans = mutableListOf<List<Int>>()
