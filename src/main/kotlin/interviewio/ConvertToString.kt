@@ -4,7 +4,7 @@ class ConvertToString {
 
     fun convertString(str: String): List<Int> {
         var num = ""
-        val ans = mutableListOf<Int>()
+        val ans= mutableListOf<Int>()
         var flag = false
 
         for (c in str) {
