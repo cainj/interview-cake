@@ -29,4 +29,31 @@ package leetcode.challenge.july
  * • You may assume that there are no duplicate edges in the input prerequisites.
  */
 class CoursesII {
+
+    fun findOrder(numCourses: Int, prerequisites: Array<IntArray>): IntArray {
+        val graph = hashMapOf<Int, List<Int>>()
+        val ans = mutableListOf<Int>()
+
+        for (reqs in prerequisites)
+            graph[reqs[1]] = graph.getOrDefault(reqs[1], listOf()) + reqs[0]
+
+        val path = mutableListOf<Int>()
+        val visited = IntArray(numCourses)
+
+        for (i in 0 until numCourses)
+            if (visited[i] == 0 && dfs(i, graph, visited, path)) return intArrayOf()
+
+        return path.toIntArray()
+    }
+
+    private fun dfs(course: Int, graph: HashMap<Int, List<Int>>, visited: IntArray, path: MutableList<Int>): Boolean {
+        visited[course] = 1
+        for (c in graph[course] ?: emptyList()) {
+            if (visited[c] == 1) return true
+            if (visited[c] == 0 && dfs(c, graph, visited, path)) return true
+        }
+        visited[course] = 2
+        path.add(0, course)
+        return false
+    }
 }
