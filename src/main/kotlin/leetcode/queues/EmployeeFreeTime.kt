@@ -1,6 +1,7 @@
 package leetcode.queues
 
 import java.util.*
+import kotlin.math.*
 
 
 class EmployeeFreeTime {
@@ -16,14 +17,14 @@ class EmployeeFreeTime {
 
         for ((ei, employee) in avails.withIndex()) {
             pq.offer(Job(ei, 0))
-            anchor = Math.min(anchor, employee[0].start)
+            anchor = min(anchor, employee[0].start)
         }
 
         while (!pq.isEmpty()) {
             val job = pq.poll()
             val iv: Interval = avails[job.eid][job.index]
             if (anchor < iv.start) ans.add(Interval(anchor, iv.start))
-            anchor = Math.max(anchor, iv.end)
+            anchor = max(anchor, iv.end)
             if (++job.index < avails[job.eid].size) pq.offer(job)
         }
         return ans

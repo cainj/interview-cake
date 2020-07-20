@@ -48,10 +48,10 @@ class CoursesII {
 
     private fun dfs(course: Int, graph: HashMap<Int, List<Int>>, visited: IntArray, path: MutableList<Int>): Boolean {
         visited[course] = 1
-        for (c in graph[course] ?: emptyList()) {
+        for (c in graph[course] ?: emptyList())
             if (visited[c] == 1) return true
-            if (visited[c] == 0 && dfs(c, graph, visited, path)) return true
-        }
+            else if (visited[c] == 0 && dfs(c, graph, visited, path)) return true
+
         visited[course] = 2
         path.add(0, course)
         return false
