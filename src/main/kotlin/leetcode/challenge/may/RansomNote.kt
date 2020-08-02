@@ -10,7 +10,6 @@ class RansomNote {
         for (c in magazine) decoder[c] = decoder.getOrDefault(c, 0) + 1
         for (c in ransomNote) ransom[c] = ransom.getOrDefault(c, 0) + 1
 
-
         for ((k, v) in ransom)
             if (v > decoder[k] ?: 0) return false
 
