@@ -1,5 +1,6 @@
 package leetcode.challenge.may
 
+
 class RansomNote {
 
     fun canConstruct(ransomNote: String, magazine: String): Boolean {
