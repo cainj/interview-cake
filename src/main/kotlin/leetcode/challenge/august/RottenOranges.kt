@@ -27,11 +27,6 @@ class RottenOranges {
             }
         }
 
-        grid.forEach {
-            println(it.toList())
-        }
-        println(isAllRotten(grid))
-
         return if (isAllRotten(grid)) minutes else -1
     }
 
