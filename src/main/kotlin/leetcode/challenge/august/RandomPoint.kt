@@ -2,7 +2,7 @@ package leetcode.challenge.august
 
 import java.util.*
 
-class RandomPoint(var rects: Array<IntArray>)  {
+class RandomPoint(private val rects: Array<IntArray>) {
     private val range: IntArray = IntArray(rects.size + 1)
 
     fun pick(): IntArray {
