@@ -32,6 +32,6 @@ class SumLeftLeaves {
         if (root!!.left == null && root.right == null){
             return if(isLeft) root.`val` else 0
         }
-        return sumOfLeftLeaves(root.left,true) + sumOfLeftLeaves(root.right,false)
+        return sumOfLeftLeavesRecursive(root.left,true) + sumOfLeftLeavesRecursive(root.right,false)
     }
 }
