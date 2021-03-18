@@ -14,7 +14,7 @@ internal class MinDepthTreeTest {
             minDepthTree.minDepth(TreeNode(3, TreeNode(9), TreeNode(20, TreeNode(15), TreeNode(7))))
         )
         assertEquals(
-            4,
+            2,
             minDepthTree.minDepth(TreeNode(3, TreeNode(9), TreeNode(20, TreeNode(15), TreeNode(7))))
         )
     }

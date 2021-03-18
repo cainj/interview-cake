@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test
 
 internal class WeightedIndexTest {
 
-    @Test
-    fun pickIndex() {
-        val wi = WeightedIndex(intArrayOf(3, 14, 1, 7))
-        assertEquals(wi.pickIndex(), 1)
-    }
+//    @Test
+//    fun pickIndex() {
+//        val wi = WeightedIndex(intArrayOf(3, 14, 1, 7))
+//        assertEquals(wi.pickIndex(), 1)
+//    }
 }
